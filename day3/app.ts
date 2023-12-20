@@ -1,14 +1,11 @@
-let circle = document.querySelector('.circle')!
-let openElment = document.querySelector('#open')!
-let closeElment = document.querySelector('#close')!
+let opens = document.querySelector('#open')!
+let closes = document.querySelector('#close')!
+let container = document.querySelector('.container')!
 
-let open:boolean = false
 
-circle.addEventListener('click',()=>{
-    console.log('return');
-    if(oepn === false){
-        openElment.classList.add('open')
-    }esle{
-        closeElment.
-    }
-})
+
+
+opens.addEventListener('click', () => container.classList.add('show-nav'))
+closes.addEventListener('click', () => container.classList.remove('show-nav'))
+
+
