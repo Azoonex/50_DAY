@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;align-items: center;
+    justify-content: center;
+
+}
+
+.cotainer{
+    position: relative;
+}
+
+input{
+    padding: 10px;
+    transition: all 1s;
+    width: 0;
+    border: none;
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.active{
+    width: 200px;
+}
+
+button  {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
