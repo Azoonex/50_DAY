@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient();
+    --s: 84px; /* control the size*/
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+            from 0deg at calc(500% / 6) calc(100% / 3),
+            var(--c3) var(--_g)
+        ),
+        conic-gradient(
+            from -120deg at calc(100% / 6) calc(100% / 3),
+            var(--c2) var(--_g)
+        ),
+        conic-gradient(
+            from 120deg at calc(100% / 3) calc(500% / 6),
+            var(--c1) var(--_g)
+        ),
+        conic-gradient(
+            from 120deg at calc(200% / 3) calc(500% / 6),
+            var(--c1) var(--_g)
+        ),
+        conic-gradient(
+            from -180deg at calc(100% / 3) 50%,
+            var(--c2) 60deg,
+            var(--c1) var(--_g)
+        ),
+        conic-gradient(
+            from 60deg at calc(200% / 3) 50%,
+            var(--c1) 60deg,
+            var(--c3) var(--_g)
+        ),
+        conic-gradient(
+            from -60deg at 50% calc(100% / 3),
+            var(--c1) 120deg,
+            var(--c2) 0 240deg,
+            var(--c3) 0
+        );
+    background-size: calc(var(--s) * 1.732) var(--s);
+}
+
+.fil {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
