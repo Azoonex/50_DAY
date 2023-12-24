@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 60%;
+    margin: 10px auto;
+    background-color: red;
+    overflow-x: hidden;
+}
+
+.item{
+    width: 98%;
+    height: 30vh;
+    margin: 5px 2px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    display: grid;place-items: center;
+      transform: translateX(400%);
+      transition: transform .77s ease-in-out;
+}
+
+.item:nth-of-type(even){
+     transform: translateX(-400%);
+}
+
+
+.item.show{
+    transform: translateX(0);
+}
+
+.item h2 {
+    font-size: 45px;
+}
