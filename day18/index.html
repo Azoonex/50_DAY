@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./app.css" />
+    </head>
+    <body>
+        <section class="silbar_container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./img/img1.jpg" style="width: 100%" alt="not-found" />
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./img/img2.jpg" style="width: 100%" alt="not-found" />
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./img/img3.jpg" style="width: 100%" alt="not-found" />
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 3</div>
+                <img src="./img/img4.jpg" style="width: 100%" alt="not-found" />
+                <div class="text">Caption Text</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
