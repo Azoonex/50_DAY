@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+:root {
+  --main-color: #373b69;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+header {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 0 10px 0 white;
+}
+
+#search {
+  padding: 10px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 30px;
+  background-color: var(--main-color);
+  border: 1px solid wheat;
+}
+#search:focus {
+  background-color: #191b32;
+}
+
+#main {
+  place-items: center;
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+#main .item1 {
+  width: 80%;
+  height: 400px;
+  background-color: red;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px white;
+  position: relative;
+  overflow: hidden;
+}
+#main .item1 .label_hover {
+  padding: 20px 10px;
+  z-index: 5;
+  background-color: white;
+  transition: all 0.8s ease;
+  position: absolute;
+  transform: translateY(400px);
+}
+#main .item1 .label_hover h3 {
+  margin: 10px 0;
+}
+#main .item1:hover .label_hover {
+  transform: translateY(0px);
+}
+#main .item1 .content_name {
+  width: 100%;
+  height: 50px;
+  background-color: #191b32;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#main .item1 .content_name h3 {
+  color: #fff;
+}
+#main .item1 .content_name button {
+  padding: 4px;
+  background-color: #373b69;
+  border: none;
+  color: yellow;
+}/*# sourceMappingURL=app.css.map */

@@ -57,11 +57,16 @@ header {
         overflow: hidden;
 
         .label_hover {
+            padding: 20px 10px;
             z-index: 5;
             background-color: white;
             transition: all 0.80s ease;
             position: absolute;
             transform: translateY(400px);
+
+            h3{
+                margin: 10px 0;
+            }
         }
         &:hover .label_hover {
             transform: translateY(0px);

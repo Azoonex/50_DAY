@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+  <div class="values">
+    <span id="range1">
+      0
+    </span>
+    <span> &dash; </span>
+    <span id="range2">
+      100
+    </span>
+  </div>
+  <div class="container">
+    <div class="slider-track"></div>
+    <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+    <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+  </div>
+</div>
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>
