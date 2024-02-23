@@ -37,9 +37,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var API_URL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1";
 var IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 var SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
-var main = document.getElementById('main');
-var form = document.getElementById('form');
-var search = document.getElementById('search');
+var main = document.getElementById("main");
+var form = document.getElementById("form");
+var search = document.getElementById("search");
+getMovies(API_URL);
 function getMovies(url) {
     return __awaiter(this, void 0, void 0, function () {
         var res, data;
@@ -58,11 +59,34 @@ function getMovies(url) {
     });
 }
 function showMovies(movies) {
-    main.innerHTML = '';
+    main.innerHTML = "";
     movies.forEach(function (movie) {
         var title = movie.title, poster_path = movie.poster_path, vote_average = movie.vote_average, overview = movie.overview;
-        var movieEl = document.createElement('div');
+        var movieEl = document.createElement("div");
         movieEl.classList.add("item1");
-        movieEl.innerHTML = "\n         <div class=\"item1\">\n                <div class=\"img\">\n                    <img src=\"".concat(IMG_PATH + poster_path, "\" alt=\"").concat(title, "\">\n                </div>\n                <div class=\"content_name\">\n                    <h3>").concat(title, "</h3>\n                    <button type=\"button\">8.600</button>\n                </div>\n                <div class=\"label_hover\">\n                    <h3>leday thes is car</h4>\n                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nostrum quas voluptate deleniti doloribus similique rerum. Voluptates, vel iusto cumque quasi repellat natus voluptate itaque praesentium id voluptas sint ab?</p>\n                </div>\n            </div>\n        ");
+        movieEl.innerHTML = "\n         <div class=\"item1\">\n                <div class=\"img\">\n                    <img src=\"".concat(IMG_PATH + poster_path, "\" alt=\"").concat(title, "\">\n                </div>\n                <div class=\"content_name\">\n                    <h3>").concat(title, "</h3>\n                    <button type=\"button\">").concat(vote_average, "</button>\n                </div>\n                <div class=\"label_hover\">\n                    <h3>overview</h4>\n                    <p>\n                    ").concat(overview, "\n                    </p>\n                </div>\n            </div>\n        ");
+        main.appendChild(movieEl);
     });
 }
+function getClassByRate(vote) {
+    if (vote >= 8) {
+        return "green";
+    }
+    else if (vote >= 5) {
+        return "orange";
+    }
+    else {
+        return "red";
+    }
+}
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var searchTerm = search.value;
+    if (searchTerm && searchTerm !== '') {
+        getMovies(SEARCH_API + searchTerm);
+        search.value = '';
+    }
+    else {
+        window.location.reload();
+    }
+});
