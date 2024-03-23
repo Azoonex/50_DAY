@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+section::before {
+  background-image: url(img/img1.jpg);
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  z-index: 2;
+}
+section .content_bg {
+  z-index: 10;
+  width: 70%;
+  height: 60%;
+  background-image: url("./img/img3.jpg") center center;
+  box-shadow: 1px 2px 3px black;
+  position: relative;
+}
+section .content_bg .next, section .content_bg .prvious {
+  z-index: 10;
+  font-size: 50px;
+  color: white;
+  padding: 0 10px;
+  background-color: blue;
+  position: absolute;
+  top: 46%;
+  cursor: pointer;
+}
+section .content_bg .prvious {
+  left: -50px;
+}
+section .content_bg .next {
+  right: -50px;
+}/*# sourceMappingURL=app.css.map */
