@@ -61,7 +61,7 @@ leftBtn.onclick = function () {
     setVgToBody();
     setActiveSlide();
 };
-setBgToBody();
+setVgToBody();
 function setVgToBody() {
     body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
