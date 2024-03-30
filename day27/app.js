@@ -22,3 +22,6 @@ console.log(result);
 if (a <= 255) {
     console.log('yes this is ok');
 }
+// Note that strings are compared alphabetically: ------------- prefect
+var text1 = "What a very ";
+text1 += "nice day";
