@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content</title>
     <link rel="stylesheet" href="./app.css">
+        
+        <script id="hix-init-script">
+        const A = '$2b$10$j17eV2twNWDVp4M9LfgeHu0g8eiNjotsMmivtFLhFBgPLiVJuWa96';
+        document.addEventListener('DOMContentLoaded', () => {
+            let hixScript = document.createElement("script");
+            hixScript.setAttribute("src", "https://portal.hixdm.com/widget/widget.js");
+            hixScript.setAttribute("crossorigin", "use-credentials");
+            document.body.appendChild(hixScript);
+            hixScript.addEventListener('load', () => {
+                HIX_INIT(A, "https://portal.hixdm.com");
+            })
+
+            document.getElementById("hix-init-script").remove();
+        })
+        </script>
 </head>
 <body>
-     <div class="kinetic"></div>
+     
 </body>
 </html>
