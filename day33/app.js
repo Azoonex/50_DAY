@@ -1,5 +1,7 @@
-var mainSection = document.getElementById('container');
-for (var i = 0; i < 9; i++) {
-    var newDiv = document.createElement("div");
-    mainSection.appendChild(newDiv);
-}
+var person = { age: 24, name: "amirabas" };
+console.log(person);
+// Conditional type
+// Conditional type
+// conditional type
+// condination type
+// condination type
