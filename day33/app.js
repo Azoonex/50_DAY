@@ -1,11 +1,23 @@
 // type ageBrother = {id:number;age:number;name: string}
-var pet;
-var dog = { name: "AlsonBeker", owner: "rudd weatherwax" };
-pet = dog;
-function Greet(pet) {
-    console.log("hello world" + pet.name);
-}
-Greet(dog);
+// type abas = {
+//     name : ageBrother["name"];
+//     age: ageBrother["age"]
+// }
+// const person: abas = { age: 24, name: "amirabas" };
+// console.log(person);
+// interface pet {
+//     name: string
+// }
+// let pet : pet;
+// let dog  = {name : "AlsonBeker",owner:"rudd weatherwax"}
+// pet = dog
+// interface Pet {
+//     name : string
+// }
+// function Greet(pet:Pet){
+//     console.log("hello world" + pet.name)
+// }
+// Greet(dog);
 // Conditional type
 // Conditional type
 // conditional type
@@ -18,10 +30,13 @@ Greet(dog);
 // taht looks little like several provide / inferre / 
 // initalizing / initializing / initailizing
 // initializing / determining / return / made / expressions /above
-// above / consider / common / provided / candidate / ideally /ideally / we may want zoo to be inferred as animall[] / we may want / we way want zoo to be infreed as an anima / but because /because / explicitly provide the type when no / candidete / explicity provide the type when no one type is a super / snake rhino / Elephoant / direction / also / cases / cases / cases in typescript / this is kown as contextual typeing . contextul / occurs / contenxtual / when expression / expression / implied/ implied by its location / infer  === result / infer / assignment / when it dide so / when it dide so/ when it dide so / when it dide so/ is was able to infer the type of the mouse Evet / Compatibiliy / compatibility / comp ea e amin reza abas / reza / sara / neda amir / abas / amir  /reza / elhame elhame elhame / elhame / abas / compatiility / based / based / based / on strucurel / strucural subtyping  / structural / structural / structural / typeing is way of relating typeing / consider the following code / contrast / contrast / nominal / contreast / nominal / nominal / consider / consider / the foollowing code / Comparing / Comparing / while primitive  / relatively / 
-var x = function (a) { return 0; };
-var y = function (b) { return 0; };
-y = x;
-x = y;
-var items = [1, 2, 3];
-items.forEach(function (items, index, array) { return console.log(items, index, array); });
+// above / consider / common / provided / candidate / ideally /ideally / we may want zoo to be inferred as animall[] / we may want / we way want zoo to be infreed as an anima / but because /because / explicitly provide the type when no / candidete / explicity provide the type when no one type is a super / snake rhino / Elephoant / direction / also / cases / cases / cases in typescript / this is kown as contextual typeing . contextul / occurs / contenxtual / when expression / expression / implied/ implied by its location / infer  === result / infer / assignment / when it dide so / when it dide so/ when it dide so / when it dide so/ is was able to infer the type of the mouse Evet / Compatibiliy / compatibility / comp ea e amin reza abas / reza / sara / neda amir / abas / amir  /reza / elhame elhame elhame / elhame / abas / compatiility / based / based / based / on strucurel / strucural subtyping  / structural / structural / structural / typeing is way of relating typeing / consider the following code / contrast / contrast / nominal / contreast / nominal / nominal / consider / consider / the foollowing code / Comparing / Comparing / while primitive  / relatively /  given 
+var names = "amirabas";
+var dev = "progamer";
+console.log(names.substr(2, 5));
+console.log(dev.concat(" ", names, " base programer", "nice bro"));
+var newName = "           Amir          ";
+console.log(newName.trimEnd());
+var work = "progrmer";
+console.log(work.repeat(3));
+console.log;
