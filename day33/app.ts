@@ -1,13 +1,35 @@
-type ageBrother = {id:number;age:number;name: string}
+// type ageBrother = {id:number;age:number;name: string}
 
-type abas = {
-    name : ageBrother["name"];
-    age: ageBrother["age"]
+// type abas = {
+//     name : ageBrother["name"];
+//     age: ageBrother["age"]
+// }
+
+// const person: abas = { age: 24, name: "amirabas" };
+
+// console.log(person);
+
+interface pet {
+    name: string
 }
 
-const person: abas = { age: 24, name: "amirabas" };
+let pet : pet;
 
-console.log(person);
+let dog  = {name : "AlsonBeker",owner:"rudd weatherwax"}
+
+pet = dog
+
+
+interface Pet {
+    name : string
+}
+
+function Greet(pet:Pet){
+    console.log("hello world" + pet.name)
+}
+
+Greet(dog);
+
 
 
 
