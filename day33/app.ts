@@ -2,3 +2,29 @@
 
 
 // Sentence / warper / work i work six hours aday wip /  weight / watch / wash / walk wait / vote / worap he spendt the he spent the everning worapping up the present / He spent the evening wrapping up the present / work i work six hourse a day / he wiped his hdands one a clean towel / how much do you weith weigh weigh weigh weigh weigh wigh  watch we watched the move in theearter i washed you clothes i woalk thirty minutest every day / vote They will vote for presidency tomorrow / They will vote for presidency tommorrow / i was feeling sich and comited / Volunteer / he volunteered his services as driver / they use intresent to serach / Use They use intrest to search Unpack i will unpack the boxes after the nap / i will unpack the boxes after the nap They unload the boxesds off the lorry i can;t type fast 
+
+
+let Years = ["2","amirabas","weekind"]
+
+if(Years[2].length === 7){
+    console.log("nice ok")
+} else {
+    console.log("error")
+    
+}
+
+const fruits = ["banana", "apple", "peach"];
+
+console.log(Object.keys(fruits)); // increasring / exteds
+
+fruits.forEach((i,o)=>{
+    console.log((o + 1) + ":",i)
+})
+
+console.log(fruits.reverse())
+
+
+
+
+// get start study for javascript Loverhttps://storyset.com/information
+
