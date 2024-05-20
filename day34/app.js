@@ -10,3 +10,15 @@ console.log(fibonacci(2));
 console.log(fibonacci(3));
 console.log(fibonacci(7));
 console.log(fibonacci(12));
+// function 2
+function factorial(n) {
+    var b = 1;
+    for (var i = 2; i <= n; i++) {
+        b = b * i;
+    }
+    return b;
+}
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(4));
+console.log(factorial(5));
