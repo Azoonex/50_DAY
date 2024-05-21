@@ -22,19 +22,44 @@
 // console.log(factorial(2));
 // console.log(factorial(4));
 // console.log(factorial(5));
-// Prime number
-function isPrime(prime) {
-    if (prime < 2) {
+// Prime number ---------------------
+// function isPrime(prime: number): boolean {
+//     if (prime < 2) {
+//         return false;
+//     }
+//     let sqrtPrime: number = Math.sqrt(prime);
+//     for (let i = 2; i <= sqrtPrime; i++) {
+//         if (prime % i === 0) {
+//             return false; // Not a prime number
+//         }
+//     }
+//     return true; // Prime number
+// }
+// console.log(isPrime(1));
+// console.log(isPrime(5));
+// console.log(isPrime(4));
+// Power of Two ----------------------
+// my
+// function isPowser(n:number):boolean {
+//     if((n % 2) === 0 || n === 1){
+//         return true
+//     }
+//     return false
+// }
+// you
+function isPowser(n) {
+    if (n < 1) {
         return false;
     }
-    var sqrtPrime = Math.sqrt(prime);
-    for (var i = 2; i <= sqrtPrime; i++) {
-        if (prime % i === 0) {
-            return false; // Not a prime number
+    while (n > 1) {
+        if (n % 2 !== 0) {
+            return false;
         }
+        n = n / 2;
+        console.log(n);
     }
-    return true; // Prime number
+    return true;
 }
-console.log(isPrime(1));
-console.log(isPrime(5));
-console.log(isPrime(4));
+console.log(isPowser(1));
+console.log(isPowser(2));
+console.log(isPowser(5));
