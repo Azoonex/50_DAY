@@ -89,14 +89,12 @@ if (fruits.includes("Apple")) {
 // interface TypeNumberCallback {
 //     (value: number, index: number): boolean;
 // }
-
 // let first = numbers.find(myFunction);
 
 // function myFunction: TypeNumberCallback {
 //     return (value, index) => value > 18;
 // }
-
 // console.log(myFunction(1, 1));
 
-
+"  i am a studaent his then him then him that house is scray "
 
