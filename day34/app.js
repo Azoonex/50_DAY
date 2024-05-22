@@ -47,19 +47,26 @@
 //     return false
 // }
 // you
-function isPowser(n) {
-    if (n < 1) {
-        return false;
-    }
-    while (n > 1) {
-        if (n % 2 !== 0) {
-            return false;
-        }
-        n = n / 2;
-        console.log(n);
-    }
-    return true;
+// function isPowser(n) {
+//     if (n < 1) {
+//         return false;
+//     }
+//     while (n > 1) {
+//         if (n % 2 !== 0) {
+//             return false;
+//         }
+//         n = n / 2;
+//         console.log(n);
+//     }
+//     return true;
+// }
+// console.log(isPowser(1));
+// console.log(isPowser(2));
+// console.log(isPowser(5));
+
+try {
+    adddlert("Welcome guest!");
 }
-console.log(isPowser(1));
-console.log(isPowser(2));
-console.log(isPowser(5));
+catch (err) {
+    document.getElementById("demo").innerHTML = err.message;
+}
