@@ -80,9 +80,11 @@ console.log(isPowser(1));
 console.log(isPowser(2));
 console.log(isPowser(5));
 
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
 
-try {
-    adddlert("Welcome guest!");
-} catch (err) {
-    document.getElementById("demo").innerHTML = err.message;
+function myFunction(value, index, array) {
+    return value > 18;
 }
+
+Math.floor(Math.random() * 100);
