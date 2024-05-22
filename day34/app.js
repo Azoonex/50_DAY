@@ -64,9 +64,4 @@
 // console.log(isPowser(2));
 // console.log(isPowser(5));
 
-try {
-    adddlert("Welcome guest!");
-}
-catch (err) {
-    document.getElementById("demo").innerHTML = err.message;
-}
+
