@@ -72,3 +72,8 @@ const letters = new Set();
 letters.add("a");
 letters.add("b");
 letters.add("c");
+
+
+x.toString()
+    (123).toString()
+    (100 + 23).toString()
