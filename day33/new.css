@@ -1,30 +1,28 @@
-/* inhancements === imporve / integration /  */
-/* 1 Browser Support */
-
-.container{
-    background: lch(from hsl(180 100% 50%) calc(l - 10) c h)
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-ul li input:checked {
-  accent-color: red;
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
 }
 
-ul li:has(input:checked) {
-  border: 2px solid #f806e4;
-}
-.course {
-  container-type: inline-size;
-  width: 100%;
+.active, .accordion:hover{
+  background-color: #ccc;
 }
 
-.course-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #620b79;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333333;
-  width: 100%;
-  height: 100%;
+.panel{
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
 }
-
