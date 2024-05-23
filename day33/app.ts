@@ -9,7 +9,7 @@ for (let i = 0; i < acc.length; i++) {
         this.classList.toggle("active");
 
         // var panel = this.nextElementSibling as HTMLElement;
-        var panel = this.nextElementSibling as HTMLAreaElement;
+        var panel = this.nextElementSibling as HTMLElement;
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
