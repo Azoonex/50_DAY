@@ -47,6 +47,7 @@
 //     return false
 // }
 // you
+
 // function isPowser(n) {
 //     if (n < 1) {
 //         return false;
@@ -63,17 +64,13 @@
 // console.log(isPowser(1));
 // console.log(isPowser(2));
 // console.log(isPowser(5));
+// var numbers = [45, 4, 9, 16, 25];
+// var allOver18 = numbers.every(myFunction);
+// function myFunction(value, index, array) {
+//     return value > 18;
+// }
+// Math.floor(Math.random() * 100);
 
 
+// Recursive  =
 
-const letters = new Set();
-
-// Add Values to the Set
-letters.add("a");
-letters.add("b");
-letters.add("c");
-
-
-x.toString()
-    (123).toString()
-    (100 + 23).toString()
