@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+a {
+    border: none;
+    text-decoration: none;
+}
+
+.dropdowon {
+    margin: 100px;
+    position: relative;
+    width: 200px;
+}
+
+.btn {
+    width: 200px;
+    height: 60px;
+    font-size: 2rem;
+    background-color: #c9df0a;
+}
+
+.warper {
+    position: absolute;
+    width: 100%;
+    left: 4px;
+    padding: 5px;
+    box-shadow: 0px 0px 16px rgba(17, 17, 26, 0.1);
+    z-index: 1;
+    display: none;
+
+    a {
+        display: block;
+        font-size: 1.9rem;
+        padding: 5px;
+        width: 100%;
+    }
+    a:hover {
+        background-color: #ccc;
+    }
+}
+
+.dropdowon:hover .warper {
+    display: block;
+}
