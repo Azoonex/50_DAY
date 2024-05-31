@@ -1,1 +1,14 @@
-"Lake land Each book is 10 dollars tell she never tells a lie she never tells a lie set i will set the table want do you want anyting do you want anyting Air Air pollution is very dangerous she did it well she did it will i con't paly.i have to study home our home is big our home is big i never read fiction this part is diffucult This part is difficult that large city is very beautiful this part is difficult can you speel you name can you spell you name you can add some sugar i can't even watch TV tehy work on a land you mustn't park here it's forbidden They work on a land you can add some suger i can't even watch tv come here,please you mustnt park here it's forbidden my kite goes high in the skey kite such she likes fruits such as mango Dont't follow this line here dont't follow this line here Act you act like a child i never change my car i never change my car i never change my car she is a kind doctor she is a kind doctor what do you need for you class what do you need for you Animal she is an animal lover never pint to people it's rude point never pint to people it's rude never pint to people it rude Never pint to peple it's rude she lives near me she lives near me she lives near me They are building a house my father takes us to school every day takes use to shoos every day i always get a good score we live in canada my only firend is jack round her face is round"
+// let num = 22
+// let numString = num.toString()
+
+// console.log(typeof numString)
+// console.log(Number("22.33"))
+// console.log(Number(new Date("1970-01-01")));
+
+console.log(Number.isInteger(22))
+console.log(Number.isSafeInteger(78548))
+console.log(Number.parseInt("2"))
+console.log(new Date().getDate())
+let d = new Date("2015-03-25");
+
+console.log(d.getMonth())
