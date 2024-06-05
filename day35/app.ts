@@ -1,6 +1,10 @@
-alert(location.href); // shows current URL
-if (confirm("Go to Wikipedia?")) {
-    location.href = "https://wikipedia.org"; // redirect the browser to another URL
+function recrsiveFactorial( n:number ) {
+    if(n === 0 ){
+        return 1
+    }
+    return n * recrsiveFactorial(n-1)
 }
 
-
+console.log(recrsiveFactorial(0));
+console.log(recrsiveFactorial(1));
+console.log(recrsiveFactorial(5));
