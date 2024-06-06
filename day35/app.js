@@ -27,4 +27,8 @@
 // ensure ensure ensure ensure
 // can be defined by many different methods and deplyoued in many different ways can be defined by many deffereent methos and deployed in may diffrenet ways definded defined defined defined definded by many differeent methos and been been been been been performed perfrmed by a web browers before input is send a web server html introduced introduced a new html validation concept call constraint validation concept called constraint html constraint validation is base  disabled max min pattern required type 
 // constraint validation css psuedo selectors 
-// 
+// elements with the required atrribute specified valid => معتبر
+// defined a specail state of an element
+// a psuedo class is used to define a special state of an element
+// it can be used to 
+// it can be used to anchor anchor anchor
