@@ -33,5 +33,7 @@
 // has the user entered a valida date ?
 // has the user entered text a numeric field
 // ensure ensure ensure ensure
-// can be defined by many different methods and deplyoued in many different ways can be defined by many deffereent methos and deployed in may diffrenet ways definded defined defined defined definded by many differeent methos and been been been been been performed 
+// can be defined by many different methods and deplyoued in many different ways can be defined by many deffereent methos and deployed in may diffrenet ways definded defined defined defined definded by many differeent methos and been been been been been performed perfrmed by a web browers before input is send a web server html introduced introduced a new html validation concept call constraint validation concept called constraint html constraint validation is base  disabled max min pattern required type 
+// constraint validation css psuedo selectors 
+// 
 
