@@ -7,3 +7,5 @@ function recrsiveFactorial(n) {
 console.log(recrsiveFactorial(0));
 console.log(recrsiveFactorial(1));
 console.log(recrsiveFactorial(5));
+function linearSearch(arr, target) {
+}
