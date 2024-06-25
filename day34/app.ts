@@ -62,29 +62,30 @@
 
 // you
 
-function isPowser(n: number) {
-    if (n < 1) {
-        return false;
-    }
-    while (n > 1) {
-        if (n % 2 !== 0) {
-            return false;
-        }
-        n = n / 2;
-        console.log(n)
-    }
-    return true;
-}
+// function isPowser(n: number) {
+//     if (n < 1) {
+//         return false;
+//     }
+//     while (n > 1) {
+//         if (n % 2 !== 0) {
+//             return false;
+//         }
+//         n = n / 2;
+//         console.log(n)
+//     }
+//     return true;
+// }
 
-console.log(isPowser(1));
-console.log(isPowser(2));
-console.log(isPowser(5));
+// console.log(isPowser(1));
+// console.log(isPowser(2));
+// console.log(isPowser(5));
 
-const numbers = [45, 4, 9, 16, 25];
-let allOver18 = numbers.every(myFunction);
+// const numbers = [45, 4, 9, 16, 25];
+// let allOver18 = numbers.every(myFunction);
 
-function myFunction(value, index, array) {
-    return value > 18;
-}
+// function myFunction(value, index, array) {
+//     return value > 18;
+// }
 
-Math.floor(Math.random() * 100);
+// Math.floor(Math.random() * 100);
+
