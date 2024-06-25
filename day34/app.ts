@@ -89,3 +89,31 @@
 
 // Math.floor(Math.random() * 100);
 
+const myProducts = [
+    {id: 1, name: "phone", price:3000000},
+    {id: 2, name: "labtop", price:2000000},
+    {id: 3, name: "pencile", price:4000000},
+    {id: 4, name: "book", price:3500000},
+    {id: 5, name: "car", price:9000000},
+    {id: 6, name: "palding", price:11000000},
+    {id: 7, name: "show", price:2000000},
+    {id: 8, name: "galsses", price:755000000},
+    {id: 9, name: "airpade", price:7000},
+];
+
+// let pagnation = 0
+// let counterEnd = 5;
+
+let pagnation = 0;
+const itemsPerPage = 5;
+
+function displayProducts() {
+    let counterStart = pagnation * itemsPerPage;
+    let counterEnd = counterStart + itemsPerPage;
+
+    const newProduct = myProducts.slice(counterStart, counterEnd);
+    console.log(newProduct);
+}
+pagnation++
+pagnation++ 
+console.log(displayProducts())
