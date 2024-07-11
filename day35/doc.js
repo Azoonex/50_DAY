@@ -64,3 +64,12 @@
 // let fruits = ['Apple', 'Orange', 'Apple']
 
 // console.log(fruits.indexOf("Apple"))
+
+let arr =  [ 'mboch value', 'default value', 'chocklat value', 'pofake value', 'chempse value' ]
+const fillter = arr.filter(i => i === "default value")
+
+if (fillter === "default value"){
+    console.log("true")
+}else {
+    console.log('false')
+}
