@@ -50,3 +50,5 @@ let fun: whide & hight = {
         
     },
 }
+
+let human : 20 | 30 = 30
