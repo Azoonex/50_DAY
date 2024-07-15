@@ -34,21 +34,35 @@ function proccedItems(item: string | number): number {
 }
 
 
-type whide = {
-    uiSize: () => void
-}
+// type whide = {
+//     uiSize: () => void
+// }
 
-type hight = {
-    uxSize: () => void
-}
+// type hight = {
+//     uxSize: () => void
+// }
 
-let fun: whide & hight = {
-    uiSize(){
+// let fun: whide & hight = {
+//     uiSize(){
 
-    },
-    uxSize() {
+//     },
+//     uxSize() {
         
-    },
-}
+//     },
+// }
 
-let human : 20 | 30 = 30
+// let human : 20 | 30 = 30
+
+// data types
+
+const wrold = "we'll cover them in general and in the next chapter we'll talk about  each of them in detial"
+
+//Number
+
+let n = 111;
+
+console.log('names' / 2)
+
+let names = 'john'
+
+console.log(`hello ${names} !`)
