@@ -33,7 +33,6 @@ function proccedItems(item: string | number): number {
     return 2;
 }
 
-
 // type whide = {
 //     uiSize: () => void
 // }
@@ -47,7 +46,7 @@ function proccedItems(item: string | number): number {
 
 //     },
 //     uxSize() {
-        
+
 //     },
 // }
 
@@ -55,24 +54,37 @@ function proccedItems(item: string | number): number {
 
 // data types
 
-const wrold = "we'll cover them in general and in the next chapter we'll talk about  each of them in detial"
+const wrold =
+    "we'll cover them in general and in the next chapter we'll talk about  each of them in detial";
 
 //Number
 
 let n = 111;
 
-console.log('names' / 2)
+console.log("names" / 2);
 
-let names = 'john'
+let names = "john";
 
-console.log(`hello ${names} !`)
+console.log(`hello ${names} !`);
 
-type Age = string | null 
+type Age = string | null;
 
-const ali : Age = '22'
+const ali: Age = "22";
 
-const reza:undefined;
+("object type not work to do that we can use the if statement and the ");
 
-'object type not work'
+("the if () statement evaluates the expressions int he parentess ad converts the result tot a boolean ");
+
+if (2233) {
+    console.log("not found")
+} else if (2 > 1){
+    console.log('mmade')
+} else{
+    confirm.log('not found')
+}
+
+let result = (22 > 33)  ? console.log('value 1') : console.log("value 2")
+
+let mes = (22 > 33) ? "hello man" : (33 < 22) ? "hello boy" : 22 > 33 ? "hello new" : "hello"
 
 
