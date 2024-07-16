@@ -66,3 +66,13 @@ console.log('names' / 2)
 let names = 'john'
 
 console.log(`hello ${names} !`)
+
+type Age = string | null 
+
+const ali : Age = '22'
+
+const reza:undefined;
+
+'object type not work'
+
+
