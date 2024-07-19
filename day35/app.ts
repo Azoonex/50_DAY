@@ -80,11 +80,35 @@ if (2233) {
 } else if (2 > 1){
     console.log('mmade')
 } else{
-    confirm.log('not found')
+    console.log('not found')
 }
 
 let result = (22 > 33)  ? console.log('value 1') : console.log("value 2")
 
 let mes = (22 > 33) ? "hello man" : (33 < 22) ? "hello boy" : 22 > 33 ? "hello new" : "hello"
+
+const api = ['data','items','caractrer',1,2,3,4,1,44,66,55,5,6,7,8]
+
+const resposve = api.find(i => i === 'data')
+const res2 = api.find(i => {
+    if(i === 'amir' ){
+        return '1'
+    } else {
+        return '-1'
+    }
+})
+
+
+const res3 = api.filter(i => i > 0)
+const setApi = new Set(api)
+
+
+console.log(resposve,res2,res3)
+console.log(setApi)
+
+const items = api.entries()
+
+console.log(items)
+
 
 
