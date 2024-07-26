@@ -45,3 +45,12 @@ var s = (side1 + side2 + side3) / 2;
 var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
 console.log(area);
 //JavaScript Basic: Exercise-4 with Solution program to find the area of a triangle 
+var arr = [1, 2, 3, 4, 5];
+for (var i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+        console.log(arr[i] + 'is odd');
+    }
+    else {
+        console.log(arr[i] + 'is evan');
+    }
+}
