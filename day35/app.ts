@@ -110,5 +110,14 @@ const items = api.entries()
 
 console.log(items)
 
+// add word
+// be have do say go can get would  get can go say do make know know will think think want look use find give  tell work may should call try ask need feel become feel need ask try call should may work tell give find use ask need feel becom leave put mean keep let mean keep let begin seem seem help talk help seem seem begin let keep mean put leave become feel need ask start might might might show hear play run move likelike live believe show bring bring bring bring happen functionhappen happen must must must must must must mutst write provide provider sit stand lose stand lose pay meet include continue continue continue continue set include include continu continue set include meet pay lose stand sit sit stand watch understand understand understand watch  follow stop create speak read allow read speak create stop follow watch understand lead change learn set continue speak read allow  add spend spend grow open walk win offer remember love consider appear consider consider appear 
+// remember 
+// offer 
+// consider 
+// appear 
+// buy
+// wait wait buy serve die send expect build stay fall cut reach kill remain remain remain kill reach cut fall stay build expect send die serve wait buy remain kill reach cut fall stay build expect send die serve wait but
+
 
 
