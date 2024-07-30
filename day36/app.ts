@@ -2,17 +2,22 @@
 
 // solution 5 exrcise exerciese
 
-const demoTage = document.getElementById("demo") as HTMLElement;
+// const demoTage = document.getElementById("demo") as HTMLElement;
 
-function animate_string(elemetn: HTMLElement): void {
-    let textNode = demoTage.childNodes[0] as Text;
-    let text = textNode.data;
+// function animate_string(elemetn: HTMLElement): void {
+//     let textNode = demoTage.childNodes[0] as Text;
+//     let text = textNode.data;
 
-    setInterval(function () {
-        text = text[text.length - 1] + text.substring(0, text.length - 1);
-        textNode.data = text;
-    }, 100);
-}
-if(demoTage){
-    animate_string(demoTage)
-}
+//     setInterval(function () {
+//         text = text[text.length - 1] + text.substring(0, text.length - 1);
+//         textNode.data = text;
+//     }, 100);
+// }
+// if(demoTage){
+//     animate_string(demoTage)
+// }
+
+// 6 : Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.  
+
+
+// lightweight lightweight lanuage language language inside provide provide programmatic
