@@ -20,4 +20,6 @@
 // 6 : Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.  
 
 
-// lightweight lightweight lanuage language language inside provide provide programmatic
+// lightweight lightweight lanuage language language inside provide provide programmatic approach
+
+// to check if the 1st january of a year is a sunday we can use the date obect js create a date object for the 1 set january of each year and 
