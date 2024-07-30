@@ -23,3 +23,23 @@
 // lightweight lightweight lanuage language language inside provide provide programmatic approach
 
 // to check if the 1st january of a year is a sunday we can use the date obect js create a date object for the 1 set january of each year and 
+
+// for(let year = 2014 ; year <= 2050;year++){
+//     let d = new Date(year,0,1)
+
+//     if(d.getDay() === 0){
+//         console.log('1set january is beging a sunday ' + year)
+//     }
+// }
+
+// glowchart soluation 8
+
+// let num = Math.ceil(Math.random() * 10);
+// // let sum = math.ceil(math.radom() * 10)
+// let progmet = 10
+
+// if(num === progmet){
+//     console.log('this nice work!')
+// } else{ 
+//     console.log('not matched ,the number was' + num);
+// }
