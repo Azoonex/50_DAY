@@ -44,3 +44,19 @@
 //     console.log('not matched ,the number was' + num);
 // }
 // remain . kill . reach . remain . cut . fall . stay . build . build . expect . sende . die . serve . wait . serve . die . send . wait . buy . appear . consider . appear . buy . wait . love . remember . offer . win . walk . walk . open .grow . spend . add .allow . win . offer . remember . love consider . consider appear . but . read . speak create . stop . follow . watch understand . lead . change . learn set continue . incluse meet pay lose stand . sit . provide . write . bring . hold hold . believe . live . like happen . must . provide . sit .stand .lose .pay . live . like write . provide . sit . stand . lose . pay . meet include . continue . set . lean
+
+let today  = new Date()
+
+var cmas = new Date(today.getFullYear(),11,25)
+
+if(today.getMonth() === 11 && today.getDay() > 25){
+    cmas.setFullYear(cmas.getFullYear() + 1)
+}
+
+
+var one_day = 1000 * 60 * 60 * 24;
+
+console.log(
+    Math.ceil((cmas.getTime() - today.getTime()) / one_day) +
+        " days left until Christmas!"
+); 
