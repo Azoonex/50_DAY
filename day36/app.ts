@@ -67,3 +67,13 @@ console.log(filename.split('.'))
 let names = "search&search&items&city&specialty"
 
 console.log(names.split('&'))
+
+function difference(n:number){
+    if(n <= 13){
+        return 13 -n
+    } else { 
+        return (n - 13) * 2
+    }
+}
+
+console.log(difference(55));
