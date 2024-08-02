@@ -61,3 +61,9 @@ console.log(
         " days left until Christmas!"
 ); 
 
+let filename = 'sstem.php.token.base.createing.bonde'
+
+console.log(filename.split('.'))
+let names = "search&search&items&city&specialty"
+
+console.log(names.split('&'))

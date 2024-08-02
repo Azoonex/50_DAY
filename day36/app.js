@@ -39,3 +39,7 @@ if (today.getMonth() === 11 && today.getDay() > 25) {
 var one_day = 1000 * 60 * 60 * 24;
 console.log(Math.ceil((cmas.getTime() - today.getTime()) / one_day) +
     " days left until Christmas!");
+var filename = 'sstem.php.token.base.createing.bonde';
+console.log(filename.split('.'));
+var names = "search&search&items&city&specialty";
+console.log(names.split('&'));
