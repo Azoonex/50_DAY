@@ -52,3 +52,9 @@ function difference(n) {
     }
 }
 console.log(difference(55));
+// solation 15 create
+function testhundred(num) {
+    var news = ((Math.abs(100 - num) <= 20) || (Math.abs(400 - num) <= 20));
+    return news;
+}
+console.log(testhundred(5));
