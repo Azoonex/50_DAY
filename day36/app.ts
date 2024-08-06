@@ -115,3 +115,22 @@ console.log(
 // [] return (x + y)
 // END
 
+// solation 17
+// compute the absolute difference between a specified number and 19
+// specified / approprate / compution
+
+function computeSum(num: number) {
+    if (num <= 19) {
+        return 19 - num;
+    } else {
+        return (num - 19) * 3;
+    }
+}
+
+console.log(computeSum(17));
+// algorithm
+// () funciton computesum
+// <> n < 19 ?
+// []  reutnr 19 -n 
+// []  return n -19 * 3
+// END
