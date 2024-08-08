@@ -111,3 +111,20 @@ function test50(x, y) {
     return x == 50 || y == 50 || x + y == 50;
 }
 console.log(test50(25, 25));
+//algorithm
+//() function test50(x,y) : Numbers
+// [] return x == 50 || y == 50 || x + y == 50 // output calling boolean true | false
+// end
+// exercise 19 with solution
+// my code
+function checkNumber(x) {
+    if (x >= 100 || x >= 400) {
+        return true;
+    }
+    return false;
+}
+console.log(checkNumber(20));
+function testhundred(x) {
+    return Math.abs(100 - x) <= 20 || Math.abs(400 - x) <= 20;
+}
+console.log(testhundred(100));
