@@ -89,3 +89,25 @@ function computeSum(num) {
     }
 }
 console.log(computeSum(17));
+// algorithm
+// () funciton computesum
+// <> n < 19 ?
+// []  reutnr 19 -n
+// []  return n -19 * 3
+// END
+// js basic exrcise solation 18
+// my code
+function checkingSum(numone, numTwo) {
+    if (numone + numTwo === 50) {
+        return numone + numTwo + 50;
+    }
+    else {
+        return 50;
+    }
+    return 50;
+}
+console.log(checkingSum(20, 40));
+function test50(x, y) {
+    return x == 50 || y == 50 || x + y == 50;
+}
+console.log(test50(25, 25));

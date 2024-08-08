@@ -131,6 +131,33 @@ console.log(computeSum(17));
 // algorithm
 // () funciton computesum
 // <> n < 19 ?
-// []  reutnr 19 -n 
+// []  reutnr 19 -n
 // []  return n -19 * 3
 // END
+
+// js basic exrcise solation 18
+// my code
+function checkingSum(numone: number, numTwo: number) {
+    if (numone + numTwo === 50) {
+        return numone + numTwo + 50;
+    } else {
+        return 50;
+    }
+    return 50;
+}
+
+console.log(checkingSum(20, 40));
+// solution
+
+type Numbers = number;
+
+function test50(x: Numbers, y: Numbers) {
+    return x == 50 || y == 50 || x + y == 50;
+}
+
+console.log(test50(25, 25));
+
+//algorithm
+//() function test50(x,y) : Numbers
+// [] return x == 50 || y == 50 || x + y == 50 // output calling boolean true | false
+// end
