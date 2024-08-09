@@ -174,8 +174,46 @@ function checkNumber(x: number) {
 
 console.log(checkNumber(20));
 
-function testhundred(x: number) {
+function testhundreds(x: number) {
     return Math.abs(100 - x) <= 20 || Math.abs(400 - x) <= 20;
 }
 
-console.log(testhundred(100))
+console.log(testhundreds(100));
+
+// exercise 20
+// write a js program to check two  given intergers whether one is positeve and another one is negative
+
+function CheckState(x: Numbers, y: Numbers) {
+    if (x < 0 || (x !== 0 && y > 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(CheckState(-20, 20));
+// nice wrok for solation 20
+// exercise 21
+// codemy
+function checkText(py: string) {
+    if (py.indexOf("py")) {
+        return true;
+    }
+    return false;
+}
+
+function string_check(star1:string){
+    if(star1.substring(0,2) === 'py'){
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(string_check('pyton'))
+
+// algorithm 
+// (str) string_cehech
+// <> str.substring(0,2) === 'py' return true else return false
+// END
+

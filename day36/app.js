@@ -124,7 +124,36 @@ function checkNumber(x) {
     return false;
 }
 console.log(checkNumber(20));
-function testhundred(x) {
+function testhundreds(x) {
     return Math.abs(100 - x) <= 20 || Math.abs(400 - x) <= 20;
 }
-console.log(testhundred(100));
+console.log(testhundreds(100));
+// exercise 20
+// write a js program to check two  given intergers whether one is positeve and another one is negative
+function CheckState(x, y) {
+    if (x < 0 || (x !== 0 && y > 0)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(CheckState(-20, 20));
+// nice wrok for solation 20
+// exercise 21
+// codemy
+function checkText(py) {
+    if (py.indexOf("py")) {
+        return true;
+    }
+    return false;
+}
+function string_check(star1) {
+    if (star1.substring(0, 2) === 'py') {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(string_check('pyton'));
