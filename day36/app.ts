@@ -202,18 +202,29 @@ function checkText(py: string) {
     return false;
 }
 
-function string_check(star1:string){
-    if(star1.substring(0,2) === 'py'){
-        return true
+function string_check(star1: string) {
+    if (star1.substring(0, 2) === "py") {
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
-console.log(string_check('pyton'))
+console.log(string_check("pyton"));
 
-// algorithm 
+// algorithm
 // (str) string_cehech
 // <> str.substring(0,2) === 'py' return true else return false
 // END
 
+function removeCharacter(s: string, char_pos: number) {
+    let part1 = s.substring(0, char_pos);
+    let part2 = s.substring(char_pos + 1, s.length);
+    // 3 , 4 i remove
+
+    return part1 + part2;
+}
+
+console.log(removeCharacter("AMIR", 2));
+
+// how work solation 22 fixed

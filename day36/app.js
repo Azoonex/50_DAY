@@ -149,11 +149,22 @@ function checkText(py) {
     return false;
 }
 function string_check(star1) {
-    if (star1.substring(0, 2) === 'py') {
+    if (star1.substring(0, 2) === "py") {
         return true;
     }
     else {
         return false;
     }
 }
-console.log(string_check('pyton'));
+console.log(string_check("pyton"));
+// algorithm
+// (str) string_cehech
+// <> str.substring(0,2) === 'py' return true else return false
+// END
+function removeCharacter(s, char_pos) {
+    var part1 = s.substring(0, char_pos);
+    var part2 = s.substring(char_pos + 1, s.length);
+    // 3 , 4 i remove
+    return part1 + part2;
+}
+console.log(removeCharacter("AMIR", 2));
