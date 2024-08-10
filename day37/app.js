@@ -12,13 +12,28 @@ function remove_mid_char(s) {
     if (s.length <= 1)
         return s;
     var mid_chat = s.substring(1, s.length - 1);
-    return (s.charAt(s.length - 1)) + mid_chat + s.charAt(0);
+    return s.charAt(s.length - 1) + mid_chat + s.charAt(0);
     // amir / amir - 1 => a + mi + a
 }
-console.log(remove_mid_char('amir'));
+console.log(remove_mid_char("amir"));
 // algorithem
 // () fn remove mid_char
-// <> s.lenght <=1 
+// <> s.lenght <=1
 // [] mid = s.substirng(1,s.length -1) return s.cahtAt s.length - 212 mid_char + s.chatAt(0)
 // [] return s
+// END
+function checkNumber(num) {
+    if (num) {
+        if (num % 3 === 0 || num % 7 === 0) {
+            return true;
+        }
+        else
+            return false;
+    }
+}
+console.log(checkNumber(99));
+//algorithem
+// function checkNumber(num)
+// num % 3 === 0 || num % 7 === 0
+// retunr turn | return false 
 // END
