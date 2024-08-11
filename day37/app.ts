@@ -39,11 +39,27 @@ function checkNumber(num: number) {
     }
 }
 
-console.log(checkNumber(99))
+console.log(checkNumber(99));
 
 //algorithem
 // function checkNumber(num)
 // num % 3 === 0 || num % 7 === 0
-// retunr turn | return false 
+// retunr turn | return false
 // END
 
+// solation 25
+function chnageCharc(s: string) {
+    if (s.length > 3) {
+        let s_len = 3;
+        let back = s.substring(s.length - 3);
+        return back + s_len + back;
+    }
+    return false;
+}
+
+console.log(chnageCharc("amirabas"));
+// () function front_back(str)
+// <> str.lenght >= 3 ?
+// [] s_len = 3 back = s.substring(s.length - 3) return back + st+ back
+// [] return false
+// END
