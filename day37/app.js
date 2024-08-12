@@ -64,3 +64,20 @@ function front_back(s) {
 }
 console.log(front_back('amir'));
 // nice sample solaution 24
+// () front_back
+// [] if(s.length > 0) let newString = s.slice(0,1) return s + newString + s else return false
+// End
+function creatore(s) {
+    if (s.length > 3) {
+        var back = s.substring(s.length - 3);
+        return back + s + back;
+    }
+    else {
+        return false;
+    }
+}
+// () creator 
+// <> if(s.length > 0)
+// [] let back = s.substring(s.length - 3) return  back + s + back
+// [] return false
+// END
