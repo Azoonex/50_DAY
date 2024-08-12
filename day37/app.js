@@ -62,7 +62,7 @@ function front_back(s) {
         return false;
     }
 }
-console.log(front_back('amir'));
+console.log(front_back("amir"));
 // nice sample solaution 24
 // () front_back
 // [] if(s.length > 0) let newString = s.slice(0,1) return s + newString + s else return false
@@ -76,8 +76,27 @@ function creatore(s) {
         return false;
     }
 }
-// () creator 
+// () creator
 // <> if(s.length > 0)
 // [] let back = s.substring(s.length - 3) return  back + s + back
 // [] return false
+// END
+function checkspecialText(text) {
+    if (text.length > 4) {
+        var cuteText = text.substring(0, 4);
+        var specialteText = "java";
+        console.log(cuteText);
+        if (cuteText === specialteText) {
+            return true;
+        }
+        return false;
+    }
+}
+console.log(checkspecialText("javascript"));
+// algorithem => text
+// () checkspecialText
+// <> string > 4  no return false
+// [] cuteText = text.substring(0,4)
+// <> cuteText === 'java'
+// return true else return false
 // END
