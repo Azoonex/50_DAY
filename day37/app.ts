@@ -63,3 +63,18 @@ console.log(chnageCharc("amirabas"));
 // [] s_len = 3 back = s.substring(s.length - 3) return back + st+ back
 // [] return false
 // END
+
+function front_back(s:string){
+    // with the first character of the given string added
+    if(s.length > 0){
+        let newstring = s.slice(0, 2);
+        return newstring + s + newstring
+    } else {
+        return false
+    }
+}
+
+console.log(front_back('amir'))
+
+        let newstring = s.slice(0,1)
+// nice sample solaution 24
