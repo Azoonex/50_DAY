@@ -135,10 +135,10 @@ console.log(checkInteger(60));
 // END 29
 
 function checkScript(text: string) {
-    let textScriptappear = text.substring(10,40);
+    let textScriptappear = text.substring(10, 40);
     if (text.length > 4) {
         if (textScriptappear === "Script") {
-            return ;
+            return;
         } else {
             return text;
         }
@@ -147,3 +147,66 @@ function checkScript(text: string) {
 
 console.log(checkScript("JavaScript"));
 
+type NUMBRS = number;
+
+function findLg(a: NUMBRS, b: NUMBRS, c: NUMBRS) {
+    return Math.max(a, b, c);
+}
+
+console.log(findLg(22, 3, 4));
+
+// sotion 32
+
+function findvalue(x: NUMBRS, y: NUMBRS) {
+    if (x != y) {
+        let x1 = Math.abs(x - 100);
+        let y1 = Math.abs(y - 100);
+        if (x1 < y1) {
+            return x + "this is x";
+        } else {
+            return y + "this is y";
+        }
+    } else {
+        return false;
+    }
+}
+
+console.log(findvalue(70, 54));
+
+// solation 33
+
+function checkRange(x: NUMBRS, y: NUMBRS) {
+    if (
+        x >= 40 &&
+        x >= 60 &&
+        x >= 70 &&
+        x >= 100
+         &&
+        y >= 40 &&
+        y >= 60 &&
+        y >= 100
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(checkRange(100, 20));
+
+// solation 34
+
+function findLargeIntger (x:NUMBRS,y:NUMBRS){
+   if(x >= y && x >= 40 && x <= 60){
+    return 'x the big'
+   }  else if (y >= x && y >= 40 && y <= 60) {
+       return "y the big";
+   }  else {
+    return false
+   }
+
+}
+
+console.log(findLargeIntger(60,55))
+
+// solation 35

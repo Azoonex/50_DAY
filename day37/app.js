@@ -123,3 +123,55 @@ function checkScript(text) {
     }
 }
 console.log(checkScript("JavaScript"));
+function findLg(a, b, c) {
+    return Math.max(a, b, c);
+}
+console.log(findLg(22, 3, 4));
+// sotion 32
+function findvalue(x, y) {
+    if (x != y) {
+        var x1 = Math.abs(x - 100);
+        var y1 = Math.abs(y - 100);
+        if (x1 < y1) {
+            return x + "this is x";
+        }
+        else {
+            return y + "this is y";
+        }
+    }
+    else {
+        return false;
+    }
+}
+console.log(findvalue(70, 54));
+// solation 33
+function checkRange(x, y) {
+    if (x >= 40 &&
+        x >= 60 &&
+        x >= 70 &&
+        x >= 100
+        &&
+            y >= 40 &&
+        y >= 60 &&
+        y >= 100) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(checkRange(100, 20));
+// solation 34
+function findLargeIntger(x, y) {
+    if (x >= y && x >= 40 && x <= 60) {
+        return 'x the big';
+    }
+    else if (y >= x && y >= 40 && y <= 60) {
+        return "y the big";
+    }
+    else {
+        return false;
+    }
+}
+console.log(findLargeIntger(60, 55));
+// solation 35
