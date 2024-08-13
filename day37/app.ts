@@ -101,7 +101,7 @@ function checkspecialText(text: string) {
         const cuteText = text.substring(0, 4);
         const specialteText = "java";
 
-        console.log(cuteText)
+        console.log(cuteText);
 
         if (cuteText === specialteText) {
             return true;
@@ -118,21 +118,49 @@ console.log(checkspecialText("javascript"));
 // [] cuteText = text.substring(0,4)
 // <> cuteText === 'java'
 // return true else return false
-// END 27
+// END 28
 
-function checkInteger (one:number){
-    if(one >= 50 && one <= 99){
-        return true
-    } return false
+function checkInteger(one: number) {
+    if (one >= 50 && one <= 99) {
+        return true;
+    }
+    return false;
 }
 
-
-console.log(checkInteger(60))
+console.log(checkInteger(60));
 
 // () check_integer
-// <> x >= 50 && x <= 99 
+// <> x >= 50 && x <= 99
 // [] return true || return false
-// END
+// END 29
 
+function checkScript(text: string) {
+    let textScriptappear = text.substring(10,40);
+    if (text.length > 4) {
+        if (textScriptappear === "Script") {
+            return ;
+        } else {
+            return text;
+        }
+    }
+}
 
+console.log(checkScript("JavaScript"));
 
+// new world
+// loud => 
+// the man 's voice was so loud that we all could hear him
+// nervous => adj nervous 
+// the boy become nervous when he heard the news
+// noise => the crying baby made a loud noise
+// project => 
+// his oafternoon work project was to parint th room green
+// scare => scare my uncle was scard by what he saw in the room
+// scret => the two boys were sharing a scret 
+// shout => my boss shouted at me becomse i was late for work
+// my boss shouted at me because i was late for work
+// smell the two frends smellded the flower
+// smell the two frinds smellded the flower
+// terrible => the way he treated his clasmate was terrible
+// the way he treated his classmate was trrible
+// worse business was worse thiss month than last month 

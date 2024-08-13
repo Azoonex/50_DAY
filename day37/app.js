@@ -99,7 +99,7 @@ console.log(checkspecialText("javascript"));
 // [] cuteText = text.substring(0,4)
 // <> cuteText === 'java'
 // return true else return false
-// END 27
+// END 28
 function checkInteger(one) {
     if (one >= 50 && one <= 99) {
         return true;
@@ -108,6 +108,18 @@ function checkInteger(one) {
 }
 console.log(checkInteger(60));
 // () check_integer
-// <> x >= 50 && x <= 99 
+// <> x >= 50 && x <= 99
 // [] return true || return false
-// END
+// END 29
+function checkScript(text) {
+    var textScriptappear = text.substring(10, 40);
+    if (text.length > 4) {
+        if (textScriptappear === "Script") {
+            return;
+        }
+        else {
+            return text;
+        }
+    }
+}
+console.log(checkScript("JavaScript"));
