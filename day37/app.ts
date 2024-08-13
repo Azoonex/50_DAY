@@ -147,20 +147,3 @@ function checkScript(text: string) {
 
 console.log(checkScript("JavaScript"));
 
-// new world
-// loud => 
-// the man 's voice was so loud that we all could hear him
-// nervous => adj nervous 
-// the boy become nervous when he heard the news
-// noise => the crying baby made a loud noise
-// project => 
-// his oafternoon work project was to parint th room green
-// scare => scare my uncle was scard by what he saw in the room
-// scret => the two boys were sharing a scret 
-// shout => my boss shouted at me becomse i was late for work
-// my boss shouted at me because i was late for work
-// smell the two frends smellded the flower
-// smell the two frinds smellded the flower
-// terrible => the way he treated his clasmate was terrible
-// the way he treated his classmate was trrible
-// worse business was worse thiss month than last month 
