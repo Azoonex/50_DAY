@@ -199,16 +199,32 @@ function check_carh(char1, char) {
         return true;
     return false;
 }
-console.log(check_carh('reza', 'a'));
+console.log(check_carh("reza", "a"));
 // algoritem
 // () check_cahr(str1,char)
 // [] ctr = 0 \ let i = 0
-// <> i < str.lengh ? 
+// <> i < str.lengh ?
 // <> <true> str.charAt(i) == char && i >= 1 && i <= 3 ?
 // [] yes ctr = 1
 // [] no i++
-// ctr = 1 
+// ctr = 1
 // return true
 // return false
-// END 
-// 
+// END
+// solation 36
+// check whether the last digit of the three given postitive integers is same
+// function check_digit(x: NUMBRS, y: NUMBRS, z: NUMBRS) {
+//     if (x > 0 && y > 0 && z > 0) {
+//         return x % 10 === y % 10 && y % 10 === z % 10 && x % 10 === z % 10;
+//     }
+//     return false;
+// }
+// console.log(check_digit(500, 300, 200));
+function check_digit(x, y, z) {
+    if (x > 0 && y > 0 && z > 0) {
+        return x % 10 === y % 10 && y % 10 === z % 10 && x % 10 === z % 10;
+    }
+    return false;
+}
+console.log(check_digit(20, 100, 200));
+//
