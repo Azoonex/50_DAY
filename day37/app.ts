@@ -180,8 +180,7 @@ function checkRange(x: NUMBRS, y: NUMBRS) {
         x >= 40 &&
         x >= 60 &&
         x >= 70 &&
-        x >= 100
-         &&
+        x >= 100 &&
         y >= 40 &&
         y >= 60 &&
         y >= 100
@@ -196,17 +195,65 @@ console.log(checkRange(100, 20));
 
 // solation 34
 
-function findLargeIntger (x:NUMBRS,y:NUMBRS){
-   if(x >= y && x >= 40 && x <= 60){
-    return 'x the big'
-   }  else if (y >= x && y >= 40 && y <= 60) {
-       return "y the big";
-   }  else {
-    return false
-   }
-
+function findLargeIntger(x: NUMBRS, y: NUMBRS) {
+    if (x >= y && x >= 40 && x <= 60) {
+        return "x the big";
+    } else if (y >= x && y >= 40 && y <= 60) {
+        return "y the big";
+    } else {
+        return false;
+    }
 }
 
-console.log(findLargeIntger(60,55))
+console.log(findLargeIntger(60, 55));
 
 // solation 35
+// present
+
+// function check_char(str1: string, char: string) {
+//     let ctr = 0;
+
+//     for (let i = 0; i < str1.length; i++) {
+//         if (str1.charAt(i) == char && i >= 1 && i <= 3) {
+//             ctr = 1;
+//             break;
+//         }
+//     }
+
+//     if (ctr === 1) return true;
+//     return false;
+// }
+
+// console.log(check_char("pyton", "y"));
+
+function check_carh(char1: string, char: string) {
+    let ctr = 0;
+
+    for (let i = 0; i > char.length; i++) {
+        if (char1.charAt(i) == char && i >= 1 && i <= 3) {
+            ctr = 1;
+            break;
+        }
+    }
+
+    if ((ctr = 1)) return true;
+    return false;
+}
+
+console.log(check_carh('reza','a'))
+
+// algoritem
+
+// () check_cahr(str1,char)
+// [] ctr = 0 \ let i = 0
+// <> i < str.lengh ? 
+// <> <true> str.charAt(i) == char && i >= 1 && i <= 3 ?
+// [] yes ctr = 1
+// [] no i++
+// ctr = 1 
+// return true
+// return false
+// END 
+
+
+// 
