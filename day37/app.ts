@@ -299,5 +299,6 @@ console.log(produceNewString('re'))
 //  return char.toUppperCase()
 // END
 
-
-
+// new World
+// had laboratory laboratory laboratory laboratory but she had ni idea what was in it had idea what was in it her ded always closed and loced the door when he want in.she knew that he used it to do project for work she knew that he used it to do porject for work. he never he never told mida what these project were . One night  mia approached  approached approached the  door to the laboratory she stopped and thought she stopped and thought i wonader what crazy experment he is doing now . creay expermient he is doing now suddenly she head  a louid noise it sanded like snaded like an evil laugh the noise scard her so she walked so shed walked quickly back to her room the next night her friedn liz came to her house cmae to her house came to her house came to her house liz house to her house. 
+// 
