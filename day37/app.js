@@ -232,11 +232,11 @@ function produceNewString(char) {
     if (char.length < 3) {
         return char.toUpperCase();
     }
-    var front_part = (char.substring(0, 3).toLowerCase());
+    var front_part = char.substring(0, 3).toLowerCase();
     var back_part = char.substring(3, char.length);
     return front_part + back_part;
 }
-console.log(produceNewString('re'));
+console.log(produceNewString("re"));
 // () productnewstring
 // <> strong.lenght < 3 ?
 // [] front char.substring(0,3).toLowerCase()
@@ -244,8 +244,22 @@ console.log(produceNewString('re'));
 //  return char.toUppperCase()
 // END
 // new World
-// had laboratory laboratory laboratory laboratory but she had ni idea what was in it had idea what was in it her ded always closed and loced the door when he want in.she knew that he used it to do project for work she knew that he used it to do porject for work. he never he never told mida what these project were . One night  mia approached  approached approached the  door to the laboratory she stopped and thought she stopped and thought i wonader what crazy experment he is doing now . creay expermient he is doing now suddenly she head  a louid noise it sanded like snaded like an evil laugh the noise scard her so she walked so shed walked quickly back to her room the next night her friedn liz came to her house cmae to her house came to her house came to her house liz house to her house. 
+// had laboratory laboratory laboratory laboratory but she had ni idea what was in it had idea what was in it her ded always closed and loced the door when he want in.she knew that he used it to do project for work she knew that he used it to do porject for work. he never he never told mida what these project were . One night  mia approached  approached approached the  door to the laboratory she stopped and thought she stopped and thought i wonader what crazy experment he is doing now . creay expermient he is doing now suddenly she head  a louid noise it sanded like snaded like an evil laugh the noise scard her so she walked so shed walked quickly back to her room the next night her friedn liz came to her house cmae to her house came to her house came to her house liz house to her house.
 // when liz arrived mia told her about the night befor . mia told her about the night befor wehn liz arrived mia told her about the night befor oh it was terrible it was terrible she said whey dont was see what is in there why dont we see what is in there ? liz asked  ? it will he a fun adventure adventure adventure adventur adventured mia felt nervous about going into her father laboratory . but shed agreed . but she argreed .As always the door was locked the waited unit untied mia fater left hte laboratory to eat dinner 'he didnt lock the door !' liz siad . lets got. the laboratory was dark the grils walked waked carfully mia lsmelled strage chemicals / what terriblething was herfather creating ? sunddonly they heard an evil laugh  / it was even wars than the on mid heard the night before what if a monster was going to kill them ? mia had to do somthing she she shouted for help . mias fater run info the room and turned on the lights . oh no he siad you must have learned my scret ? you mean this he hod a pretty doll in his hands . the doll laughed the laugh didont sound so evil anymore.i made this for you brighday i wanted to given it to you then but you can have it now i hope you like it !
 // finsh course english 6 => now => 7
 // united => تا / they waited => منتظر شدن تا  / walked down =>  رفتن پایین  / sunddonly => یهو
-// 
+// enume
+// tuple
+var admin;
+(function (admin) {
+    admin[admin["main_admin"] = 33] = "main_admin";
+    admin[admin["admin_work"] = 233] = "admin_work";
+    admin["developer"] = "amirabas";
+})(admin || (admin = {}));
+var person = {
+    name: "amirabas",
+    about: "admin",
+    age: 33,
+};
+var back_admin = admin;
+console.log(back_admin.developer);
