@@ -347,3 +347,9 @@ const graph: [number, number] = [55.2, 41.3];
 const [x,z] = graph
 
 console.log(x,z)
+
+// NEW WORLD
+// son / daughter daughter daughter mother father parent baby man woman brother sister family grandfater gradnmother hushbad wife king queen presiedt neighbor boy girl unmarried woman childadult adult human animal friend victim player fan crowd person
+// son daughter father mother parent baby man wonman brother sister family grandfater grandmother husbad wif king quesn president president neighbor boy gril
+
+// zero one two three four five six seven eight nine ten eleven twelve thirteen fourthtenn fifteen sixteen seventeen eightten nineteen twenty twenty one twenty two thirthy one thirthy two thirthy three forty fifty sixty one hundred one hundred one hudredd
