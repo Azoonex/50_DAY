@@ -227,4 +227,19 @@ function check_digit(x, y, z) {
     return false;
 }
 console.log(check_digit(20, 100, 200));
-//
+// solation 37
+function produceNewString(char) {
+    if (char.length < 3) {
+        return char.toUpperCase();
+    }
+    var front_part = (char.substring(0, 3).toLowerCase());
+    var back_part = char.substring(3, char.length);
+    return front_part + back_part;
+}
+console.log(produceNewString('re'));
+// () productnewstring
+// <> strong.lenght < 3 ?
+// [] front char.substring(0,3).toLowerCase()
+// [] back_part char.substring(3,cghar.lentgth);
+//  return char.toUppperCase()
+// END

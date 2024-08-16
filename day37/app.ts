@@ -275,4 +275,29 @@ function check_digit(x: NUMBRS, y: NUMBRS, z: NUMBRS) {
 }
 
 console.log(check_digit(20, 100, 200));
-//
+// solation 37
+
+function produceNewString(char: string){
+    if(char.length < 3 ){
+        return char.toUpperCase()
+    }
+
+    let front_part = (char.substring(0,3).toLowerCase());
+    let back_part = char.substring(3,char.length)
+
+    return front_part + back_part
+
+}
+
+
+console.log(produceNewString('re'))
+
+// () productnewstring
+// <> strong.lenght < 3 ?
+// [] front char.substring(0,3).toLowerCase()
+// [] back_part char.substring(3,cghar.lentgth);
+//  return char.toUppperCase()
+// END
+
+
+
