@@ -310,7 +310,7 @@ console.log(produceNewString("re"));
 enum admin {
     main_admin = 33,
     admin_work = 233,
-    developer = 'amirabas'
+    developer = "amirabas",
 }
 
 let person: {
@@ -323,7 +323,14 @@ let person: {
     age: 33,
 };
 
-
-let back_admin = admin
+let back_admin = admin;
 
 console.log(back_admin.developer);
+
+function combine(input1: string | number, input2: string | number) {
+    if(typeof input1 === 'number' && typeof input2 === 'number'){
+        return input1 + input2
+    } else {
+        return input1.toString() + input2.toString()
+    }
+}
