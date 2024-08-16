@@ -316,7 +316,7 @@ enum admin {
 let person: {
     name: string;
     age: number;
-    about: "admin" | "manager";
+    about: "admin" | "manager"; // this is litral type 
 } = {
     name: "amirabas",
     about: "admin",
@@ -327,10 +327,11 @@ let back_admin = admin;
 
 console.log(back_admin.developer);
 
-function combine(input1: string | number, input2: string | number) {
+function combine(input1: string | number, input2: string | number,resultConnverion: 'admin' | 'employ') {
     if(typeof input1 === 'number' && typeof input2 === 'number'){
         return input1 + input2
     } else {
-        return input1.toString() + input2.toString()
+        return resultConnverion = 'admin'
     }
 }
+console.log(combine(22,'reza',"employ"))
