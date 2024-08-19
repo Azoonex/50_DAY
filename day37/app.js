@@ -308,12 +308,13 @@ console.log(radngeEvaluate(100));
 // [] return false
 // END
 // compute compute compute
-function computeIntgers(num) {
-    if (num >= 50 && num <= 80) {
+function computeIntgers(num1, num2) {
+    var sum = num1 + num2;
+    if (sum >= 50 && sum <= 80) {
         return 65;
     }
     else {
         return 80;
     }
 }
-console.log(computeIntgers(49));
+console.log(computeIntgers(49, 90));
