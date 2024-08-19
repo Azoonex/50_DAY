@@ -386,8 +386,8 @@ console.log(radngeEvaluate(100));
 // END
 // compute compute compute
 
-function computeIntgers(num1: number,num2): number {
-    let sum = num1 + num2
+function computeIntgers(num1: number, num2): number {
+    let sum = num1 + num2;
     if (sum >= 50 && sum <= 80) {
         return 65;
     } else {
@@ -395,4 +395,15 @@ function computeIntgers(num1: number,num2): number {
     }
 }
 
-console.log(computeIntgers(49,90));
+console.log(computeIntgers(49, 90));
+
+function checkEight(num1: number, num2: number) {
+    if (num1 === 8 || num2 === 8) {
+        return true;
+    } else if (num1 + num2 === 8 || Math.abs(num1 - num2) === 8) {
+        return true;
+    } else return false;
+}
+
+console.log(checkEight(8,8 ));
+
