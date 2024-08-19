@@ -407,3 +407,8 @@ function checkEight(num1: number, num2: number) {
 
 console.log(checkEight(8,8 ));
 
+// new world
+
+// victim victim player fan crowd person victim frined frined animal human adult adult animal head neck head neck face brard hair eye mouth nose tooth ear drop tongueback toe finge foot hand leg arm shoulder heart blood brain knee seat diease bone viose skin
+
+// heart heart heat heat heat heat hill island island hill ice fire wave brach sand air leaf grasssta lake root valley flower flower earth wind plant sky forest earth world moon sun tree snow rain mountain mountain river ocean sea 
