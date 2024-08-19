@@ -316,7 +316,7 @@ enum admin {
 let person: {
     name: string;
     age: number;
-    about: "admin" | "manager"; // this is litral type 
+    about: "admin" | "manager"; // this is litral type
 } = {
     name: "amirabas",
     about: "admin",
@@ -327,29 +327,60 @@ let back_admin = admin;
 
 console.log(back_admin.developer);
 
-function combine(input1: string | number, input2: string | number,resultConnverion: 'admin' | 'employ') {
-    if(typeof input1 === 'number' && typeof input2 === 'number'){
-        return input1 + input2
+function combine(
+    input1: string | number,
+    input2: string | number,
+    resultConnverion: "admin" | "employ"
+) {
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        return input1 + input2;
     } else {
-        return resultConnverion = 'admin'
+        return (resultConnverion = "admin");
     }
 }
-console.log(combine(22,'reza',"employ"))
+console.log(combine(22, "reza", "employ"));
 
 // define our readonly tuple
-const ourReadonlyTuple: readonly [number, boolean, string] = [5, true, 'The Real Coding God'];
+const ourReadonlyTuple: readonly [number, boolean, string] = [
+    5,
+    true,
+    "The Real Coding God",
+];
 // throws error as it is readonly.
 
-console.log(ourReadonlyTuple)
+console.log(ourReadonlyTuple);
 
 const graph: [number, number] = [55.2, 41.3];
 
-const [x,z] = graph
+const [x, z] = graph;
 
-console.log(x,z)
+console.log(x, z);
 
 // NEW WORLD
 // son / daughter daughter daughter mother father parent baby man woman brother sister family grandfater gradnmother hushbad wife king queen presiedt neighbor boy girl unmarried woman childadult adult human animal friend victim player fan crowd person
 // son daughter father mother parent baby man wonman brother sister family grandfater grandmother husbad wif king quesn president president neighbor boy gril
 
 // zero one two three four five six seven eight nine ten eleven twelve thirteen fourthtenn fifteen sixteen seventeen eightten nineteen twenty twenty one twenty two thirthy one thirthy two thirthy three forty fifty sixty one hundred one hundred one hudredd
+
+// evaluate evaluate evaluate evaluate student's  student's across
+// receivis / across / various / examinations / determine / grade /garde
+
+function radngeEvaluate(totalMarkrs: number) {
+    // if the total marks fall whitin the range of 89 to 100 (incusive ) the student receives an A+ grade
+
+    if (totalMarkrs >= 90 && totalMarkrs <= 100) {
+        return "the baset status for final-exam A+ garde";
+    } else if (totalMarkrs >= 89 && totalMarkrs <= 100) {
+        return "this is student receives A+ grade";
+    } else {
+        return false;
+    }
+}
+
+console.log(radngeEvaluate(100));
+
+// () radnageEvaluate(totalMarkes)
+// <> totoal >= 90 && totoalmarkrs <= 100 return ''
+// <> totoal >= 90 && totoal <= 100 return ''
+// [] return false
+// END 
