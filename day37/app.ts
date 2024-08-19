@@ -383,4 +383,15 @@ console.log(radngeEvaluate(100));
 // <> totoal >= 90 && totoalmarkrs <= 100 return ''
 // <> totoal >= 90 && totoal <= 100 return ''
 // [] return false
-// END 
+// END
+// compute compute compute
+
+function computeIntgers(num: number): number {
+    if (num >= 50 && num <= 80) {
+        return 65;
+    } else {
+        return 80;
+    }
+}
+
+console.log(computeIntgers(49));
