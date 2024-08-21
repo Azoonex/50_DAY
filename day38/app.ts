@@ -65,4 +65,11 @@ function checkforThey(x: number, y: number) {
 
 // solation 46
 
+function checkIntger(x: number, y: number) {
+    if (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15)
+        return true;
+    return false;
+}
+
+console.log(checkIntger(15,25))
 
