@@ -102,10 +102,17 @@ function checkforThey(x, y) {
 // [] return true
 // [] return false
 // END
-// solation 46
 function checkIntger(x, y) {
     if (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15)
         return true;
     return false;
 }
 console.log(checkIntger(15, 25));
+// solation 46
+function cehckTwoIntger(x, y) {
+    if (!(x % 7 === 0 || y % 7 === 0) && !(y % 7 === 0 || y % 10 === 0)) {
+        return (x % 7 === 0 || y % 7 === 0) && !(y % 7 === 0 || y % 10 === 0);
+    }
+    return false;
+}
+console.log(cehckTwoIntger(14, 8));
