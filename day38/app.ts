@@ -1,6 +1,6 @@
 // waht is clean code ?
 
-function notFound (){
+function notFound() {
     return false
 }
 
@@ -10,7 +10,7 @@ async function fetchData() {
     const data = res.ok ? await res.json() : null;
 
 
-    if(!data || data?.status === 0){
+    if (!data || data?.status === 0) {
         return notFound()
     } return true
 
@@ -18,4 +18,12 @@ async function fetchData() {
 
 
 // nice fetching data 
+// get url
+
+let paramse = 'https://doctor/api/v1/components'
+
+let formmatedUrl = paramse.substring(0, paramse.length - 1)
+formmatedUrl = formmatedUrl.substring(formmatedUrl.lastIndexOf('/') + 1)
+
+
 
