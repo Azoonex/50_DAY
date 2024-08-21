@@ -25,5 +25,20 @@ let paramse = 'https://doctor/api/v1/components'
 let formmatedUrl = paramse.substring(0, paramse.length - 1)
 formmatedUrl = formmatedUrl.substring(formmatedUrl.lastIndexOf('/') + 1)
 
+// solation 42
+
+function checkThreeNumber(x:number,y:number,z:number){
+        if(y > x && z > y){
+            return 'strict mode';
+        }else if(z > y){
+            return 'Soft mode';
+        } return 'undefinde'
+
+}
+
+console.log(checkThreeNumber(22,33,54))
+
+// 
+
 
 
