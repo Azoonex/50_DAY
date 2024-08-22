@@ -116,3 +116,14 @@ function cehckTwoIntger(x, y) {
     return false;
 }
 console.log(cehckTwoIntger(14, 8));
+// solution 47 satisfies satisfies
+function checkexists(x) {
+    if (x < 40 || x < 10000) {
+        return false;
+    }
+    else if (x >= 40 && x <= 10000) {
+        return true;
+    }
+    return false;
+}
+console.log(checkexists(30000));

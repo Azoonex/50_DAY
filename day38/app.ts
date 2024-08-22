@@ -76,8 +76,25 @@ console.log(checkIntger(15, 25));
 function cehckTwoIntger(x: number, y: number) {
     if (!(x % 7 === 0 || y % 7 === 0) && !(y % 7 === 0 || y % 10 === 0)) {
         return (x % 7 === 0 || y % 7 === 0) && !(y % 7 === 0 || y % 10 === 0);
-    } return false
+    }
+    return false;
 }
 
-console.log(cehckTwoIntger(14,8))
+console.log(cehckTwoIntger(14, 8));
 
+// solution 47 satisfies satisfies im did not understand
+
+function checkexists(x: number) {
+    if (x < 40 || x < 10000) {
+        return false;
+    } else if (x >= 40 && x <= 10000) {
+        return true;
+    }
+    return false;
+}
+
+console.log(checkexists(30000));
+
+function reverceStrging(s:string){
+    
+}
