@@ -100,16 +100,21 @@ function reverceStrging(s: string) {
 
     let o = "";
     for (let i = s.length - 1; i >= 0; i--) {
-        console.log('this is I '+i)
-        console.log('this  S ' + s)
+        console.log("this is I " + i);
+        console.log("this  S " + s);
         // console.log('this is charcerts = '+s[i])
-        console.log(s[i])
+        console.log(s[i]);
         o += s[i];
     }
 
     return o;
-
 }
+
+function reverseOne(s: string) {
+    return s.split('').reverse().join('')
+}
+
+console.log(reverseOne('solve with one method'))
 
 // thresse this
 
@@ -118,4 +123,4 @@ function reverceStrging(s: string) {
 
 console.log(reverceStrging("amir abas"));
 
-// this is bast solation perfomance perfomance performance performace of these implementation ot these 
+// this is bast solation perfomance perfomance performance performace of these implementation ot these

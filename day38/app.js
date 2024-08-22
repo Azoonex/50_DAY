@@ -131,15 +131,20 @@ function reverceStrging(s) {
     // return s.split("").reverse().join("");
     var o = "";
     for (var i = s.length - 1; i >= 0; i--) {
-        console.log('this is I ' + i);
-        console.log('this  S ' + s);
+        console.log("this is I " + i);
+        console.log("this  S " + s);
         // console.log('this is charcerts = '+s[i])
         console.log(s[i]);
         o += s[i];
     }
     return o;
 }
+function reverseOne(s) {
+    return s.split('').reverse().join('');
+}
+console.log(reverseOne('solve with one method'));
 // thresse this
 // let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
 // o += s[i]}
 console.log(reverceStrging("amir abas"));
+// this is bast solation perfomance perfomance performance performace of these implementation ot these
