@@ -116,7 +116,7 @@ function cehckTwoIntger(x, y) {
     return false;
 }
 console.log(cehckTwoIntger(14, 8));
-// solution 47 satisfies satisfies
+// solution 47 satisfies satisfies im did not understand
 function checkexists(x) {
     if (x < 40 || x < 10000) {
         return false;
@@ -127,3 +127,19 @@ function checkexists(x) {
     return false;
 }
 console.log(checkexists(30000));
+function reverceStrging(s) {
+    // return s.split("").reverse().join("");
+    var o = "";
+    for (var i = s.length - 1; i >= 0; i--) {
+        console.log('this is I ' + i);
+        console.log('this  S ' + s);
+        // console.log('this is charcerts = '+s[i])
+        console.log(s[i]);
+        o += s[i];
+    }
+    return o;
+}
+// thresse this
+// let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
+// o += s[i]}
+console.log(reverceStrging("amir abas"));

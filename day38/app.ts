@@ -95,6 +95,27 @@ function checkexists(x: number) {
 
 console.log(checkexists(30000));
 
-function reverceStrging(s:string){
-    
+function reverceStrging(s: string) {
+    // return s.split("").reverse().join("");
+
+    let o = "";
+    for (let i = s.length - 1; i >= 0; i--) {
+        console.log('this is I '+i)
+        console.log('this  S ' + s)
+        // console.log('this is charcerts = '+s[i])
+        console.log(s[i])
+        o += s[i];
+    }
+
+    return o;
+
 }
+
+// thresse this
+
+// let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
+// o += s[i]}
+
+console.log(reverceStrging("amir abas"));
+
+// this is bast solation perfomance perfomance performance performace of these implementation ot these 
