@@ -131,8 +131,6 @@ function reverceStrging(s) {
     // return s.split("").reverse().join("");
     var o = "";
     for (var i = s.length - 1; i >= 0; i--) {
-        console.log("this is I " + i);
-        console.log("this  S " + s);
         // console.log('this is charcerts = '+s[i])
         console.log(s[i]);
         o += s[i];
@@ -143,7 +141,16 @@ function reverseOne(s) {
     return s.split('').reverse().join('');
 }
 console.log(reverseOne('solve with one method'));
+function reverseTwo(s) {
+    var strn = '';
+    for (var _i = 0, s_1 = s; _i < s_1.length; _i++) {
+        var char = s_1[_i];
+        strn = char + s;
+    }
+    return strn;
+}
 // thresse this
+console.log(reverseTwo('iam king '));
 // let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
 // o += s[i]}
 console.log(reverceStrging("amir abas"));

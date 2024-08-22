@@ -100,8 +100,6 @@ function reverceStrging(s: string) {
 
     let o = "";
     for (let i = s.length - 1; i >= 0; i--) {
-        console.log("this is I " + i);
-        console.log("this  S " + s);
         // console.log('this is charcerts = '+s[i])
         console.log(s[i]);
         o += s[i];
@@ -116,7 +114,18 @@ function reverseOne(s: string) {
 
 console.log(reverseOne('solve with one method'))
 
+
+function reverseTwo(s:string){
+   let strn = '';
+   for(let char of s){
+    strn = char + s
+   }
+   return strn
+}
 // thresse this
+
+
+console.log(reverseTwo('iam king '))
 
 // let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
 // o += s[i]}
