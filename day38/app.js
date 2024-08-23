@@ -1,4 +1,3 @@
-// waht is clean code ?
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,6 +34,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var f = console.log.bind(console); // Still suspect, for a different reason
+// waht is clean code ?
 function notFound() {
     return false;
 }
@@ -138,11 +139,11 @@ function reverceStrging(s) {
     return o;
 }
 function reverseOne(s) {
-    return s.split('').reverse().join('');
+    return s.split("").reverse().join("");
 }
-console.log(reverseOne('solve with one method'));
+console.log(reverseOne("solve with one method"));
 function reverseTwo(s) {
-    var strn = '';
+    var strn = "";
     for (var _i = 0, s_1 = s; _i < s_1.length; _i++) {
         var char = s_1[_i];
         strn = char + s;
@@ -150,8 +151,32 @@ function reverseTwo(s) {
     return strn;
 }
 // thresse this
-console.log(reverseTwo('iam king '));
+console.log(reverseTwo("iam king "));
 // let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
 // o += s[i]}
 console.log(reverceStrging("amir abas"));
 // this is bast solation perfomance perfomance performance performace of these implementation ot these
+function reverceSt(s) {
+    return s.split("").reverse().join("");
+}
+f(reverceSt("amir this bast programer"));
+// what does this stement? console.log('this is bast')
+// write a js to replace every character in a given string with the charchter following it in the alphabe covert vowels to upercase
+function Letterchange(text) {
+    var s = text.split("");
+    for (var i = 0; i < s.length; i++) {
+        switch (s[i]) {
+            case " ":
+                break;
+            case "z":
+                s[i] = "a";
+                break;
+            case "Z":
+                s[i] = "A";
+                break;
+            default:
+                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+        }
+    }
+}
+// solve the solation 49

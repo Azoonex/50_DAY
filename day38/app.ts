@@ -1,3 +1,4 @@
+var f = console.log.bind(console); // Still suspect, for a different reason
 // waht is clean code ?
 
 function notFound() {
@@ -109,23 +110,21 @@ function reverceStrging(s: string) {
 }
 
 function reverseOne(s: string) {
-    return s.split('').reverse().join('')
+    return s.split("").reverse().join("");
 }
 
-console.log(reverseOne('solve with one method'))
+console.log(reverseOne("solve with one method"));
 
-
-function reverseTwo(s:string){
-   let strn = '';
-   for(let char of s){
-    strn = char + s
-   }
-   return strn
+function reverseTwo(s: string) {
+    let strn = "";
+    for (let char of s) {
+        strn = char + s;
+    }
+    return strn;
 }
 // thresse this
 
-
-console.log(reverseTwo('iam king '))
+console.log(reverseTwo("iam king "));
 
 // let = 0 / for ( let i = s.lenght - 1; i >= 0;i-- ){
 // o += s[i]}
@@ -133,3 +132,33 @@ console.log(reverseTwo('iam king '))
 console.log(reverceStrging("amir abas"));
 
 // this is bast solation perfomance perfomance performance performace of these implementation ot these
+
+function reverceSt(s: string) {
+    return s.split("").reverse().join("");
+}
+
+f(reverceSt("amir this bast programer"));
+
+// what does this stement? console.log('this is bast')
+// write a js to replace every character in a given string with the charchter following it in the alphabe covert vowels to upercase
+
+function Letterchange(text: string) {
+    let s = text.split("");
+
+    for (let i = 0; i < s.length; i++) {
+        switch (s[i]) {
+            case " ":
+                break;
+            case "z":
+                s[i] = "a";
+                break;
+            case "Z":
+                s[i] = "A";
+                break;
+            default:
+                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+        }
+    }
+}
+
+// solve the solation 49
