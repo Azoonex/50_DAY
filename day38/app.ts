@@ -185,3 +185,9 @@ function capital_litter(str: string) {
 }
 
 console.log(capital_litter('amirabas'))
+
+
+// new stor
+
+// zahra loved drawing.she was very poor and didnt have pens or pencils / one day . an old woman saw rose and said hell ohers paintbursh and some paper
+
