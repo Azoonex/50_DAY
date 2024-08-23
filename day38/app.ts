@@ -162,3 +162,14 @@ function Letterchange(text: string) {
 }
 
 // solve the solation 49
+
+function capitalizeS(s:string){
+    let text = s.substring(1);
+    let capitalize = s.charAt(0).toUpperCase()
+    
+    return capitalize + text
+}
+
+f(capitalizeS('amirabas'))
+
+// solve the new sotuation
