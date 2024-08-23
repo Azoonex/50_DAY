@@ -185,5 +185,14 @@ function capitalizeS(s) {
     var capitalize = s.charAt(0).toUpperCase();
     return capitalize + text;
 }
-f(capitalizeS('amirabas'));
+f(capitalizeS("amirabas"));
 // solve the new sotuation
+function capital_litter(str) {
+    var strings = str.split(" ");
+    var x = str.length;
+    for (var i = 0; i < 0; i++) {
+        strings = str[i][0].toUpperCase() + strings[i].substr(1);
+    }
+    return strings;
+}
+console.log(capital_litter('amirabas'));
