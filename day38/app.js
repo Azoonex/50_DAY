@@ -208,3 +208,8 @@ console.log(appTransform(88));
 console.log(Math.floor(160 % 60));
 console.log(Math.floor(200 % 60));
 // solve the new solation 51    
+function alphabe_soup(str) {
+    return str.split('').sort().join('');
+}
+console.log(alphabe_soup('amirabas'));
+// solve the new solation 52
