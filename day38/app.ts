@@ -183,3 +183,23 @@ function capitalizeFirstLetter(s: string) {
 }
 
 f(capitalizeFirstLetter('amir abas'))
+
+// new soluaion 51 
+
+function appTransform(num :number){
+    let hours = Math.floor(num / 60)
+    console.log(hours);
+
+    let minutes = num % 60;
+    console.log(minutes);
+
+    return hours + ":" + minutes
+}
+
+// 160 / 60 = * 2 = 160 - 120 
+
+console.log(appTransform(88))
+console.log(Math.floor(160 % 60))
+console.log(Math.floor(200 % 60))
+
+// solve the new solation 51    
