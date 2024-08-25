@@ -186,13 +186,12 @@ function capitalizeS(s) {
     return capitalize + text;
 }
 f(capitalizeS("amirabas"));
-// solve the new sotuation
-function capital_litter(str) {
-    var strings = str.split(" ");
+function capitalizeFirstLetter(s) {
+    var str = s.split(" ");
     var x = str.length;
-    for (var i = 0; i < 0; i++) {
-        strings = str[i][0].toUpperCase() + strings[i].substr(1);
+    for (var i = 0; i < x; i++) {
+        str[i] = str[i][0].toLocaleUpperCase() + str[i].substr(1);
     }
-    return strings;
+    return str.join(" ");
 }
-console.log(capital_litter('amirabas'));
+f(capitalizeFirstLetter('amir abas'));

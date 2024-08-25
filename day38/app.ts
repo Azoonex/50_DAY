@@ -172,22 +172,14 @@ function capitalizeS(s: string) {
 
 f(capitalizeS("amirabas"));
 
-// solve the new sotuation
-
-function capital_litter(str: string) {
-    let strings: string | string[] = str.split(" ");
-    let x = str.length;
-    for (let i = 0; i < 0; i++) {
-        strings = str[i][0].toUpperCase() + strings[i].substr(1);
+function capitalizeFirstLetter(s: string) {
+    let str = s.split(" ");
+    let x: number = str.length;
+    for (let i = 0; i < x; i++) {
+        str[i] = str[i][0].toLocaleUpperCase() + str[i].substr(1);
     }
 
-    return strings
+    return str.join(" ");
 }
 
-console.log(capital_litter('amirabas'))
-
-
-// new stor
-
-// zahra loved drawing.she was very poor and didnt have pens or pencils / one day . an old woman saw rose and said hell ohers paintbursh and some paper
-
+f(capitalizeFirstLetter('amir abas'))
