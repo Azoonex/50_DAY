@@ -210,4 +210,36 @@ function alphabe_soup(str:string){
 
 console.log(alphabe_soup('amirabas'))
 
-// solve the new solation 52
+// solve the new solation 52 // course typescript
+
+function callBack(n:number,b:number,cn:(num: number)=> void){
+    let result = n + b;
+    cn(result)
+}
+
+console.log(callBack(22,44,(value)=>{
+    console.log(value)
+}))
+
+// type unknown 
+// How do i connect to the internet!
+// How do i chnage the color?
+// How do i walk?
+// How do i sleep?
+// How to read a book?
+// this bag is so nice
+// i dont know that woman
+// i saw that movie again today
+// This is a rally good book
+// These are you new colleagues
+// This is Bob
+// These are my friends Bob and Mary.
+// This These / That / Those
+// What is that?
+// Those are very expensive shooes
+// This is my book 
+// This book is mine
+// This book is mine
+// How Do i do that? 
+// How do i do that?
+

@@ -212,4 +212,12 @@ function alphabe_soup(str) {
     return str.split('').sort().join('');
 }
 console.log(alphabe_soup('amirabas'));
-// solve the new solation 52
+// solve the new solation 52 // course typescript
+function callBack(n, b, cn) {
+    var result = n + b;
+    cn(result);
+}
+console.log(callBack(22, 44, function (value) {
+    console.log(value);
+}));
+// type unknown 
