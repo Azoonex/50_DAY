@@ -9,3 +9,8 @@ console.log(repetChar('amirabas'))
 // separated separeaeted separtated exactly exactly
 
 
+function counterVowels(str : string){
+    return str.replace(/^aeiou/,"").length
+}
+
+// solve th
