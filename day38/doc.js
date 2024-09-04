@@ -25,3 +25,4 @@ function checkTP(str) {
 }
 console.log("chckTp" + checkTP('amirabas top levele p and bastprogram'));
 //ss
+// solution 55

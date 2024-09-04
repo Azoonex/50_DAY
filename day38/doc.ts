@@ -34,3 +34,19 @@ function checkTP(str: string) {
 }
 console.log("chckTp" + checkTP('amirabas top levele p and bastprogram'));
 //ss
+// solution 55
+
+function divideNumbes(num:number,num2:number){
+    if(num === 0){
+        return "Cannot divide by zero"
+    }
+
+    let result = num / num2
+    let formateedResult = result.toLocaleString(undefined,{
+        maximumFractionDigits: 2
+    })
+
+    return formateedResult
+}
+
+console.log(divideNumbes(22,44))
