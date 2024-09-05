@@ -23,6 +23,27 @@ function checkTP(str) {
         return true;
     return false;
 }
-console.log("chckTp" + checkTP('amirabas top levele p and bastprogram'));
+console.log("chckTp" + checkTP("amirabas top levele p and bastprogram"));
 //ss
 // solution 55
+function divideNumbes(num, num2) {
+    if (num === 0) {
+        return "Cannot divide by zero";
+    }
+    var result = num / num2;
+    var formateedResult = result.toLocaleString(undefined, {
+        maximumFractionDigits: 2,
+    });
+    return formateedResult;
+}
+console.log(divideNumbes(22, 44));
+var amirabasAdmin = {
+    age: 28,
+    name: "amir",
+    code: 33,
+    command: "dirctor",
+    access: true
+};
+// use type
+// type admin 
+// type admin : dirctor & manger
