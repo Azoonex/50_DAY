@@ -42,8 +42,36 @@ var amirabasAdmin = {
     name: "amir",
     code: 33,
     command: "dirctor",
-    access: true
+    access: true,
 };
 // use type
-// type admin 
+// type admin
 // type admin : dirctor & manger
+// type react= string{}
+// function checkFrame(a: react){
+//     if('ts' in a.lan){
+//         console.log('this is base')
+//     }
+// }
+// object orantede program
+var Department = /** @class */ (function () {
+    function Department(n) {
+        this.employes = [];
+        this.name = n;
+    }
+    Department.prototype.addEmplyes = function (name) {
+        this.employes.push(name);
+    };
+    Department.prototype.printeEmployes = function () {
+        console.log(this.employes.length);
+        console.log(this.employes);
+    };
+    return Department;
+}());
+var accounting = new Department("amirabas");
+console.log(accounting);
+accounting.addEmplyes("reza");
+accounting.addEmplyes("hansan");
+accounting.addEmplyes("jack");
+accounting.addEmplyes('hossen');
+accounting.printeEmployes();

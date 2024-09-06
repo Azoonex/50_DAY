@@ -63,18 +63,53 @@ interface manager {
     command: string;
 }
 
-interface admin extends director , manager {}
+interface admin extends director, manager {}
 
 let amirabasAdmin: admin = {
     age: 28,
     name: "amir",
     code: 33,
     command: "dirctor",
-    access:true
+    access: true,
 };
 
 // use type
-// type admin 
+// type admin
 // type admin : dirctor & manger
 
+// type react= string{}
 
+// function checkFrame(a: react){
+//     if('ts' in a.lan){
+//         console.log('this is base')
+//     }
+// }
+
+// object orantede program
+
+class Department {
+    public name: string;
+    private employes: string[] = [];
+
+    constructor(n: string) {
+        this.name = n;
+    }
+
+    addEmplyes(name: string) {
+        this.employes.push(name);
+    }
+
+    printeEmployes() {
+        console.log(this.employes.length);
+        console.log(this.employes);
+    }
+}
+
+let accounting = new Department("amirabas");
+console.log(accounting);
+
+accounting.addEmplyes("reza");
+accounting.addEmplyes("hansan");
+accounting.addEmplyes("jack");
+accounting.addEmplyes('hossen')
+accounting.printeEmployes();
