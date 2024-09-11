@@ -111,5 +111,32 @@ console.log(accounting);
 accounting.addEmplyes("reza");
 accounting.addEmplyes("hansan");
 accounting.addEmplyes("jack");
-accounting.addEmplyes('hossen')
+accounting.addEmplyes("hossen");
 accounting.printeEmployes();
+
+type Brid = {
+    type: "brid";
+    flyingSpeed: number;
+};
+
+type Hourse = {
+    type: "house";
+    runnigSpeed: number;
+};
+
+type TypeAnimal = Brid | Hourse;
+
+function Animal(name: TypeAnimal) {
+    if ("speed" in name) console.log(name.speed);
+    switch (name.type) {
+        case "brid":
+            console.log("brid");
+            break;
+        case "house":
+            console.log("house");
+        default:
+            console.log("others");
+    }
+}
+
+console.log(Animal({type:"brid",flyingSpeed:33}))
