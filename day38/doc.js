@@ -89,3 +89,8 @@ function Animal(name) {
     }
 }
 console.log(Animal({ type: "brid", flyingSpeed: 33 }));
+// tpe casting
+var inputElement = document.getElementById("input-element");
+if (inputElement) {
+    inputElement.value = "text";
+}

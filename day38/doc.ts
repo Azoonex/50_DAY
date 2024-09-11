@@ -139,4 +139,12 @@ function Animal(name: TypeAnimal) {
     }
 }
 
-console.log(Animal({type:"brid",flyingSpeed:33}))
+console.log(Animal({ type: "brid", flyingSpeed: 33 }));
+
+// tpe casting
+
+let inputElement = document.getElementById("input-element")!;
+
+if (inputElement) {
+    (inputElement as HTMLInputElement).value = "text";
+}
