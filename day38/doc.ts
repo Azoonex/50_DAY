@@ -143,11 +143,24 @@ console.log(Animal({ type: "brid", flyingSpeed: 33 }));
 
 // solution 57
 
+function copyString(str: string, n: number) {
+    if (n < 1) return false;
 
-function copyString(str:string,n:number){
-    if( n < 1) return false
-    
-    return str.repeat(n)
+    return str.repeat(n);
 }
 
-console.log(copyString('abas',1/4))
+console.log(copyString("abas", 1 / 4));
+
+function createString(str: string) {
+    let newStr: string;
+
+    if (str.length < 3) return false;
+    
+    newStr = str.substring(str.length - 3)
+
+    return newStr.repeat(3)
+    
+}
+
+
+console.log(createString('amirabas'))

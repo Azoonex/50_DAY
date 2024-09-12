@@ -95,4 +95,12 @@ function copyString(str, n) {
         return false;
     return str.repeat(n);
 }
-console.log(copyString('abas', 1 / 4));
+console.log(copyString("abas", 1 / 4));
+function createString(str) {
+    var newStr;
+    if (str.length < 3)
+        return false;
+    newStr = str.substring(str.length - 3);
+    return newStr.repeat(3);
+}
+console.log(createString('amirabas'));
