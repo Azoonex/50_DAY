@@ -164,3 +164,18 @@ function createString(str: string) {
 
 
 console.log(createString('amirabas'))
+
+// solution 59
+
+function evenHelfStr(str:string){
+    if(str.length % 2 == 0) return false;
+    let checkLenght:number;
+    checkLenght = str.length / 2;
+
+    return str.slice(0,str.length - checkLenght)
+
+}
+
+console.log(evenHelfStr('javascrip'))
+
+// solution 60

@@ -104,3 +104,12 @@ function createString(str) {
     return newStr.repeat(3);
 }
 console.log(createString('amirabas'));
+// solution 59
+function evenHelfStr(str) {
+    if (str.length % 2 == 0)
+        return false;
+    var checkLenght;
+    checkLenght = str.length / 2;
+    return str.slice(0, str.length - checkLenght);
+}
+console.log(evenHelfStr('javascrip'));
