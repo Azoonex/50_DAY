@@ -155,41 +155,42 @@ function createString(str: string) {
     let newStr: string;
 
     if (str.length < 3) return false;
-    
-    newStr = str.substring(str.length - 3)
 
-    return newStr.repeat(3)
-    
+    newStr = str.substring(str.length - 3);
+
+    return newStr.repeat(3);
 }
 
-
-console.log(createString('amirabas'))
+console.log(createString("amirabas"));
 
 // solution 59
 
-function evenHelfStr(str:string){
-    if(str.length % 2 == 0) return false;
-    let checkLenght:number;
+function evenHelfStr(str: string) {
+    if (str.length % 2 == 0) return false;
+    let checkLenght: number;
     checkLenght = str.length / 2;
 
-    return str.slice(0,str.length - checkLenght)
-
+    return str.slice(0, str.length - checkLenght);
 }
 
-console.log(evenHelfStr('javascrip'))
+console.log(evenHelfStr("javascrip"));
 
 // solution 60
 
-
-function createNewString(str:string){
-
-    if(str.length < 3) return false;
+function createNewString(str: string) {
+    if (str.length < 3) return false;
 
     let firstCharacter = str.charAt(0);
     let lastCharacter = str.slice(-1);
 
-    return firstCharacter + lastCharacter
-
+    return firstCharacter + lastCharacter;
 }
 
-console.log(createNewString('items'))
+console.log(createNewString("items"));
+
+function removeFirstChar(str1: string, str2: string) {
+    if (str1.length < 1 || str2.length < 1) return false;
+    return str1.slice(1, str1.length) + str2.slice(1, str2.length);
+}
+
+console.log(removeFirstChar("js", "python"));
