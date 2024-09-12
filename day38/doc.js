@@ -89,8 +89,10 @@ function Animal(name) {
     }
 }
 console.log(Animal({ type: "brid", flyingSpeed: 33 }));
-// tpe casting
-var inputElement = document.getElementById("input-element");
-if (inputElement) {
-    inputElement.value = "text";
+// solution 57
+function copyString(str, n) {
+    if (n < 1)
+        return false;
+    return str.repeat(n);
 }
+console.log(copyString('abas', 1 / 4));

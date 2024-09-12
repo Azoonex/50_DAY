@@ -141,10 +141,13 @@ function Animal(name: TypeAnimal) {
 
 console.log(Animal({ type: "brid", flyingSpeed: 33 }));
 
-// tpe casting
+// solution 57
 
-let inputElement = document.getElementById("input-element")!;
 
-if (inputElement) {
-    (inputElement as HTMLInputElement).value = "text";
+function copyString(str:string,n:number){
+    if( n < 1) return false
+    
+    return str.repeat(n)
 }
+
+console.log(copyString('abas',1/4))
