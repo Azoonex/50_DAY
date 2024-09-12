@@ -128,3 +128,10 @@ function removeFirstChar(str1, str2) {
     return str1.slice(1, str1.length) + str2.slice(1, str2.length);
 }
 console.log(removeFirstChar("js", "python"));
+function lastString(str) {
+    if (str.length <= 3)
+        return false;
+    var lastCharacter = str.substring(str.length - 3);
+    return lastCharacter + str;
+}
+console.log(lastString('ami'));

@@ -192,5 +192,15 @@ function removeFirstChar(str1: string, str2: string) {
     if (str1.length < 1 || str2.length < 1) return false;
     return str1.slice(1, str1.length) + str2.slice(1, str2.length);
 }
-
 console.log(removeFirstChar("js", "python"));
+
+
+function lastString(str:string){
+    if(str.length <= 3) return false;
+
+    let lastCharacter = str.substring(str.length - 3)
+
+    return lastCharacter + str 
+}
+
+console.log(lastString('ami'))
