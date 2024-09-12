@@ -179,3 +179,17 @@ function evenHelfStr(str:string){
 console.log(evenHelfStr('javascrip'))
 
 // solution 60
+
+
+function createNewString(str:string){
+
+    if(str.length < 3) return false;
+
+    let firstCharacter = str.charAt(0);
+    let lastCharacter = str.slice(-1);
+
+    return firstCharacter + lastCharacter
+
+}
+
+console.log(createNewString('items'))

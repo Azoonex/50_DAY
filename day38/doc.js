@@ -113,3 +113,12 @@ function evenHelfStr(str) {
     return str.slice(0, str.length - checkLenght);
 }
 console.log(evenHelfStr('javascrip'));
+// solution 60
+function createNewString(str) {
+    if (str.length < 3)
+        return false;
+    var firstCharacter = str.charAt(0);
+    var lastCharacter = str.slice(-1);
+    return firstCharacter + lastCharacter;
+}
+console.log(createNewString('items'));
