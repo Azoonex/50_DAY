@@ -194,13 +194,33 @@ function removeFirstChar(str1: string, str2: string) {
 }
 console.log(removeFirstChar("js", "python"));
 
+function lastString(str: string) {
+    if (str.length <= 3) return false;
 
-function lastString(str:string){
-    if(str.length <= 3) return false;
+    let lastCharacter = str.substring(str.length - 3);
 
-    let lastCharacter = str.substring(str.length - 3)
-
-    return lastCharacter + str 
+    return lastCharacter + str;
 }
 
-console.log(lastString('ami'))
+console.log(lastString("ami"));
+
+// opatonalchining
+let datafetching = undefined;
+
+console.log(datafetching ?? "defualte");
+
+function creatMiddle(str: string) {
+    if (str.length % 2 !== 0) {
+        let mid = (str.length + 1) / 2;
+        return str.slice(mid - 2, mid + 1);
+    } else return str;
+    // my solve
+    // let midlleStr =
+    //     str.length % 2
+    //         ? str.substr(str.length / 2, 3)
+    //         : str.substr(str.length / 2 - 1, 3);
+
+    // return midlleStr;
+}
+
+console.log(creatMiddle("amirabs"));

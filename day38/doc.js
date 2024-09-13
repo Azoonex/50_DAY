@@ -134,4 +134,22 @@ function lastString(str) {
     var lastCharacter = str.substring(str.length - 3);
     return lastCharacter + str;
 }
-console.log(lastString('ami'));
+console.log(lastString("ami"));
+// opatonalchining
+var datafetching = undefined;
+console.log(datafetching !== null && datafetching !== void 0 ? datafetching : "defualte");
+function creatMiddle(str) {
+    if (str.length % 2 !== 0) {
+        var mid = (str.length + 1) / 2;
+        return str.slice(mid - 2, mid + 1);
+    }
+    else
+        return str;
+    // my solve
+    // let midlleStr =
+    //     str.length % 2
+    //         ? str.substr(str.length / 2, 3)
+    //         : str.substr(str.length / 2 - 1, 3);
+    // return midlleStr;
+}
+console.log(creatMiddle("amirabs"));
