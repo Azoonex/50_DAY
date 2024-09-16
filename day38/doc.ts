@@ -143,25 +143,25 @@ console.log(Animal({ type: "brid", flyingSpeed: 33 }));
 
 // solution 57
 
-function copyString(str: string, n: number) {
-    if (n < 1) return false;
+// function copyString(str: string, n: number) {
+//     if (n < 1) return false;
 
-    return str.repeat(n);
-}
+//     return str.repeat(n);
+// }
 
-console.log(copyString("abas", 1 / 4));
+// console.log(copyString("abas", 1 / 4));
 
-function createString(str: string) {
-    let newStr: string;
+// function createString(str: string) {
+//     let newStr: string;
 
-    if (str.length < 3) return false;
+//     if (str.length < 3) return false;
 
-    newStr = str.substring(str.length - 3);
+//     newStr = str.substring(str.length - 3);
 
-    return newStr.repeat(3);
-}
+//     return newStr.repeat(3);
+// }
 
-console.log(createString("amirabas"));
+// console.log(createString("amirabas"));
 
 // solution 59
 
@@ -224,3 +224,22 @@ function creatMiddle(str: string) {
 }
 
 console.log(creatMiddle("amirabs"));
+
+// fiction emily's secret
+
+// emily is 8 years old.she lives in a big house.she has a huge room.she has many toys and she has a lot of friends.but Emily is not happy.she has a secret.
+
+// she doesn't want to tell anyone about her secret.she fells embarrassed.the problem is that if nobody knows about it.there is not one that can help her.
+
+// slice substring substar
+// tolowerCase toupercase replace concate
+
+let pathName = "/imagings/67";
+
+let formatPathName: string;
+if (pathName.includes("/labs/"))
+    formatPathName = pathName.replace("/labs/", "/lab/");
+if (pathName.includes("/imagings/"))
+    formatPathName = pathName.replace("/imagings/", "/imaging/");
+
+console.log(formatPathName);
