@@ -1,12 +1,3 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 function content(xs, u) {
     return Object.assign(xs, u);
 }
@@ -71,7 +62,15 @@ console.log(compute([33, 44, 55]));
 // function rotateArray(arr: string[],rotate : boolean){
 //     if(rotate) arr.unshift(arr.pop())
 // }
-function rotateArry(arr) {
-    var count = 1;
-    return __spreadArray([], arr.slice((count, arr.length), arr.slice(0, count)), true);
+// 
+function checkArry(str) {
+    var posend = str.length - 1;
+    if (str.length <= 1)
+        return false;
+    if (str[0] === 1 || str[posend] === 1) {
+        return "this is ok";
+    }
+    else
+        return false;
 }
+console.log(checkArry([1, 3, 5, 3, 3, 1]));

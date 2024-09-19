@@ -84,3 +84,15 @@ console.log(compute([33, 44, 55]));
 
 // }
 // 
+
+function checkArry(str:number[]){
+    let posend = str.length - 1;
+
+    if(str.length <= 1) return false 
+    
+    if(str[0] === 1 || str[posend] === 1){
+        return "this is ok"
+    } else return false
+}
+
+console.log(checkArry([1,3,5,3,3,1]))
