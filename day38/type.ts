@@ -83,16 +83,27 @@ console.log(compute([33, 44, 55]));
 //     if(rotate) arr.unshift(arr.pop())
 
 // }
-// 
+//
 
-function checkArry(str:number[]){
+function checkArry(str: number[]) {
     let posend = str.length - 1;
 
-    if(str.length <= 1) return false 
-    
-    if(str[0] === 1 || str[posend] === 1){
-        return "this is ok"
-    } else return false
+    if (str.length <= 1) return false;
+
+    if (str[0] === 1 || str[posend] === 1) {
+        return "this is ok";
+    } else return false;
 }
 
-console.log(checkArry([1,3,5,3,3,1]))
+console.log(checkArry([1, 3, 5, 3, 3, 1]));
+
+function middleArry(arr1: number[], arr2: number[]) {
+    let middleArry = Math.floor(arr1.length / 2);
+    let middleArry2 = Math.floor(arr2.length / 2);
+
+    return arr1[middleArry] + arr2[middleArry2]
+}
+
+console.log(
+    middleArry([1, 3, 5, 6, 3, 2, 4, 5, 3], [1, 3, 5, 6, 3, 2, 4, 5, 3])
+);

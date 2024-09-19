@@ -62,7 +62,7 @@ console.log(compute([33, 44, 55]));
 // function rotateArray(arr: string[],rotate : boolean){
 //     if(rotate) arr.unshift(arr.pop())
 // }
-// 
+//
 function checkArry(str) {
     var posend = str.length - 1;
     if (str.length <= 1)
@@ -74,3 +74,9 @@ function checkArry(str) {
         return false;
 }
 console.log(checkArry([1, 3, 5, 3, 3, 1]));
+function middleArry(arr1, arr2) {
+    var middleArry = Math.floor(arr1.length / 2);
+    var middleArry2 = Math.floor(arr2.length / 2);
+    return arr1[middleArry] + arr2[middleArry2];
+}
+console.log(middleArry([1, 3, 5, 6, 3, 2, 4, 5, 3], [1, 3, 5, 6, 3, 2, 4, 5, 3]));
