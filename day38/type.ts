@@ -78,3 +78,15 @@ function compute(arr : number[]){
 }
 
 console.log(compute([33,44,55]))
+
+
+// rotate array
+function rotateArray(arr: string[]){
+    if(arr.length < 3) return false;
+    return arr.re
+}
+
+
+
+// store 1
+// there was boy named john who was so lazy,he could't even bother to change his clothes/ one day he saw that the apple tree in their yar was full of frutis on day he saw that the apple tree in their yard was full of fruits / He wanted to eat some apples but he was too lazy to climb the terr and take the fruits climb clim the tree and take the fruits so he lay dow underneath the tree and waited so he lay down underneath the tree and waited for the fruits to fall off.john waited and waited untilhe was very hungry but the apples never fell.laziness can get you nowhere.if you want something you, need to work hard for it.
