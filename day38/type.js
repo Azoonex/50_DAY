@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 function content(xs, u) {
     return Object.assign(xs, u);
 }
@@ -42,7 +51,7 @@ function newString(str, n) {
     var last = str.substring(str.length - n);
     return first + last;
 }
-console.log(newString('amirabas', 2));
+console.log(newString("amirabas", 2));
 // solve the soluation 67 compute compute compute compute compute compute computes
 function compute(arr) {
     var sum = 0;
@@ -58,3 +67,11 @@ function compute(arr) {
     return sum;
 }
 console.log(compute([33, 44, 55]));
+// rotate array
+// function rotateArray(arr: string[],rotate : boolean){
+//     if(rotate) arr.unshift(arr.pop())
+// }
+function rotateArry(arr) {
+    var count = 1;
+    return __spreadArray([], arr.slice((count, arr.length), arr.slice(0, count)), true);
+}
