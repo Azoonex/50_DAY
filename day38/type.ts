@@ -101,9 +101,30 @@ function middleArry(arr1: number[], arr2: number[]) {
     let middleArry = Math.floor(arr1.length / 2);
     let middleArry2 = Math.floor(arr2.length / 2);
 
-    return arr1[middleArry] + arr2[middleArry2]
+    return arr1[middleArry] + arr2[middleArry2];
 }
 
 console.log(
     middleArry([1, 3, 5, 6, 3, 2, 4, 5, 3], [1, 3, 5, 6, 3, 2, 4, 5, 3])
 );
+// class object oraneted programing
+
+class ampoinment {
+    public name: string;
+    private employees: string[] = [];
+
+    constructor(n: string) {
+        this.name = n;
+    }
+
+    addempoees (add:string){
+        this.employees.push(add)
+    }
+    prientemployees(){
+        console.log(this.employees)
+    }
+}
+
+const arrcitve = new ampoinment("contecting");
+arrcitve.addempoees('max')
+console.log(arrcitve);

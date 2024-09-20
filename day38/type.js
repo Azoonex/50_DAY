@@ -80,3 +80,20 @@ function middleArry(arr1, arr2) {
     return arr1[middleArry] + arr2[middleArry2];
 }
 console.log(middleArry([1, 3, 5, 6, 3, 2, 4, 5, 3], [1, 3, 5, 6, 3, 2, 4, 5, 3]));
+// class object oraneted programing
+var ampoinment = /** @class */ (function () {
+    function ampoinment(n) {
+        this.employees = [];
+        this.name = n;
+    }
+    ampoinment.prototype.addempoees = function (add) {
+        this.employees.push(add);
+    };
+    ampoinment.prototype.prientemployees = function () {
+        console.log(this.employees);
+    };
+    return ampoinment;
+}());
+var arrcitve = new ampoinment("contecting");
+arrcitve.addempoees('max');
+console.log(arrcitve);
