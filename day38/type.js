@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 function content(xs, u) {
     return Object.assign(xs, u);
 }
@@ -94,6 +109,21 @@ var ampoinment = /** @class */ (function () {
     };
     return ampoinment;
 }());
+var itDeparment = /** @class */ (function (_super) {
+    __extends(itDeparment, _super);
+    function itDeparment(name) {
+        var _this = _super.call(this, "content") || this;
+        _this.allTeame = [];
+        return _this;
+    }
+    itDeparment.prototype.addEmploes = function (n) {
+        this.allTeame.push(n);
+    };
+    return itDeparment;
+}(ampoinment));
+var it = new itDeparment(['amirabas']);
+it.addEmploes('reza');
+console.log(it);
 var arrcitve = new ampoinment("contecting");
-arrcitve.addempoees('max');
+arrcitve.addempoees("max");
 console.log(arrcitve);
