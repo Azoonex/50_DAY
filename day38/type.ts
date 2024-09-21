@@ -203,3 +203,14 @@ function checkArryint(arr: number[]){
 }
 
 console.log(checkArryint([20, 40]));
+
+function rotateVlue(arr: number[]){
+    let first = arr[0]
+    arr[0] = arr[arr.length - 1]
+    arr[arr.length -1 ] = first
+    return arr
+}
+
+console.log(rotateVlue([1,3,5,67,4,3,3,5]))
+
+// solvethe soltion 80
