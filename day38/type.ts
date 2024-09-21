@@ -109,71 +109,77 @@
 // );
 // // class object oraneted programing
 
-// class ampoinment {
-//     readonly id: number;
-//     public name: string;
-//     private employees: string[] = [];
+class ampoinment {
+    readonly id: number;
+    public name: string;
+    protected employees: string[] = [];
 
-//     constructor(n: string) {
-//         this.name = n;
-//     }
+    constructor(n: string) {
+        this.name = n;
+    }
 
-//     addempoees(add: string) {
-//         this.employees.push(add);
-//     }
-//     prientemployees() {
-//         console.log(this.employees);
-//     }
-// }
-
-// class itDeparment extends ampoinment {
-//     public allTeame: string[] =[];
-//     constructor(name: string[]) {
-//         super("content");
-//     }
-
-//     addEmploes(n: string) {
-//         this.allTeame.push(n);
-//     }
-// }
-
-// const it = new itDeparment(['amirabas'])
-// it.addEmploes('reza')
-
-// console.log(it)
-
-// const arrcitve = new ampoinment("contecting");
-// arrcitve.addempoees("max");
-// console.log(arrcitve);
-
-// console.log('amir')
-
-type arrs = number[];
-
-function findLarge_small(arr: arrs) {
-    let first = arr[0];
-    let last = arr[arr.length - 1];
-
-    if (first > last) {
-        return Array.from({ length: 3 })
-            .map((i = first, index) => [i])
-            .flat();
-    } else if (first < last) {
-        return Array.from({ length: 3 })
-            .map((i = last, index) => [i])
-            .flat();
+    addempoees(add: string) {
+        this.employees.push(add);
+    }
+    prientemployees() {
+        console.log(this.employees);
     }
 }
 
-console.log(findLarge_small([2, 2, 4, 5, 6, 7, 83, 3, 85]));
+class itDeparment extends ampoinment {
+    public allTeame: string[] =[];
+    constructor(name: string[]) {
+        super("content");
+    }
 
-// solve the new solution 74
+    addEmploes(n: string) {
+        this.allTeame.push(n);
+    }
 
-function createArraMidlle(arr1: arrs, arr2: arrs) {
-    
-    let firstmdiddle = arr1[Math.floor(arr1.length - 1) / 2];
-    let lastmiddle = arr2[Math.round(arr2.length - 1) / 2];
-    return [firstmdiddle,lastmiddle]
+    changeNameEmploes(name : string){
+        this.employees.push[name]
+    }
 }
 
-console.log(createArraMidlle([1,3,4],[4,6,7]))
+const it = new itDeparment(['amirabas'])
+it.addEmploes('reza')
+
+console.log(it)
+
+const arrcitve = new ampoinment("contecting");
+arrcitve.addempoees("max");
+console.log(arrcitve);
+
+
+
+// console.log('amir')
+
+// type arrs = number[];
+
+// function findLarge_small(arr: arrs) {
+//     let first = arr[0];
+//     let last = arr[arr.length - 1];
+
+//     if (first > last) {
+//         return Array.from({ length: 3 })
+//             .map((i = first, index) => [i])
+//             .flat();
+//     } else if (first < last) {
+//         return Array.from({ length: 3 })
+//             .map((i = last, index) => [i])
+//             .flat();
+//     }
+// }
+
+// console.log(findLarge_small([2, 2, 4, 5, 6, 7, 83, 3, 85]));
+
+// // solve the new solution 74
+
+// function createArraMidlle(arr1: arrs, arr2: arrs) {
+    
+//     let firstmdiddle = arr1[Math.floor(arr1.length - 1) / 2];
+//     let lastmiddle = arr2[Math.round(arr2.length - 1) / 2];
+//     return [firstmdiddle,lastmiddle]
+// }
+
+// console.log(createArraMidlle([1,3,4],[4,6,7]))
