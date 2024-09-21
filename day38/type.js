@@ -143,3 +143,10 @@ function checkIntegerArray(myArray) {
 }
 console.log(checkIntegerArray([20, 2]));
 // solve the solution 77
+function checkArryint(arr) {
+    if (arr.length > 2)
+        return false;
+    var Successe = arr.includes(30 && 40);
+    return Successe;
+}
+console.log(checkArryint([20, 40]));
