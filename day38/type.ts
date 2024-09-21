@@ -109,46 +109,46 @@
 // );
 // // class object oraneted programing
 
-class ampoinment {
-    readonly id: number;
-    public name: string;
-    protected employees: string[] = [];
+// class ampoinment {
+//     readonly id: number;
+//     public name: string;
+//     protected employees: string[] = [];
 
-    constructor(n: string) {
-        this.name = n;
-    }
+//     constructor(n: string) {
+//         this.name = n;
+//     }
 
-    addempoees(add: string) {
-        this.employees.push(add);
-    }
-    prientemployees() {
-        console.log(this.employees);
-    }
-}
+//     addempoees(add: string) {
+//         this.employees.push(add);
+//     }
+//     prientemployees() {
+//         console.log(this.employees);
+//     }
+// }
 
-class itDeparment extends ampoinment {
-    public allTeame: string[] =[];
-    constructor(name: string[]) {
-        super("content");
-    }
+// class itDeparment extends ampoinment {
+//     public allTeame: string[] =[];
+//     constructor(name: string[]) {
+//         super("content");
+//     }
 
-    addEmploes(n: string) {
-        this.allTeame.push(n);
-    }
+//     addEmploes(n: string) {
+//         this.allTeame.push(n);
+//     }
 
-    changeNameEmploes(name : string){
-        this.employees.push[name]
-    }
-}
+//     changeNameEmploes(name : string){
+//         this.employees.push[name]
+//     }
+// }
 
-const it = new itDeparment(['amirabas'])
-it.addEmploes('reza')
+// const it = new itDeparment(['amirabas'])
+// it.addEmploes('reza')
 
-console.log(it)
+// console.log(it)
 
-const arrcitve = new ampoinment("contecting");
-arrcitve.addempoees("max");
-console.log(arrcitve);
+// const arrcitve = new ampoinment("contecting");
+// arrcitve.addempoees("max");
+// console.log(arrcitve);
 
 
 
@@ -183,3 +183,15 @@ console.log(arrcitve);
 // }
 
 // console.log(createArraMidlle([1,3,4],[4,6,7]))
+
+
+function checkIntegerArray (myArray: number[]){
+    if(myArray.length > 2) return false;
+    let include = myArray.includes(1 && 2)
+
+    return include
+}
+
+console.log(checkIntegerArray([20,2]))
+
+// solve the solution 77
