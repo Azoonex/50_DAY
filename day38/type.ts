@@ -155,12 +155,25 @@ function findLarge_small(arr: arrs) {
     let last = arr[arr.length - 1];
 
     if (first > last) {
-        return Array.from({ length: 3 }).map((i = first, index) => [i]).flat();
+        return Array.from({ length: 3 })
+            .map((i = first, index) => [i])
+            .flat();
     } else if (first < last) {
-        return Array.from({ length: 3 }).map((i = last, index) => [i]).flat();
+        return Array.from({ length: 3 })
+            .map((i = last, index) => [i])
+            .flat();
     }
 }
 
 console.log(findLarge_small([2, 2, 4, 5, 6, 7, 83, 3, 85]));
 
 // solve the new solution 74
+
+function createArraMidlle(arr1: arrs, arr2: arrs) {
+    
+    let firstmdiddle = arr1[Math.floor(arr1.length - 1) / 2];
+    let lastmiddle = arr2[Math.round(arr2.length - 1) / 2];
+    return [firstmdiddle,lastmiddle]
+}
+
+console.log(createArraMidlle([1,3,4],[4,6,7]))
