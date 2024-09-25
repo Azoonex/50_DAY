@@ -150,8 +150,6 @@
 // arrcitve.addempoees("max");
 // console.log(arrcitve);
 
-
-
 // console.log('amir')
 
 // type arrs = number[];
@@ -176,7 +174,7 @@
 // // solve the new solution 74
 
 // function createArraMidlle(arr1: arrs, arr2: arrs) {
-    
+
 //     let firstmdiddle = arr1[Math.floor(arr1.length - 1) / 2];
 //     let lastmiddle = arr2[Math.round(arr2.length - 1) / 2];
 //     return [firstmdiddle,lastmiddle]
@@ -184,33 +182,41 @@
 
 // console.log(createArraMidlle([1,3,4],[4,6,7]))
 
+// function checkIntegerArray (myArray: number[]){
+//     if(myArray.length > 2) return false;
+//     let include = myArray.includes(1 && 2)
 
-function checkIntegerArray (myArray: number[]){
-    if(myArray.length > 2) return false;
-    let include = myArray.includes(1 && 2)
+//     return include
+// }
 
-    return include
-}
-
-console.log(checkIntegerArray([20,2]))
+// console.log(checkIntegerArray([20,2]))
 
 // solve the solution 77
 
-function checkArryint(arr: number[]){
-    if(arr.length > 2) return false;
-    let Successe = arr.includes(30 && 40);
-    return Successe
+// function checkArryint(arr: number[]){
+//     if(arr.length > 2) return false;
+//     let Successe = arr.includes(30 && 40);
+//     return Successe
+// }
+
+// console.log(checkArryint([20, 40]));
+
+// function rotateVlue(arr: number[]){
+//     let first = arr[0]
+//     arr[0] = arr[arr.length - 1]
+//     arr[arr.length -1 ] = first
+//     return arr
+// }
+
+// console.log(rotateVlue([1,3,5,67,4,3,3,5]))
+type arrs = number[];
+
+function checkInteger(arr: arrs) {
+    if (arr.length < 2) return false;
+    let check = arr.includes(1 || 3);
+    return check;
 }
 
-console.log(checkArryint([20, 40]));
+console.log(checkInteger([1, 2, 0, 5, 6, 7, 4]));
 
-function rotateVlue(arr: number[]){
-    let first = arr[0]
-    arr[0] = arr[arr.length - 1]
-    arr[arr.length -1 ] = first
-    return arr
-}
-
-console.log(rotateVlue([1,3,5,67,4,3,3,5]))
-
-// solvethe soltion 80
+// solve the solution 79
