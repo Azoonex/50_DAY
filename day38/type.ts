@@ -209,14 +209,41 @@
 // }
 
 // console.log(rotateVlue([1,3,5,67,4,3,3,5]))
-type arrs = number[];
+// type arrs = number[];
 
-function checkInteger(arr: arrs) {
-    if (arr.length < 2) return false;
-    let check = arr.includes(1 || 3);
-    return check;
+// function checkInteger(arr: arrs) {
+//     if (arr.length < 2) return false;
+//     let check = arr.includes(1 || 3);
+//     return check;
+// }
+
+// console.log(checkInteger([1, 2, 0, 5, 6, 7, 4]));
+
+// // solve the solution 79
+
+// function checks(arr: arrs) {
+//     if (arr.length < 3) return false;
+//     let check = arr.includes(30 || 40);
+//     return check;
+// }
+
+// console.log(checks([1, 2, 0, 5, 6, 7, 4]));
+
+
+// gendrace type
+
+interface TypeElement {
+    length : number
 }
 
-console.log(checkInteger([1, 2, 0, 5, 6, 7, 4]));
+function countAndDescrib<T extends TypeElement>(element: T){
+        let diescription = 'Hello im programer !'
+    if(element.length === 1) diescription = 'Go no value'
+    else if(element.length > 0) diescription = 'it 1 Eelment'
+   if(element.length > 0) return [element,diescription]
+}
 
-// solve the solution 79
+console.log(countAndDescrib(['22dasf',['dasdf']]))
+
+
+
