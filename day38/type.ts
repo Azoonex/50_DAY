@@ -232,18 +232,32 @@
 
 // gendrace type
 
-interface TypeElement {
-    length : number
+// interface TypeElement {
+//     length : number
+// }
+
+// function countAndDescrib<T extends TypeElement>(element: T){
+//         let diescription = 'Hello im programer !'
+//     if(element.length === 1) diescription = 'Go no value'
+//     else if(element.length > 0) diescription = 'it 1 Eelment'
+//    if(element.length > 0) return [element,diescription]
+// }
+
+// console.log(countAndDescrib(['22dasf',['dasdf']]))
+
+// function toCovnvert <T extends object,U extends keyof T>(obj:T,key:U){
+//     return obj[key]
+// }
+
+// console.log(toCovnvert({name : 'amir'}, 'name'))
+
+
+// How it work?
+function add_two_digist(n:number){
+    return n % 10 + Math.floor(n / 10)
 }
+console.log(add_two_digist(575))
 
-function countAndDescrib<T extends TypeElement>(element: T){
-        let diescription = 'Hello im programer !'
-    if(element.length === 1) diescription = 'Go no value'
-    else if(element.length > 0) diescription = 'it 1 Eelment'
-   if(element.length > 0) return [element,diescription]
-}
+// solve the solution 81
 
-console.log(countAndDescrib(['22dasf',['dasdf']]))
-
-
-
+// 
