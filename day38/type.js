@@ -185,9 +185,15 @@
 // }
 // console.log(toCovnvert({name : 'amir'}, 'name'))
 // How it work?
-function add_two_digist(n) {
-    return n % 10 + Math.floor(n / 10);
-}
-console.log(add_two_digist(575));
+// function add_two_digist(n:number){
+//     return n % 10 + Math.floor(n / 10)
+// }
+// console.log(add_two_digist(575))
 // solve the solution 81
-// 
+var arrayEvery = [1, 2, 3, 4, 4, 1, 4, 2, 0];
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var list = fruits.entries();
+var newArray = arrayEvery.every(function (i) { return i > 0; });
+console.log(list.next().value);
+console.log(list.next().value);
+console.log(list.next().value);
