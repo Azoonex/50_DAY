@@ -2,7 +2,7 @@ const demo = document.querySelector(".demo")!;
 const btn = document.querySelector(".btn")!;
 
 btn.addEventListener("click", generateJoke);
-
+this.click
 async function generateJoke() {
     let config = {
         headers: {
