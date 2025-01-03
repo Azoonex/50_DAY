@@ -1,71 +1,70 @@
-// function checkEquleArray(arr: number[], arr2: number[]) {
-//   let checkEqule: boolean[] = [];
+// function program
+interface  TypeStudents {
+    id : number,
+    name : string,
+    score : null | number
+}
+let students = [
+    {id : 1, name : "ali",score : 19},
+    {id : 2, name : "reza",score : 20},
+    {id : 3, name : "hasan",score : 15},
+    {id : 4, name : "amir",score : 10},
+]
 
-//   let i = 0;
-//   if (arr.length == arr2.length) {
-//     do {
-//       if (arr[i] === arr2[i]) {
-//         checkEqule.push(true);
-//       } else {
-//         checkEqule.push(false);
-//       }
-//       i += 1;
-//     } while (i < arr.length);
-//   } else {
-//     return "Agrument not Equle length !";
-//   } 
-//   let result = checkEqule.filter((i) => !!i);
-//   if(result.length){
-//     return ['fix this']
-//   }
-// }
-
-// checkEquleArray([1, 2, 41], [1, 2, 4]);
+// Average-ScoreAllStudents
+function averageScore (arr:TypeStudents[]){
+     let totalled = arr.reduce((a,b)=> a + (b.score ?? 0) ,0) / arr.length;
+    return arr.length > 0 ? totalled / arr.length : 0;
+}
 
 
 
-// let chat = "chat".charAt(11)
-//
-// console.log(chat)
-//
-// let text = "Apple, Banana, Kiwi";
-// let part = text.slice(-12,-6);
-//
-// // console.log(part)
-// // omit / paramerter
-//
-// // Substring
-//
-// let strsSub = "Apple, Banana, Kiwi";
-// let parts = strsSub.substr(-5);
-//
-// console.log(  parts)
-//
-// let text1 = "Hello";
-// let text2 = "World";
-// let text3 = text1.concat( text2);
-//
-// let mes1 = "Hello|orld!";
+// add new student
+function newStudent(student : TypeStudents){
+    if(student) {
+        students.push(student)
+        return "student added successfully "
+    }else {
+        return "student no found invalid !"
+    }
+}
 
-// let mes2 = text1.trimStart();
-//
-// let mes3 = mes1.split('|')
-//
-// let myArray =[1,3,5,1]
-// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// console.log(myArray.length)
-// let newArray = myArray.toString();
-// fruits.sshift()
-//
-// console.log(fruits)
+newStudent({name:"mohamed",id  : 22,score: 12})
 
-const myGirls = ["Cecilie", "Lone"];
-const myBoys = ["Emil", "Tobias", "Linus"];
+// remove student
+function  removeStudent (id :number){
+    const initialStudent= students.length;
+     students =  students.filter(i => i.id !== id)
+    return initialStudent > students.length ? "student is remove" : "not found student";
+}
 
+// update score this is not work
+function updateScore (id:number,newScore: number){
+    let seUpdateFind = false;
+    students = students.map(i => {
+      if(i.id === id){
+          seUpdateFind = true;
+          return {...i,score: newScore}
+      }
+      return i;
+    })
+    return seUpdateFind ? "Score updated successfully" : "student not found !"
+}
 
-const myChidlren = myGirls.concat(myBoys)
+// return the all student is score !Question
 
-console.log(myChidlren)
+function  returnAllStudent(){
+    return students.map(({name,score})=>({name,score}))
+}
+
+console.log(returnAllStudent())
 
 
+function topScore ():TypeStudents | null{
+    if(students.length === 0)return null;
+     return students.reduce((topScore,currentScore)=>{
+        return (currentScore.score ?? 0) > (topScore.score ?? 0) ? currentScore : topScore;
+    },students[0])
+}
 
+console.log(topScore())
