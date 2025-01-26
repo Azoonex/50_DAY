@@ -228,3 +228,7 @@ function showPrimes(limit:number){
 
 showPrimes(5);
 // factorize
+
+
+
+// method for object
