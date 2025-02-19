@@ -1,44 +1,13 @@
-function cl(any:any){
-    return console.log(any)
-}
+// const obj = {"1":5,"2":7,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0};
 
-// TYPE BOOK CASE
+// const toNumericPairs = input => {
+//   const entries = Object.entries(obj);
+//   entries.forEach(entry => entry[0] = +entry[0]);
+//   return entries;
+// }
 
-type type_bookcase = {
-    id : number,
-    name: string,
-    status? : boolean,
-    discount? : boolean,
-}
+// console.log(toNumericPairs(obj));
 
-let book_case:type_bookcase[] = [
-    {id : 1,name : "be_to"},
-]
+const value = Object.assign({},['z','t','m'])
 
-function createBook (book: type_bookcase) {
-    if(book.id !== undefined && book.name !== undefined) {
-        book_case.push(book)
-    }
-    return "name or id is invalid"
-}
-
-function removeBook (id:number) {
-    let findId = book_case.find(i => i.id === id)
-    if(findId) {
-        book_case =  book_case.filter(i => i.id !== id)
-        return `book with id ${findId.id} it is deleted`
-    }else {
-        return `status code 404`
-    }
-}
-
-function returnArray (id: number) {
-    let findBook = book_case.find(i => i.id === id)
-        if(id && findBook){
-           return findBook
-        }else {
-            return "not found the book is id"
-        }
-}
-
-cl(returnArray(1))
+console.log(value)

@@ -1,32 +1,9 @@
-function cl(any) {
-    return console.log(any);
-}
-var book_case = [
-    { id: 1, name: "be_to" },
-];
-function createBook(book) {
-    if (book.id !== undefined && book.name !== undefined) {
-        book_case.push(book);
-    }
-    return "name or id is invalid";
-}
-function removeBook(id) {
-    var findId = book_case.find(function (i) { return i.id === id; });
-    if (findId) {
-        book_case = book_case.filter(function (i) { return i.id !== id; });
-        return "book with id ".concat(findId.id, " it is deleted");
-    }
-    else {
-        return "status code 404";
-    }
-}
-function returnArray(id) {
-    var findBook = book_case.find(function (i) { return i.id === id; });
-    if (id && findBook) {
-        return findBook;
-    }
-    else {
-        return "not found the book is id";
-    }
-}
-cl(returnArray(1));
+// const obj = {"1":5,"2":7,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0};
+// const toNumericPairs = input => {
+//   const entries = Object.entries(obj);
+//   entries.forEach(entry => entry[0] = +entry[0]);
+//   return entries;
+// }
+// console.log(toNumericPairs(obj));
+var value = Object.assign({}, ['z', 't', 'm']);
+console.log(value);
