@@ -7,7 +7,9 @@
 // }
 
 // console.log(toNumericPairs(obj));
+// const value = Object.assign({},['z','t','m'])
+// console.log(value)
 
-const value = Object.assign({},['z','t','m'])
-
-console.log(value)
+function findCommon(arr1:Array<number>,arr2:Array<number>) {
+    for(arr1)
+}
