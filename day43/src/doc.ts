@@ -1,51 +1,17 @@
-const value = [1, 2, 3, 41, 2, 14, 10];
+// function sort array for digit
 
-let newValue = value.map((i) => i);
 
-const enum Size {
-  sm = 1,
-  lg = 2,
+function lenghtSortArray(array:Array<number>){
+    let sortDigit:Array<Array<number>> = [];
+
+    for(let x =0;array.length > x; x++){
+       if(array[x + 1]){
+        let sort = [array[array[0],x + 1]]
+        sortDigit.push(sort)
+       }
+    }
+    return sortDigit.length
 }
 
-const circle: Size = Size.sm;
+console.log(lenghtSortArray([1,2,4,5,7,81]))
 
-console.log(circle);
-
-// union types / aliases type / intersection type / nullable type
-
-type drag = {
-  drag: () => void;
-};
-
-type resize = {
-  resize: () => void;
-};
-
-const action: drag & resize = {
-  drag: () => {},
-  resize: () => {},
-};
-
-// nullish coalescing operator
-
-let speed: number | null = null;
-
-let ride = {
-  ride: speed ?? 30,
-};
-
-function checkNumber(link: number | string | null): number {
-  if (link !== undefined) return 33;
-  return 0;
-}
-
-const input = <HTMLInputElement>document.getElementById("input");
-
-// unknown type unknown unknown unknown unknown unknown types
-
-function checkDocument(document: unknown) {
-  if (typeof document === "string") {
-    return document.length;
-  }
-  return "Hold";
-}
