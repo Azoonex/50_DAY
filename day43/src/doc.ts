@@ -17,3 +17,12 @@ function isValid(s) {
     return stack.length === 0;
 }
 ;
+
+interface TypeProject {
+    name : string;
+    id : number
+}
+
+type ProjectReadOnly = {
+    readOnly [P in keyof TypeProject] : TypeProject[P]
+}
