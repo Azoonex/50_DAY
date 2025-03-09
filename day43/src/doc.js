@@ -1,4 +1,3 @@
-// function sort array for digit
 function lenghtSortArray(array) {
     var sortDigit = [];
     for (var x = 0; array.length > x; x++) {
