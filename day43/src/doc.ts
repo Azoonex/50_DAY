@@ -1,43 +1,25 @@
-// function sort array for digit
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+const product = numbers.reduce((accumulator, currentValue) => {
+  return accumulator * currentValue;
+});
+const maxNumber = numbers.reduce((accumulator, currentValue) => {
+  return Math.max(accumulator, currentValue);
+});
+const word = ["tehran","shiraz"];
+const newWorld = word.reduce((accumulator,currentValue)=>{
+  return accumulator + "+" + currentValue 
+})
 
-function lenghtSortArray(array: Array<number>) {
-  let sortDigit: Array<Array<number>> = [];
-
-  for (let x = 0; array.length > x; x++) {
-    if (array[x + 1]) {
-      let sort = [array[(array[0], x + 1)]];
-      sortDigit.push(sort);
-    }
-  }
-  return sortDigit.length;
-}
-
-console.log(lenghtSortArray([1, 2, 4, 5, 7, 81]));
-
-// Dot Product of Two 3D Vectors
-type number_type = number[];
-
-function twoGiven(arr1: number_type, arr2: number_type) {
-  let vectors: number_type = [0];
-  // for(let value of arr1 ){
-  //     vectors.push(arr1[])
-  // }
-  arr1.reduce((_, current, index) => {
-    if (current && index) {
-      vectors.push(arr1[index] + arr2[index]);
-    }
-  });
-
-  let sumArray = 0;
-  if (vectors.length) {
-    sumArray = vectors.reduce(function(a, s) {
-        return a += s;
-    }, 0);
-  }
+console.log(newWorld)
 
 
-  console.log(sumArray)
-
-}
-
-twoGiven([1, 3, 14, 1, 4], [2, 1, 41, 4, 1]);
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const count = fruits.reduce((accumulator, currentValue) => {
+  accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
+  return accumulator;
+}, {});
+console.log(count);
