@@ -1,25 +1,15 @@
-const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  0
-);
-const product = numbers.reduce((accumulator, currentValue) => {
-  return accumulator * currentValue;
-});
-const maxNumber = numbers.reduce((accumulator, currentValue) => {
-  return Math.max(accumulator, currentValue);
-});
-const word = ["tehran","shiraz"];
-const newWorld = word.reduce((accumulator,currentValue)=>{
-  return accumulator + "+" + currentValue 
-})
+// let object = {test :1}
 
-console.log(newWorld)
+// console.log(object["test"])
 
+function findUniqueNumber(arr: Array<number>) {
+  const count = arr.reduce((acc: Record<number, number>, num: number) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+  }, {});
 
-const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
-const count = fruits.reduce((accumulator, currentValue) => {
-  accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
-  return accumulator;
-}, {});
-console.log(count);
+  return Object.keys(count).find((key) => count[key] === 1);
+}
+
+const numbers = [5, 5, 10];
+console.log(findUniqueNumber(numbers));
