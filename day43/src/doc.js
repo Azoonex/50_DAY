@@ -9,3 +9,15 @@ function findUniqueNumber(arr) {
 }
 var numbers = [5, 5, 10];
 console.log(findUniqueNumber(numbers));
+var students = ["Ali", "Reza", "Sara", "Ali", "Reza", "Ali"];
+function repeat_Name(arr) {
+    var all_student = null;
+    if (arr.length > 0) {
+        all_student = arr.reduce(function (acc, current) {
+            acc[current] = (acc[current] || 0) + 1;
+            return acc;
+        }, {});
+    }
+    return all_student;
+}
+console.log(repeat_Name(students));
