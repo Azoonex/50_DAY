@@ -1,14 +1,30 @@
-// Exercise-119 with Solution
+let myPromise = new Promise(function (myResolve, myReject) {
+  setTimeout(function () {
+    myResolve("I love You !!");
+  }, 3000);
+});
 
-function checkOf_digit(num: number) {
-  let arr_num = num.toString().split("");
+setTimeout(function () {
+  myFunction("I love You !!!");
+}, 3000);
 
-  for (let x = 0; arr_num.length > 0; x++) {
-    if (parseInt(arr_num[x]) >= parseInt(arr_num[x + 1])) {
-      return false;
-    }
-  }
-  return true;
+async function myFunction() {
+  return "Hello";
 }
 
-console.log(checkOf_digit(1235));
+function myFunction(value) {
+  console.log(value);
+}
+
+myPromise.then((value) => {
+  console.log(value);
+});
+
+async function myDisplay() {
+  let myPromise = new Promise(function (resolve, reject) {
+    resolve("I love You !!");
+  });
+  console.log(await myPromise);
+}
+
+myDisplay();
