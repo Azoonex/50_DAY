@@ -25,29 +25,40 @@
 
 // console.log(checkNumber(123451, 4));
 
-const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
-function findMaxNumber(arr: number[]): number {
-  let item = [];
-  let items = arr.reduce((max, current) => {
-    arr[max] === current ? item.push(max) : undefined;
-  }, arr[0]);
-  console.log(item);
+// function findMaxNumber(arr: number[]): number {
+//   let item = [];
+//   let items = arr.reduce((max, current) => {
+//     arr[max] === current ? item.push(max) : undefined;
+//   }, arr[0]);
+//   console.log(item);
+// }
+
+// // console.log(findMaxNumber([3, 9, 2, 5, 12, 7]));
+
+// const items = [
+//   { id: 1, name: "Apple", price: 100 },
+//   { id: 2, name: "Banana", price: 50 },
+//   { id: 3, name: "Orange", price: 70 },
+// ];
+
+// function arraytoobject(arr: number[]) {
+//   return arr.reduce((acc, current) => {
+//     acc[current.id] = current;
+//     return acc;
+//   }, {});
+// }
+
+// console.log(arraytoobject(items));
+// Exercise-130 with Solution
+
+function findDigitEven(num: number) {
+  return num
+    .toString()
+    .split("")
+    .map(Number)
+    .filter((item) => item % 2 === 0);
 }
 
-// console.log(findMaxNumber([3, 9, 2, 5, 12, 7]));
-
-const items = [
-  { id: 1, name: "Apple", price: 100 },
-  { id: 2, name: "Banana", price: 50 },
-  { id: 3, name: "Orange", price: 70 },
-];
-
-function arraytoobject(arr: number[]) {
-  return arr.reduce((acc, current) => {
-    acc[current.id] = current;
-    return acc;
-  }, {});
-}
-
-console.log(arraytoobject(items));
+console.log(findDigitEven(12323));
