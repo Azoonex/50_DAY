@@ -1,30 +1,19 @@
-let myPromise = new Promise(function (myResolve, myReject) {
-  setTimeout(function () {
-    myResolve("I love You !!");
-  }, 3000);
-});
+// Exercise-123 with Solution / not solve the solution
 
-setTimeout(function () {
-  myFunction("I love You !!!");
-}, 3000);
-
-async function myFunction() {
-  return "Hello";
+function find_whether_TheMember(array: Array<number>, value: number) {
+  console.log(array.length, value);
+  // if (array.length  === value) {
+  console.log("yes");
+  for (let x = 0; x > array.length; x++) {
+    console.log(array[x]);
+    // if (array[x] === x ) {
+    //   console.log(array[x])
+    //   // return true;
+    // }
+    // return false;
+    // }
+  }
+  // return false;
 }
 
-function myFunction(value) {
-  console.log(value);
-}
-
-myPromise.then((value) => {
-  console.log(value);
-});
-
-async function myDisplay() {
-  let myPromise = new Promise(function (resolve, reject) {
-    resolve("I love You !!");
-  });
-  console.log(await myPromise);
-}
-
-myDisplay();
+console.log(find_whether_TheMember([1, 2, 3, 4, 5], 5));
