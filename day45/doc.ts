@@ -53,12 +53,36 @@
 // console.log(arraytoobject(items));
 // Exercise-130 with Solution
 
-function findDigitEven(num: number) {
-  return num
-    .toString()
-    .split("")
-    .map(Number)
-    .filter((item) => item % 2 === 0);
+// function findDigitEven(num: number) {
+//   return num
+//     .toString()
+//     .split("")
+//     .map(Number)
+//     .filter((item) => item % 2 === 0);
+// }
+// let num = 1235545
+// console.log(num.toFixed(3));
+
+class Person {
+  readonly id: number;
+  age: number;
+  service: string;
+
+  constructor(id: number, age: number, service: string) {
+    this.id = id;
+    this.age = age;
+    this.service = service;
+  }
+
+  getUser(num:number){
+      if(num > 0){
+       return 'Yes'
+      }
+  }
 }
 
-console.log(findDigitEven(12323));
+let PersonBank = new Person(1,2,'programer');
+
+PersonBank.getUser(1);
+
+console.log(PersonBank.getUser(2))

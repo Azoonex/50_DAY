@@ -41,11 +41,28 @@
 // }
 // console.log(arraytoobject(items));
 // Exercise-130 with Solution
-function findDigitEven(num) {
-    return num
-        .toString()
-        .split("")
-        .map(Number)
-        .filter(function (item) { return item % 2 === 0; });
-}
-console.log(findDigitEven(12323));
+// function findDigitEven(num: number) {
+//   return num
+//     .toString()
+//     .split("")
+//     .map(Number)
+//     .filter((item) => item % 2 === 0);
+// }
+// let num = 1235545
+// console.log(num.toFixed(3));
+var Person = /** @class */ (function () {
+    function Person(id, age, service) {
+        this.id = id;
+        this.age = age;
+        this.service = service;
+    }
+    Person.prototype.getUser = function (num) {
+        if (num > 0) {
+            return 'Yes';
+        }
+    };
+    return Person;
+}());
+var PersonBank = new Person(1, 2, 'programer');
+PersonBank.getUser(1);
+console.log(PersonBank.getUser(2));
