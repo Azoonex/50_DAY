@@ -82,16 +82,16 @@ class Person {
     return this.balance;
   }
 
-  // todo
-  // set setBalance(num: number) {
-  //   if (num < 0) throw new Error("Invalid value");
-  //   this.balance = num;
-  // }
+  // fixe_todo
+  set setBalance(num: number) {
+    if (num < 0) throw new Error("Invalid value");
+    this.balance = num;
+  }
 }
 
 let PersonBank = new Person(1, 2, "programer", 2);
-// todo
-// PersonBank.setBalance(2)
+// fixed todo
+PersonBank.setBalance = 2
 PersonBank.getUser(1);
 
 console.log(PersonBank.getUser(2));

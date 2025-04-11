@@ -70,11 +70,21 @@ var Person = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    Object.defineProperty(Person.prototype, "setBalance", {
+        // fixe_todo
+        set: function (num) {
+            if (num < 0)
+                throw new Error("Invalid value");
+            this.balance = num;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Person;
 }());
 var PersonBank = new Person(1, 2, "programer", 2);
-// todo
-// PersonBank.setBalance(2)
+// fixed todo
+PersonBank.setBalance = 2;
 PersonBank.getUser(1);
 console.log(PersonBank.getUser(2));
 console.log(PersonBank.logBalance);
