@@ -64,25 +64,63 @@
 // console.log(num.toFixed(3));
 
 class Person {
-  readonly id: number;
-  age: number;
-  service: string;
+  constructor(
+    public id: number,
+    public age: number,
+    readonly service: string,
+    private balance: number
+  ) {}
 
-  constructor(id: number, age: number, service: string) {
-    this.id = id;
-    this.age = age;
-    this.service = service;
+  getUser(num: number) {
+    if (num > 0) {
+      return "Yes";
+    }
   }
 
-  getUser(num:number){
-      if(num > 0){
-       return 'Yes'
-      }
+  // getter and setter
+  get logBalance(): number {
+    return this.balance;
+  }
+
+  // todo
+  // set setBalance(num: number) {
+  //   if (num < 0) throw new Error("Invalid value");
+  //   this.balance = num;
+  // }
+}
+
+let PersonBank = new Person(1, 2, "programer", 2);
+// todo
+// PersonBank.setBalance(2)
+PersonBank.getUser(1);
+
+console.log(PersonBank.getUser(2));
+console.log(PersonBank.logBalance);
+
+class SeatAssignment {
+  [seatNumber: string]: string;
+}
+
+let seats = new SeatAssignment();
+
+seats.A1 = "abas";
+seats.A2 = "tehran";
+
+// static
+
+class Ride {
+  private static activeRide: number = 0;
+  static get print() {
+    return Ride.activeRide;
+  }
+
+  static set setRider(num:number){
+    Ride.activeRide += num
   }
 }
 
-let PersonBank = new Person(1,2,'programer');
+const activeRiders = new Ride();
 
-PersonBank.getUser(1);
+Ride.setRider = 2
 
-console.log(PersonBank.getUser(2))
+console.log(Ride.print);

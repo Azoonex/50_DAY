@@ -51,18 +51,62 @@
 // let num = 1235545
 // console.log(num.toFixed(3));
 var Person = /** @class */ (function () {
-    function Person(id, age, service) {
+    function Person(id, age, service, balance) {
         this.id = id;
         this.age = age;
         this.service = service;
+        this.balance = balance;
     }
     Person.prototype.getUser = function (num) {
         if (num > 0) {
-            return 'Yes';
+            return "Yes";
         }
     };
+    Object.defineProperty(Person.prototype, "logBalance", {
+        // getter and setter
+        get: function () {
+            return this.balance;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Person;
 }());
-var PersonBank = new Person(1, 2, 'programer');
+var PersonBank = new Person(1, 2, "programer", 2);
+// todo
+// PersonBank.setBalance(2)
 PersonBank.getUser(1);
 console.log(PersonBank.getUser(2));
+console.log(PersonBank.logBalance);
+var SeatAssignment = /** @class */ (function () {
+    function SeatAssignment() {
+    }
+    return SeatAssignment;
+}());
+var seats = new SeatAssignment();
+seats.A1 = "abas";
+seats.A2 = "tehran";
+// static
+var Ride = /** @class */ (function () {
+    function Ride() {
+    }
+    Object.defineProperty(Ride, "print", {
+        get: function () {
+            return Ride.activeRide;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Ride, "setRider", {
+        set: function (num) {
+            Ride.activeRide += num;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Ride.activeRide = 0;
+    return Ride;
+}());
+var activeRiders = new Ride();
+Ride.setRider = 2;
+console.log(Ride.print);
