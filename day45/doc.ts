@@ -91,7 +91,7 @@ class Person {
 
 let PersonBank = new Person(1, 2, "programer", 2);
 // fixed todo
-PersonBank.setBalance = 2
+PersonBank.setBalance = 2;
 PersonBank.getUser(1);
 
 console.log(PersonBank.getUser(2));
@@ -114,13 +114,29 @@ class Ride {
     return Ride.activeRide;
   }
 
-  static set setRider(num:number){
-    Ride.activeRide += num
+  static set setRider(num: number) {
+    Ride.activeRide += num;
   }
 }
 
 const activeRiders = new Ride();
 
-Ride.setRider = 2
+Ride.setRider = 2;
 
 console.log(Ride.print);
+
+// inheritance ts
+
+class PersonNew {
+  constructor(private name: string, private status: boolean) {}
+
+  getFullName(value: string): string {
+    return `${this.name} ${value}`;
+  }
+}
+
+class Employee extends Person {
+  constructor(name: string, status: boolean) {
+    super(name, status);
+  }
+}

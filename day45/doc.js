@@ -1,4 +1,19 @@
 // let items = "item1,item2,item3";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // // console.log(items.search("item2"),items.lastIndexOf(","));
 // // let new_items = items.substring(items.search("item2"),items.lastIndexOf(","));
 // // let split_value = items.split(",")
@@ -120,3 +135,21 @@ var Ride = /** @class */ (function () {
 var activeRiders = new Ride();
 Ride.setRider = 2;
 console.log(Ride.print);
+// inheritance ts
+var PersonNew = /** @class */ (function () {
+    function PersonNew(name, status) {
+        this.name = name;
+        this.status = status;
+    }
+    PersonNew.prototype.getFullName = function (value) {
+        return "".concat(this.name, " ").concat(value);
+    };
+    return PersonNew;
+}());
+var Employee = /** @class */ (function (_super) {
+    __extends(Employee, _super);
+    function Employee(name, status) {
+        return _super.call(this, name, status) || this;
+    }
+    return Employee;
+}(Person));
