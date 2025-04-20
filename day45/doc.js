@@ -1,19 +1,4 @@
 // let items = "item1,item2,item3";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // // console.log(items.search("item2"),items.lastIndexOf(","));
 // // let new_items = items.substring(items.search("item2"),items.lastIndexOf(","));
 // // let split_value = items.split(",")
@@ -65,91 +50,90 @@ var __extends = (this && this.__extends) || (function () {
 // }
 // let num = 1235545
 // console.log(num.toFixed(3));
-var Person = /** @class */ (function () {
-    function Person(id, age, service, balance) {
-        this.id = id;
-        this.age = age;
-        this.service = service;
-        this.balance = balance;
-    }
-    Person.prototype.getUser = function (num) {
-        if (num > 0) {
-            return "Yes";
-        }
-    };
-    Object.defineProperty(Person.prototype, "logBalance", {
-        // getter and setter
-        get: function () {
-            return this.balance;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Person.prototype, "setBalance", {
-        // fixe_todo
-        set: function (num) {
-            if (num < 0)
-                throw new Error("Invalid value");
-            this.balance = num;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Person;
-}());
-var PersonBank = new Person(1, 2, "programer", 2);
-// fixed todo
-PersonBank.setBalance = 2;
-PersonBank.getUser(1);
-console.log(PersonBank.getUser(2));
-console.log(PersonBank.logBalance);
-var SeatAssignment = /** @class */ (function () {
-    function SeatAssignment() {
-    }
-    return SeatAssignment;
-}());
-var seats = new SeatAssignment();
-seats.A1 = "abas";
-seats.A2 = "tehran";
-// static
-var Ride = /** @class */ (function () {
-    function Ride() {
-    }
-    Object.defineProperty(Ride, "print", {
-        get: function () {
-            return Ride.activeRide;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Ride, "setRider", {
-        set: function (num) {
-            Ride.activeRide += num;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Ride.activeRide = 0;
-    return Ride;
-}());
-var activeRiders = new Ride();
-Ride.setRider = 2;
-console.log(Ride.print);
+// class Person {
+//   constructor(
+//     public id: number,
+//     public age: number,
+//     readonly service: string,
+//     private balance: number
+//   ) {}
+//   getUser(num: number) {
+//     if (num > 0) {
+//       return "Yes";
+//     }
+//   }
+//   // getter and setter
+//   get logBalance(): number {
+//     return this.balance;
+//   }
+//   // fixe_todo
+//   set setBalance(num: number) {
+//     if (num < 0) throw new Error("Invalid value");
+//     this.balance = num;
+//   }
+// }
+// let PersonBank = new Person(1, 2, "programer", 2);
+// // fixed todo
+// PersonBank.setBalance = 2;
+// PersonBank.getUser(1);
+// console.log(PersonBank.getUser(2));
+// console.log(PersonBank.logBalance);
+// class SeatAssignment {
+//   [seatNumber: string]: string;
+// }
+// let seats = new SeatAssignment();
+// seats.A1 = "abas";
+// seats.A2 = "tehran";
+// // static
+// class Ride {
+//   private static activeRide: number = 0;
+//   static get print() {
+//     return Ride.activeRide;
+//   }
+//   static set setRider(num: number) {
+//     Ride.activeRide += num;
+//   }
+// }
+// const activeRiders = new Ride();
+// Ride.setRider = 2;
+// console.log(Ride.print);
 // inheritance ts
-var PersonNew = /** @class */ (function () {
-    function PersonNew(name, status) {
-        this.name = name;
-        this.status = status;
-    }
-    PersonNew.prototype.getFullName = function (value) {
-        return "".concat(this.name, " ").concat(value);
-    };
-    return PersonNew;
-}());
-var Employee = /** @class */ (function (_super) {
-    __extends(Employee, _super);
-    function Employee(name, status) {
-        return _super.call(this, name, status) || this;
-    }
-    return Employee;
-}(Person));
+// class PersonNew {
+//   constructor(private name: string, private status: boolean) {}
+//   getFullName(value: string): string {
+//     return `${this.name} ${value}`;
+//   }
+// }
+// class Employee extends Person {
+//   constructor(name: string, status: boolean) {
+//     super(name, status);
+//   }
+// }
+// Exercise-131 with Solution
+// function prefix_sums(arr: Array<number>) {
+//   if (!arr.length) return false;
+//   let newArray: number[] = [];
+//   for (let x = 0; x < arr.length; x++) {
+//     newArray[x] = 0;
+//     for (let i = 0; x < i + 1; i++) {
+//       newArray[x] += arr[i];
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(prefix_sums([1, 3, 4, 1, 2]));
+// const obj = { foo: "bar", baz: 42 };
+// console.log(Object.entries(obj));
+var target = { a: 1, b: 2 };
+var source = { b: 4, c: 5 };
+var create = { g1: 4, z: 5 };
+var returnTarget = Object.assign(target, source, create);
+var person = {
+    isHuman: false,
+    printIntroduction: function () {
+        console.log("My name is ".concat(this.name, ". Am I human? ").concat(this.isHuman));
+    },
+};
+var we = Object.create(person);
+we.isHuman = false;
+console.log(person);
