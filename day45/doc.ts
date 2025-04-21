@@ -164,23 +164,57 @@
 
 // console.log(Object.entries(obj));
 
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-const create = { g1: 4, z: 5 };
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const create = { g1: 4, z: 5 };
 
-const returnTarget = Object.assign(target,source,create)
+// const returnTarget = Object.assign(target,source,create)
 
-const person = {
-  isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-  },
-};
+// const person = {
+//   isHuman: false,
+//   printIntroduction: function () {
+//     console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+//   },
+// };
 
-const we = Object.create(person)
-
-
-we.isHuman = false
+// const we = Object.create(person)
 
 
-console.log(person)
+// we.isHuman = false
+
+
+// console.log(person)
+
+// title case
+
+function TitleCase(str:string){
+  let newString = str.split(" ");
+  let setString:string[]= [];
+  newString.forEach(item =>{
+    let letterWorld = item.slice(0,1).toUpperCase()
+    setString.push(letterWorld + item.slice(1).toLowerCase())
+    
+  })
+  return setString.join(" ")
+}
+
+console.log(TitleCase("amir reza Abas"))
+
+
+// reverse string 
+
+function reverseString (str:string){
+  // return str.split("").reverse().join("")
+
+  const newString = str.split("");
+  let arrayString:string[] = []
+  for(let x = newString.length - 1; x >= 0 ; x--){
+    arrayString.push(newString[x])
+  }
+  return arrayString.join("")
+}
+
+console.log(reverseString("tehran"))
+
+
+console.log("items".length)

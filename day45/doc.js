@@ -124,16 +124,39 @@
 // console.log(prefix_sums([1, 3, 4, 1, 2]));
 // const obj = { foo: "bar", baz: 42 };
 // console.log(Object.entries(obj));
-var target = { a: 1, b: 2 };
-var source = { b: 4, c: 5 };
-var create = { g1: 4, z: 5 };
-var returnTarget = Object.assign(target, source, create);
-var person = {
-    isHuman: false,
-    printIntroduction: function () {
-        console.log("My name is ".concat(this.name, ". Am I human? ").concat(this.isHuman));
-    },
-};
-var we = Object.create(person);
-we.isHuman = false;
-console.log(person);
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const create = { g1: 4, z: 5 };
+// const returnTarget = Object.assign(target,source,create)
+// const person = {
+//   isHuman: false,
+//   printIntroduction: function () {
+//     console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+//   },
+// };
+// const we = Object.create(person)
+// we.isHuman = false
+// console.log(person)
+// title case
+function TitleCase(str) {
+    var newString = str.split(" ");
+    var setString = [];
+    newString.forEach(function (item) {
+        var letterWorld = item.slice(0, 1).toUpperCase();
+        setString.push(letterWorld + item.slice(1).toLowerCase());
+    });
+    return setString.join(" ");
+}
+console.log(TitleCase("amir reza Abas"));
+// reverse string 
+function reverseString(str) {
+    // return str.split("").reverse().join("")
+    var newString = str.split("");
+    var arrayString = [];
+    for (var x = newString.length - 1; x >= 0; x--) {
+        arrayString.push(newString[x]);
+    }
+    return arrayString.join("");
+}
+console.log(reverseString("tehran"));
+console.log("items".length);
