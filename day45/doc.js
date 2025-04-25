@@ -138,25 +138,38 @@
 // we.isHuman = false
 // console.log(person)
 // title case
-function TitleCase(str) {
-    var newString = str.split(" ");
-    var setString = [];
-    newString.forEach(function (item) {
-        var letterWorld = item.slice(0, 1).toUpperCase();
-        setString.push(letterWorld + item.slice(1).toLowerCase());
-    });
-    return setString.join(" ");
-}
-console.log(TitleCase("amir reza Abas"));
-// reverse string 
-function reverseString(str) {
-    // return str.split("").reverse().join("")
-    var newString = str.split("");
-    var arrayString = [];
-    for (var x = newString.length - 1; x >= 0; x--) {
-        arrayString.push(newString[x]);
+// function TitleCase(str:string){
+//   let newString = str.split(" ");
+//   let setString:string[]= [];
+//   newString.forEach(item =>{
+//     let letterWorld = item.slice(0,1).toUpperCase()
+//     setString.push(letterWorld + item.slice(1).toLowerCase())
+//   })
+//   return setString.join(" ")
+// }
+// console.log(TitleCase("amir reza Abas"))
+// reverse string
+// function reverseString (str:string){
+//   // return str.split("").reverse().join("")
+//   const newString = str.split("");
+//   let arrayString:string[] = []
+//   for(let x = newString.length - 1; x >= 0 ; x--){
+//     arrayString.push(newString[x])
+//   }
+//   return arrayString.join("")
+// }
+// console.log(reverseString("tehran"))
+// console.log("items".length)
+// count vowels
+function countVowels(str) {
+    var Alphabet = ["a", "b", "c", "i", "y"];
+    var newArray = str.split("");
+    var findVowels = [];
+    for (var x = 0; newArray.length > x; x++) {
+        if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+            findVowels.push("yes");
+        }
     }
-    return arrayString.join("");
+    return findVowels.length;
 }
-console.log(reverseString("tehran"));
-console.log("items".length);
+console.log(countVowels("abas"));
