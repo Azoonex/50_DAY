@@ -230,3 +230,33 @@ function countVowels(str: string) {
 }
 
 console.log(countVowels("abas"));
+
+
+function removeDuplicate (arr:number[]){
+  // one solution
+  let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+
+  // two solution
+  let two = [...new Set(arr)]
+  
+
+  // three solution
+
+  let unique:number[] = [];
+
+  arr.forEach(element=>{
+    if(!unique.includes(element)){
+      unique.push(element)
+    }
+  })
+
+  // fore solution
+
+  arr.reduce((prevous,curren)=>{
+    if(prevous.index(prevous) < 0) prevous.push(curren)
+      
+    return prevous
+  })
+
+  
+}

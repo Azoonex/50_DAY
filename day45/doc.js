@@ -1,4 +1,13 @@
 // let items = "item1,item2,item3";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 // // console.log(items.search("item2"),items.lastIndexOf(","));
 // // let new_items = items.substring(items.search("item2"),items.lastIndexOf(","));
 // // let split_value = items.split(",")
@@ -173,3 +182,22 @@ function countVowels(str) {
     return findVowels.length;
 }
 console.log(countVowels("abas"));
+function removeDuplicate(arr) {
+    // one solution
+    var one = arr.filter(function (value, index) { return arr.indexOf(value) === index; });
+    // two solution
+    var two = __spreadArray([], new Set(arr), true);
+    // three solution
+    var unique = [];
+    arr.forEach(function (element) {
+        if (!unique.includes(element)) {
+            unique.push(element);
+        }
+    });
+    // fore solution
+    arr.reduce(function (prevous, curren) {
+        if (prevous.index(prevous) < 0)
+            prevous.push(curren);
+        return prevous;
+    });
+}
