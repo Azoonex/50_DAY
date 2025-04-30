@@ -1,13 +1,19 @@
 // let items = "item1,item2,item3";
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // // console.log(items.search("item2"),items.lastIndexOf(","));
 // // let new_items = items.substring(items.search("item2"),items.lastIndexOf(","));
 // // let split_value = items.split(",")
@@ -170,34 +176,100 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 // console.log(reverseString("tehran"))
 // console.log("items".length)
 // count vowels
-function countVowels(str) {
-    var Alphabet = ["a", "b", "c", "i", "y"];
-    var newArray = str.split("");
-    var findVowels = [];
-    for (var x = 0; newArray.length > x; x++) {
-        if (Alphabet[x] && Alphabet[x] === newArray[x]) {
-            findVowels.push("yes");
-        }
+// function countVowels(str: string) {
+//   const Alphabet = ["a", "b", "c", "i", "y"];
+//   const newArray = str.split("");
+//   let findVowels: string[] = [];
+//
+//   for (let x = 0; newArray.length > x; x++) {
+//     if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+//       findVowels.push("yes");
+//     }
+//   }
+//   return findVowels.length
+// }
+//
+// console.log(countVowels("abas"));
+//
+//
+// function removeDuplicate (arr:number[]){
+//   // one solution
+//   let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+//
+//   // two solution
+//   let two = [...new Set(arr)]
+//
+//
+//   // three solution
+//
+//   let unique:number[] = [];
+//
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element)
+//     }
+//   })
+//
+//   // fore solution
+//
+//   arr.reduce((prevous,curren)=>{
+//     if(prevous.index(prevous) < 0) prevous.push(curren)
+//
+//     return prevous
+//   })
+//
+//
+// }
+// example integration array
+// function checkTwoArray(arr:,arr)
+// inheritance inheritance inheritance
+var Person = /** @class */ (function () {
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    return findVowels.length;
-}
-console.log(countVowels("abas"));
-function removeDuplicate(arr) {
-    // one solution
-    var one = arr.filter(function (value, index) { return arr.indexOf(value) === index; });
-    // two solution
-    var two = __spreadArray([], new Set(arr), true);
-    // three solution
-    var unique = [];
-    arr.forEach(function (element) {
-        if (!unique.includes(element)) {
-            unique.push(element);
-        }
+    Object.defineProperty(Person.prototype, "fullName", {
+        get: function () {
+            return this.firstName + " " + this.lastName;
+        },
+        enumerable: false,
+        configurable: true
     });
-    // fore solution
-    arr.reduce(function (prevous, curren) {
-        if (prevous.index(prevous) < 0)
-            prevous.push(curren);
-        return prevous;
-    });
-}
+    Person.prototype.walk = function () {
+        console.log("Walk");
+    };
+    return Person;
+}());
+var Student = /** @class */ (function (_super) {
+    __extends(Student, _super);
+    function Student(studentId, firstName, lastName) {
+        var _this = _super.call(this, firstName, lastName) || this;
+        _this.studentId = studentId;
+        return _this;
+    }
+    return Student;
+}(Person));
+// extends abstract
+var Timer = /** @class */ (function () {
+    function Timer() {
+    }
+    return Timer;
+}());
+var Clock = /** @class */ (function (_super) {
+    __extends(Clock, _super);
+    function Clock() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Clock.prototype.setTimer = function () {
+        console.log("Clock");
+    };
+    Clock.prototype.getTimer = function (time) {
+        console.log(time + "clock");
+    };
+    return Clock;
+}(Timer));
+var newTimer = new Clock();
+console.log(newTimer.setTimer);
+var newStudent = new Student(33, "jhon1", "motrio0");
+console.log(newStudent.);
+console.log(newStudent.fullName);

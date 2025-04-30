@@ -216,47 +216,94 @@
 
 // count vowels
 
-function countVowels(str: string) {
-  const Alphabet = ["a", "b", "c", "i", "y"];
-  const newArray = str.split("");
-  let findVowels: string[] = [];
+// function countVowels(str: string) {
+//   const Alphabet = ["a", "b", "c", "i", "y"];
+//   const newArray = str.split("");
+//   let findVowels: string[] = [];
+//
+//   for (let x = 0; newArray.length > x; x++) {
+//     if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+//       findVowels.push("yes");
+//     }
+//   }
+//   return findVowels.length
+// }
+//
+// console.log(countVowels("abas"));
+//
+//
+// function removeDuplicate (arr:number[]){
+//   // one solution
+//   let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+//
+//   // two solution
+//   let two = [...new Set(arr)]
+//
+//
+//   // three solution
+//
+//   let unique:number[] = [];
+//
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element)
+//     }
+//   })
+//
+//   // fore solution
+//
+//   arr.reduce((prevous,curren)=>{
+//     if(prevous.index(prevous) < 0) prevous.push(curren)
+//
+//     return prevous
+//   })
+//
+//
+// }
+// example integration array
+// function checkTwoArray(arr:,arr)
+// inheritance inheritance inheritance
 
-  for (let x = 0; newArray.length > x; x++) {
-    if (Alphabet[x] && Alphabet[x] === newArray[x]) {
-      findVowels.push("yes");
+class Person{
+    constructor(public firstName:string, public lastName:string){}
+    get fullName (): string {
+        return this.firstName + " " + this.lastName;
     }
-  }
-  return findVowels.length
+
+    walk(){
+        console.log("Walk");
+    }
 }
 
-console.log(countVowels("abas"));
-
-
-function removeDuplicate (arr:number[]){
-  // one solution
-  let one = arr.filter((value,index)=> arr.indexOf(value) === index);
-
-  // two solution
-  let two = [...new Set(arr)]
-  
-
-  // three solution
-
-  let unique:number[] = [];
-
-  arr.forEach(element=>{
-    if(!unique.includes(element)){
-      unique.push(element)
+class Student extends  Person{
+    constructor(public studentId : number,firstName:string,lastName:string){
+        super(firstName, lastName);
     }
-  })
-
-  // fore solution
-
-  arr.reduce((prevous,curren)=>{
-    if(prevous.index(prevous) < 0) prevous.push(curren)
-      
-    return prevous
-  })
-
-  
 }
+// extends abstract
+
+abstract class Timer{
+
+    abstract setTimer():void
+    abstract getTimer(time :number):void;
+
+}
+
+class Clock extends Timer{
+    setTimer() {
+        console.log("Clock");
+    }
+
+    getTimer(time :number   ):void {
+        console.log(time + "clock");
+    }
+}
+
+
+const newTimer = new Clock();
+console.log(newTimer.setTimer);
+
+const newStudent = new Student(33,"jhon1","motrio0");
+
+console.log(newStudent.);
+console.log(newStudent.fullName);
