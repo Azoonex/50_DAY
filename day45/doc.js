@@ -1,13 +1,4 @@
 // let items = "item1,item2,item3";
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 // // console.log(items.search("item2"),items.lastIndexOf(","));
 // // let new_items = items.substring(items.search("item2"),items.lastIndexOf(","));
 // // let split_value = items.split(",")
@@ -170,34 +161,47 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 // console.log(reverseString("tehran"))
 // console.log("items".length)
 // count vowels
-function countVowels(str) {
-    var Alphabet = ["a", "b", "c", "i", "y"];
-    var newArray = str.split("");
-    var findVowels = [];
-    for (var x = 0; newArray.length > x; x++) {
-        if (Alphabet[x] && Alphabet[x] === newArray[x]) {
-            findVowels.push("yes");
+// function countVowels(str: string) {
+//   const Alphabet = ["a", "b", "c", "i", "y"];
+//   const newArray = str.split("");
+//   let findVowels: string[] = [];
+//   for (let x = 0; newArray.length > x; x++) {
+//     if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+//       findVowels.push("yes");
+//     }
+//   }
+//   return findVowels.length
+// }
+// console.log(countVowels("abas"));
+// function removeDuplicate (arr:number[]){
+//   // one solution
+//   let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+//   // two solution
+//   let two = [...new Set(arr)]
+//   // three solution
+//   let unique:number[] = [];
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element)
+//     }
+//   })
+//   // fore solution
+//   arr.reduce((prevous,curren)=>{
+//     if(prevous.index(prevous) < 0) prevous.push(curren)
+//     return prevous
+//   })
+// }
+function findMissingAlpha(arr) {
+    var allAlpha = "abcdefghijklmnopqrstuywxyz";
+    var findIndexAlpha = allAlpha.indexOf(arr[0]);
+    var missingAlpha = [];
+    for (var i = 0; i < arr.length; i++) {
+        findIndexAlpha += 1;
+        console.log(findIndexAlpha);
+        if (allAlpha[findIndexAlpha + 1] !== arr[i]) {
+            missingAlpha.push(allAlpha[findIndexAlpha + 1]);
         }
     }
-    return findVowels.length;
+    return missingAlpha;
 }
-console.log(countVowels("abas"));
-function removeDuplicate(arr) {
-    // one solution
-    var one = arr.filter(function (value, index) { return arr.indexOf(value) === index; });
-    // two solution
-    var two = __spreadArray([], new Set(arr), true);
-    // three solution
-    var unique = [];
-    arr.forEach(function (element) {
-        if (!unique.includes(element)) {
-            unique.push(element);
-        }
-    });
-    // fore solution
-    arr.reduce(function (prevous, curren) {
-        if (prevous.index(prevous) < 0)
-            prevous.push(curren);
-        return prevous;
-    });
-}
+console.log(findMissingAlpha(["a", "b", "c", "d"]));

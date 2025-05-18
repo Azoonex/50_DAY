@@ -216,47 +216,62 @@
 
 // count vowels
 
-function countVowels(str: string) {
-  const Alphabet = ["a", "b", "c", "i", "y"];
-  const newArray = str.split("");
-  let findVowels: string[] = [];
+// function countVowels(str: string) {
+//   const Alphabet = ["a", "b", "c", "i", "y"];
+//   const newArray = str.split("");
+//   let findVowels: string[] = [];
 
-  for (let x = 0; newArray.length > x; x++) {
-    if (Alphabet[x] && Alphabet[x] === newArray[x]) {
-      findVowels.push("yes");
+//   for (let x = 0; newArray.length > x; x++) {
+//     if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+//       findVowels.push("yes");
+//     }
+//   }
+//   return findVowels.length
+// }
+
+// console.log(countVowels("abas"));
+
+// function removeDuplicate (arr:number[]){
+//   // one solution
+//   let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+
+//   // two solution
+//   let two = [...new Set(arr)]
+
+//   // three solution
+
+//   let unique:number[] = [];
+
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element)
+//     }
+//   })
+
+//   // fore solution
+
+//   arr.reduce((prevous,curren)=>{
+//     if(prevous.index(prevous) < 0) prevous.push(curren)
+
+//     return prevous
+//   })
+
+// }
+
+function findMissingAlpha(arr: string[]) {
+  let allAlpha = "abcdefghijklmnopqrstuywxyz";
+  let findIndexAlpha = allAlpha.indexOf(arr[0]);
+
+  let missingAlpha: Array<string> = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    findIndexAlpha += 1;
+    console.log(findIndexAlpha);
+    if (allAlpha[findIndexAlpha + 1] !== arr[i]) {
+      missingAlpha.push(allAlpha[findIndexAlpha + 1]);
     }
   }
-  return findVowels.length
+  return missingAlpha;
 }
 
-console.log(countVowels("abas"));
-
-
-function removeDuplicate (arr:number[]){
-  // one solution
-  let one = arr.filter((value,index)=> arr.indexOf(value) === index);
-
-  // two solution
-  let two = [...new Set(arr)]
-  
-
-  // three solution
-
-  let unique:number[] = [];
-
-  arr.forEach(element=>{
-    if(!unique.includes(element)){
-      unique.push(element)
-    }
-  })
-
-  // fore solution
-
-  arr.reduce((prevous,curren)=>{
-    if(prevous.index(prevous) < 0) prevous.push(curren)
-      
-    return prevous
-  })
-
-  
-}
+console.log(findMissingAlpha(["a", "b","c", "d"]));
