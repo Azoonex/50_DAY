@@ -1,15 +1,14 @@
-function find_missingNumber(arr: number[]): number {
-  if (!arr.length) return 1;
+// function find_missingNumber(arr: number[]): number {
+//   if (!arr.length) return 1;
 
-  let n = arr.length + 1;
-  let expectedSum = (n * (n + 1)) / 2;
+//   let n = arr.length + 1;
+//   let expectedSum = (n * (n + 1)) / 2;
 
-  console.log(arr)
+//   console.log(arr);
 
-  let actualSum = arr.reduce((acc, current) => acc + current, 0);
+//   let actualSum = arr.reduce((acc, current) => acc + current, 0);
 
-
-  console.log(actualSum,expectedSum)
+//   console.log(actualSum, expectedSum);
 
 // const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
@@ -244,20 +243,53 @@ function find_missingNumber(arr: number[]): number {
 
 // }
 
-function findMissingAlpha(arr: string[]) {
-  let allAlpha = "abcdefghijklmnopqrstuywxyz";
-  let findIndexAlpha = allAlpha.indexOf(arr[0]);
+// function findMissingAlpha(arr: string[]) {
+//   let allAlpha = "abcdefghijklmnopqrstuywxyz";
+//   let findIndexAlpha = allAlpha.indexOf(arr[0]);
 
-  let missingAlpha: Array<string> = [];
+//   let missingAlpha: Array<string> = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    findIndexAlpha += 1;
-    console.log(findIndexAlpha);
-    if (allAlpha[findIndexAlpha + 1] !== arr[i]) {
-      missingAlpha.push(allAlpha[findIndexAlpha + 1]);
+//   for (let i = 0; i < arr.length; i++) {
+//     findIndexAlpha += 1;
+//     console.log(findIndexAlpha);
+//     if (allAlpha[findIndexAlpha + 1] !== arr[i]) {
+//       missingAlpha.push(allAlpha[findIndexAlpha + 1]);
+//     }
+//   }
+//   return missingAlpha;
+// }
+
+// console.log(findMissingAlpha(["a", "b","c", "d"]));
+
+// function allCharacterUnique(str: string) {
+//   const charCount = {};
+
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+
+//     if (charCount[char]) {
+//       return false;
+//     }
+
+//     charCount[char] = true;
+//   }
+//   return charCount;
+// }
+
+// method 2
+
+export function allCharacterUnique(str: string) {
+  const charSet = new Set();
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (charSet.has(char)) {
+      return false;
     }
+    charSet.add(char);
   }
-  return missingAlpha;
+  return Array.from(charSet);
 }
 
-console.log(findMissingAlpha(["a", "b","c", "d"]));
+console.log(allCharacterUnique("amir"));
