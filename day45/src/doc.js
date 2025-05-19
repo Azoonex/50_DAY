@@ -235,5 +235,14 @@ function checkDuplicate(str) {
     }
     return checkStr;
 }
-// method two
-console.log(checkDuplicate("creat"));
+function findFirstRepeatCharacters(str) {
+    var saveCharacter = {};
+    for (var _i = 0, str_1 = str; _i < str_1.length; _i++) {
+        var char = str_1[_i];
+        saveCharacter[char] = (saveCharacter[char] || 0) + 1;
+        console.log(saveCharacter);
+    }
+    var obj = Object.keys(saveCharacter);
+    return Math.max.apply(Math, obj);
+}
+console.log(findFirstRepeatCharacters("hello"));

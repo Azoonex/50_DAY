@@ -327,8 +327,20 @@ function checkDuplicate(str:string){
 
 }
 
-// method two
+
+function findFirstRepeatCharacters(str:string){
+  let  saveCharacter:{[key:string]:number} = {};
+
+ for(const char of str){
+  saveCharacter[char] = (saveCharacter[char] || 0) + 1
+  console.log(saveCharacter)
+ }
+
+let obj = Object.keys(saveCharacter);
+
+return Math.max(...obj)
 
 
+}
 
- console.log(checkDuplicate("creat"))
+console.log(findFirstRepeatCharacters("hello"))
