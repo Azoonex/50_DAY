@@ -278,18 +278,57 @@
 
 // method 2
 
-export function allCharacterUnique(str: string) {
-  const charSet = new Set();
+// export function allCharacterUnique(str: string) {
+//   const charSet = new Set();
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
 
-    if (charSet.has(char)) {
-      return false;
+//     if (charSet.has(char)) {
+//       return false;
+//     }
+//     charSet.add(char);
+//   }
+//   return Array.from(charSet);
+// }
+
+// console.log(allCharacterUnique("amir"));
+
+
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
+//   for(let i =0;i < str.length;i++){
+//     if(checkStr[str[i]]){
+//       return false
+//     }
+//     checkStr[str[i]] = true
+//   }
+
+//   return checkStr
+
+// }
+
+function checkDuplicate(str:string){
+  const checkStr:{[key : string]:boolean} = {};
+
+
+  for(let i =0;i < str.length;i++){
+
+
+    if(checkStr[str[i]]){
+      return false
     }
-    charSet.add(char);
+
+    checkStr[str[i]] = true
+
   }
-  return Array.from(charSet);
+
+  return checkStr
+
 }
 
-console.log(allCharacterUnique("amir"));
+// method two
+
+
+
+ console.log(checkDuplicate("creat"))

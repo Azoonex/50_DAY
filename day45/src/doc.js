@@ -1,8 +1,5 @@
-"use strict";
 // function find_missingNumber(arr: number[]): number {
 //   if (!arr.length) return 1;
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.allCharacterUnique = allCharacterUnique;
 //   let n = arr.length + 1;
 //   let expectedSum = (n * (n + 1)) / 2;
 //   console.log(arr);
@@ -206,15 +203,37 @@ exports.allCharacterUnique = allCharacterUnique;
 //   return charCount;
 // }
 // method 2
-function allCharacterUnique(str) {
-    var charSet = new Set();
+// export function allCharacterUnique(str: string) {
+//   const charSet = new Set();
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (charSet.has(char)) {
+//       return false;
+//     }
+//     charSet.add(char);
+//   }
+//   return Array.from(charSet);
+// }
+// console.log(allCharacterUnique("amir"));
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
+//   for(let i =0;i < str.length;i++){
+//     if(checkStr[str[i]]){
+//       return false
+//     }
+//     checkStr[str[i]] = true
+//   }
+//   return checkStr
+// }
+function checkDuplicate(str) {
+    var checkStr = {};
     for (var i = 0; i < str.length; i++) {
-        var char = str[i];
-        if (charSet.has(char)) {
+        if (checkStr[str[i]]) {
             return false;
         }
-        charSet.add(char);
+        checkStr[str[i]] = true;
     }
-    return Array.from(charSet);
+    return checkStr;
 }
-console.log(allCharacterUnique("amir"));
+// method two
+console.log(checkDuplicate("creat"));

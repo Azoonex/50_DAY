@@ -42,7 +42,8 @@
     "why-is-node-running": "^2.3.0"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "dev": "tsc -w ./src/doc.ts",
   },
   "author": "",
   "license": "ISC",
