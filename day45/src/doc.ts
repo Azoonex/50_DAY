@@ -42,3 +42,31 @@ function formatPhoneNumber(phoneNumber: Array<number>): string {
 }
 
 console.log(formatPhoneNumber([1, 3, 5, 1, 3, 1, 3, 2]));
+
+// ValidateEmail
+
+function validateEmail(email: string): boolean {
+  const [localPart, domin] = email.split(",");
+  console.log(localPart, domin);
+
+  if (email.lastIndexOf("@") !== -1 && email.lastIndexOf(".") !== -1)
+    return true;
+  return false;
+}
+
+console.log(validateEmail("create react app@."));
+
+const items = [
+  {
+    id: 1,
+    name: "age",
+  },
+  {
+    id: 2,
+    name: "ali",
+  },
+];
+
+const [person1,person2] = items;
+
+console.log(person1,person2)

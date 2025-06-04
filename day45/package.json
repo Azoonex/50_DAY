@@ -43,7 +43,7 @@
   },
   "scripts": {
     "test": "vitest",
-    "dev": "tsc -w ./src/doc.ts",
+    "dev": "tsc -w ./src/doc.ts"
   },
   "author": "",
   "license": "ISC",
