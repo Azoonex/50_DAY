@@ -1,72 +1,101 @@
-function find_missingNumber(arr: number[]): number {
-  if (!arr.length) return 1;
+// function find_missingNumber(arr: number[]): number {
+//   if (!arr.length) return 1;
 
-  let n = arr.length + 1;
-  let expectedSum = (n * (n + 1)) / 2;
+//   let n = arr.length + 1;
+//   let expectedSum = (n * (n + 1)) / 2;
 
-  let actualSum = arr.reduce((acc, current) => acc + current, 0);
-  console.log(actualSum, expectedSum);
-  return expectedSum - actualSum;
-}
-
-// example missing alpha
-// function findMissing_Alpha(arr: string[]): string[] | string {
-//   if (!arr.length) return "String is Empty";
-//   const allAlphabets = "abcdefghijklmnopqrstuvwxyz";
-//   let findMissing = allAlphabets.indexOf(arr[0]);
-
-//   for (let i = 0; i < arr.length; i++) {
-//     const checkAlpa =
-//   }
-//   return findMissing;
+//   let actualSum = arr.reduce((acc, current) => acc + current, 0);
+//   console.log(actualSum, expectedSum);
+//   return expectedSum - actualSum;
 // }
 
-// console.log(findMissing_Alpha(["a", "b", "d", "e"])); // ["c"]
+// // example missing alpha
+// // function findMissing_Alpha(arr: string[]): string[] | string {
+// //   if (!arr.length) return "String is Empty";
+// //   const allAlphabets = "abcdefghijklmnopqrstuvwxyz";
+// //   let findMissing = allAlphabets.indexOf(arr[0]);
 
-// format Phone number
+// //   for (let i = 0; i < arr.length; i++) {
+// //     const checkAlpa =
+// //   }
+// //   return findMissing;
+// // }
 
-function formatPhoneNumber(phoneNumber: Array<number>): string {
-  if (!phoneNumber.length) {
-    return "Phone  Number is Invalid";
-  }
+// // console.log(findMissing_Alpha(["a", "b", "d", "e"])); // ["c"]
 
-  const startCodeNumber = phoneNumber.slice(0, 3).join("");
-  const middleCodeNumber = phoneNumber
-    .slice(startCodeNumber.length, startCodeNumber.length + 3)
-    .join("");
-  const lastCodeNumber = phoneNumber.slice(-3).join("");
+// // format Phone number
 
-  return phoneNumber.length === 8
-    ? `(${startCodeNumber}) ${middleCodeNumber}-${lastCodeNumber}`
-    : "Value is not valid";
+// function formatPhoneNumber(phoneNumber: Array<number>): string {
+//   if (!phoneNumber.length) {
+//     return "Phone  Number is Invalid";
+//   }
+
+//   const startCodeNumber = phoneNumber.slice(0, 3).join("");
+//   const middleCodeNumber = phoneNumber
+//     .slice(startCodeNumber.length, startCodeNumber.length + 3)
+//     .join("");
+//   const lastCodeNumber = phoneNumber.slice(-3).join("");
+
+//   return phoneNumber.length === 8
+//     ? `(${startCodeNumber}) ${middleCodeNumber}-${lastCodeNumber}`
+//     : "Value is not valid";
+// }
+
+// console.log(formatPhoneNumber([1, 3, 5, 1, 3, 1, 3, 2]));
+
+// // ValidateEmail
+
+// function validateEmail(email: string): boolean {
+//   const [localPart, domin] = email.split(",");
+//   console.log(localPart, domin);
+
+//   if (email.lastIndexOf("@") !== -1 && email.lastIndexOf(".") !== -1)
+//     return true;
+//   return false;
+// }
+
+// console.log(validateEmail("create react app@."));
+
+// const items = [
+//   {
+//     id: 1,
+//     name: "age",
+//   },
+//   {
+//     id: 2,
+//     name: "ali",
+//   },
+// ];
+
+// const [person1,person2] = items;
+
+// console.log(person1,person2)
+
+// sumOfEvenSquares
+
+function sumOfEvenSquares(number: Array<number>) {
+  if (!number.length) return false;
+
+  // one method
+  // return number.reduce((acc, current) => {
+  //   if (current % 2 === 0) {
+  //     return acc + current;
+  //   }
+  //   return acc;
+  // }, 0);
+
+  // two method
+  // let sum = 0;
+  // number
+  //   .filter((item) => item % 2 == 0)
+  //   .forEach((item) => {
+  //     sum += item;
+  //   });
+  // return sum;
+
+  // method three
+
+  
 }
 
-console.log(formatPhoneNumber([1, 3, 5, 1, 3, 1, 3, 2]));
-
-// ValidateEmail
-
-function validateEmail(email: string): boolean {
-  const [localPart, domin] = email.split(",");
-  console.log(localPart, domin);
-
-  if (email.lastIndexOf("@") !== -1 && email.lastIndexOf(".") !== -1)
-    return true;
-  return false;
-}
-
-console.log(validateEmail("create react app@."));
-
-const items = [
-  {
-    id: 1,
-    name: "age",
-  },
-  {
-    id: 2,
-    name: "ali",
-  },
-];
-
-const [person1,person2] = items;
-
-console.log(person1,person2)
+console.log(sumOfEvenSquares([1, 2, 3, 1, 3, 1, 34, 234, 324]));
