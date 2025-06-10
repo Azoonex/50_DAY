@@ -94,8 +94,27 @@ function sumOfEvenSquares(number: Array<number>) {
   // return sum;
 
   // method three
-
-  
 }
 
-console.log(sumOfEvenSquares([1, 2, 3, 1, 3, 1, 34, 234, 324]));
+// total tax
+
+const totalProducts = [
+  { name: "lab-tab", price: 0.2, qunit: 200 },
+  { name: "peen", price: 0.5, qunit: 200 },
+];
+
+function totalTax(
+  arr: { name: string; price: number; qunit: number }[],
+  tax: number
+) {
+  const some = arr.reduce((acc, current) => {
+    acc = current.price * current.qunit;
+    return acc;
+  }, 0);
+
+  const totalTax = (some * tax) / 100;
+
+  return tax + totalTax;
+}
+
+console.log(totalTax(totalProducts,10));

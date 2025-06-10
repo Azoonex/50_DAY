@@ -65,12 +65,26 @@ function sumOfEvenSquares(number) {
     //   return acc;
     // }, 0);
     // two method
-    var sum = 0;
-    number
-        .filter(function (item) { return item % 2 == 0; })
-        .forEach(function (item) {
-        sum += item;
-    });
-    return sum;
+    // let sum = 0;
+    // number
+    //   .filter((item) => item % 2 == 0)
+    //   .forEach((item) => {
+    //     sum += item;
+    //   });
+    // return sum;
+    // method three
 }
-console.log(sumOfEvenSquares([1, 2, 3, 1, 3, 1, 34, 234, 324]));
+// total tax
+var totalProducts = [
+    { name: "lab-tab", price: 0.2, qunit: 200 },
+    { name: "peen", price: 0.5, qunit: 200 },
+];
+function totalTax(arr, tax) {
+    var some = arr.reduce(function (acc, current) {
+        acc = current.price * current.qunit;
+        return acc;
+    }, 0);
+    var totalTax = (some * tax) / 100;
+    return tax + totalTax;
+}
+console.log(totalTax(totalProducts, 10));
