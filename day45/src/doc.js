@@ -1,5 +1,8 @@
+"use strict";
 // function find_missingNumber(arr: number[]): number {
 //   if (!arr.length) return 1;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.hightScoringWord = hightScoringWord;
 //   let n = arr.length + 1;
 //   let expectedSum = (n * (n + 1)) / 2;
 //   let actualSum = arr.reduce((acc, current) => acc + current, 0);
@@ -93,21 +96,20 @@ function sumOfEvenSquares(number) {
 // console.log(totalTax(totalProducts,10));
 // solution hightScoring Word
 function hightScoringWord(str) {
-    // if (!str.length) return "Invalid string and writing This.";
+    if (!str.length)
+        return "Invalid string and writing This.";
     var stringTo_array = str.split(" ");
-    // const largeLength = stringTo_array.reduce(
-    //   (acc, curr) => Math.max(acc, curr.length),
-    //   0
-    // );
-    // return stringTo_array.find((v) => v.length === largeLength);
-    var max = -Infinity;
-    var index = -1;
-    stringTo_array.forEach(function (a, i) {
-        if (a.length > max) {
-            max = a.length;
-            index = i;
-        }
-    });
+    var largeLength = stringTo_array.reduce(function (acc, curr) { return Math.max(acc, curr.length); }, 0);
+    return stringTo_array.find(function (v) { return v.length === largeLength; });
+    // let max = -Infinity;
+    // let index = -1;
+    // const sum = stringTo_array.forEach(function (a, i) {
+    //   if (a.length > max) {
+    //     max = a.length;
+    //     index = i;
+    //   }
+    // });
+    // return sum;
 }
 console.log(hightScoringWord("hello world And string to array"));
 // choose chat gpt
