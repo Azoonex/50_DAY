@@ -75,16 +75,30 @@ function sumOfEvenSquares(number) {
     // method three
 }
 // total tax
-var totalProducts = [
-    { name: "lab-tab", price: 0.2, qunit: 200 },
-    { name: "peen", price: 0.5, qunit: 200 },
-];
-function totalTax(arr, tax) {
-    var some = arr.reduce(function (acc, current) {
-        acc = current.price * current.qunit;
-        return acc;
-    }, 0);
-    var totalTax = (some * tax) / 100;
-    return tax + totalTax;
+// const totalProducts = [
+//   { name: "lab-tab", price: 0.2, qunit: 200 },
+//   { name: "peen", price: 0.5, qunit: 200 },
+// ];
+// function totalTax(
+//   arr: { name: string; price: number; qunit: number }[],
+//   tax: number
+// ) {
+//   const some = arr.reduce((acc, current) => {
+//     acc = current.price * current.qunit;
+//     return acc;
+//   }, 0);
+//   const totalTax = (some * tax) / 100;
+//   return tax + totalTax;
+// }
+// console.log(totalTax(totalProducts,10));
+// solution hightScoring Word
+function hightScoringWord(str) {
+    if (!str.length)
+        return "Invalid string and writing This.";
+    var stringTo_array = str.split(" ");
+    var largeLength = stringTo_array.reduce(function (acc, curr) { return Math.max(acc, curr.length); }, 0);
+    return stringTo_array.find(function (v) { return v.length === largeLength; });
 }
-console.log(totalTax(totalProducts, 10));
+console.log(hightScoringWord("hello world And string to array"));
+// choose chat gpt
+var max = -Infinity;

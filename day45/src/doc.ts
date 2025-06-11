@@ -98,23 +98,43 @@ function sumOfEvenSquares(number: Array<number>) {
 
 // total tax
 
-const totalProducts = [
-  { name: "lab-tab", price: 0.2, qunit: 200 },
-  { name: "peen", price: 0.5, qunit: 200 },
-];
+// const totalProducts = [
+//   { name: "lab-tab", price: 0.2, qunit: 200 },
+//   { name: "peen", price: 0.5, qunit: 200 },
+// ];
 
-function totalTax(
-  arr: { name: string; price: number; qunit: number }[],
-  tax: number
-) {
-  const some = arr.reduce((acc, current) => {
-    acc = current.price * current.qunit;
-    return acc;
-  }, 0);
+// function totalTax(
+//   arr: { name: string; price: number; qunit: number }[],
+//   tax: number
+// ) {
+//   const some = arr.reduce((acc, current) => {
+//     acc = current.price * current.qunit;
+//     return acc;
+//   }, 0);
 
-  const totalTax = (some * tax) / 100;
+//   const totalTax = (some * tax) / 100;
 
-  return tax + totalTax;
+//   return tax + totalTax;
+// }
+
+// console.log(totalTax(totalProducts,10));
+
+// solution hightScoring Word
+
+function hightScoringWord(str: string) {
+  if (!str.length) return "Invalid string and writing This.";
+
+  const stringTo_array = str.split(" ");
+  const largeLength = stringTo_array.reduce(
+    (acc, curr) => Math.max(acc, curr.length),
+    0
+  );
+  return stringTo_array.find((v) => v.length === largeLength);
 }
 
-console.log(totalTax(totalProducts,10));
+console.log(hightScoringWord("hello world And string to array"));
+
+// choose chat gpt
+let max = -Infinity;
+
+
