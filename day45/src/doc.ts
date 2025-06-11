@@ -122,14 +122,23 @@ function sumOfEvenSquares(number: Array<number>) {
 // solution hightScoring Word
 
 function hightScoringWord(str: string) {
-  if (!str.length) return "Invalid string and writing This.";
+  // if (!str.length) return "Invalid string and writing This.";
 
   const stringTo_array = str.split(" ");
-  const largeLength = stringTo_array.reduce(
-    (acc, curr) => Math.max(acc, curr.length),
-    0
-  );
-  return stringTo_array.find((v) => v.length === largeLength);
+  // const largeLength = stringTo_array.reduce(
+  //   (acc, curr) => Math.max(acc, curr.length),
+  //   0
+  // );
+  // return stringTo_array.find((v) => v.length === largeLength);
+
+  let max = -Infinity;
+  let index = -1;
+  stringTo_array.forEach(function (a, i) {
+    if (a.length > max) {
+      max = a.length;
+      index = i;
+    }
+  });
 }
 
 console.log(hightScoringWord("hello world And string to array"));
@@ -137,4 +146,4 @@ console.log(hightScoringWord("hello world And string to array"));
 // choose chat gpt
 let max = -Infinity;
 
-
+console.log(max < -1000);

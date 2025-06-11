@@ -93,12 +93,23 @@ function sumOfEvenSquares(number) {
 // console.log(totalTax(totalProducts,10));
 // solution hightScoring Word
 function hightScoringWord(str) {
-    if (!str.length)
-        return "Invalid string and writing This.";
+    // if (!str.length) return "Invalid string and writing This.";
     var stringTo_array = str.split(" ");
-    var largeLength = stringTo_array.reduce(function (acc, curr) { return Math.max(acc, curr.length); }, 0);
-    return stringTo_array.find(function (v) { return v.length === largeLength; });
+    // const largeLength = stringTo_array.reduce(
+    //   (acc, curr) => Math.max(acc, curr.length),
+    //   0
+    // );
+    // return stringTo_array.find((v) => v.length === largeLength);
+    var max = -Infinity;
+    var index = -1;
+    stringTo_array.forEach(function (a, i) {
+        if (a.length > max) {
+            max = a.length;
+            index = i;
+        }
+    });
 }
 console.log(hightScoringWord("hello world And string to array"));
 // choose chat gpt
 var max = -Infinity;
+console.log(max < -1000);
