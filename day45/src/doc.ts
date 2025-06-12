@@ -141,11 +141,35 @@ function hightScoringWord(str: string) {
   // return sum;
 }
 
-console.log(hightScoringWord("hello world And string to array"));
+// console.log(hightScoringWord("hello world And string to array"));
 
 // choose chat gpt
-let max = -Infinity;
+let minNegative = -Infinity;
 
-console.log(max < -1000);
+// console.log(max < -1000);
 
-export { hightScoringWord };
+// validAnagrams
+
+function validAnagram(oneStr: string, towStr: string) {
+  const letterWord = oneStr.slice(0, 1);
+  let checkTheLetter = towStr.split("").includes(letterWord);
+  return checkTheLetter;
+}
+
+console.log(validAnagram("ttt", "mmt"));
+
+export { hightScoringWord, validAnagram };
+
+function validAnagram2(oneStr: string, towStr: string) {
+  const letterWord = oneStr.slice(0, 1);
+  let checkTheLetter = towStr
+    .split("")
+    .reduce((acc: Record<string, number>, cur: string) => {
+      acc[cur] = (acc[cur] || 0) + 1;
+      return acc;
+    }, {});
+  return Object.keys(checkTheLetter).some(i => i === letterWord)
+
+}
+
+console.log(validAnagram2("ete", "gte"));

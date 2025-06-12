@@ -3,6 +3,7 @@
 //   if (!arr.length) return 1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.hightScoringWord = hightScoringWord;
+exports.validAnagram = validAnagram;
 //   let n = arr.length + 1;
 //   let expectedSum = (n * (n + 1)) / 2;
 //   let actualSum = arr.reduce((acc, current) => acc + current, 0);
@@ -111,7 +112,25 @@ function hightScoringWord(str) {
     // });
     // return sum;
 }
-console.log(hightScoringWord("hello world And string to array"));
+// console.log(hightScoringWord("hello world And string to array"));
 // choose chat gpt
-var max = -Infinity;
-console.log(max < -1000);
+var minNegative = -Infinity;
+// console.log(max < -1000);
+// validAnagrams
+function validAnagram(oneStr, towStr) {
+    var letterWord = oneStr.slice(0, 1);
+    var checkTheLetter = towStr.split("").includes(letterWord);
+    return checkTheLetter;
+}
+console.log(validAnagram("ttt", "mmt"));
+function validAnagram2(oneStr, towStr) {
+    var letterWord = oneStr.slice(0, 1);
+    var checkTheLetter = towStr
+        .split("")
+        .reduce(function (acc, cur) {
+        acc[cur] = (acc[cur] || 0) + 1;
+        return acc;
+    }, {});
+    return Object.keys(checkTheLetter).some(function (i) { return i === letterWord; });
+}
+console.log(validAnagram2("ete", "gte"));

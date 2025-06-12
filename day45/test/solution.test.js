@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { hightScoringWord } from "../src/doc";
+import { hightScoringWord,validAnagram } from "../src/doc";
 
 // describe("check test", () => {
 //   it("check the character should return false", () => {
@@ -23,4 +23,14 @@ describe("Function stringTo_array", () => {
 
     expect(validValue).toBe("crypto");
   });
+});
+
+
+describe('Check the letter world return == false', () => {
+    it('should  return false', () => {
+      expect(validAnagram("ttt","mma")).toBe(false)
+    });
+    it('should return true validAnagram', () => {
+      expect(validAnagram("take","get")).toBeTruthy()
+    });
 });
