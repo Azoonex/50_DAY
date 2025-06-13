@@ -134,3 +134,5 @@ function validAnagram2(oneStr, towStr) {
     return Object.keys(checkTheLetter).some(function (i) { return i === letterWord; });
 }
 console.log(validAnagram2("ete", "gte"));
+//
+Number.;

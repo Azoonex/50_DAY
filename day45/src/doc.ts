@@ -173,3 +173,8 @@ function validAnagram2(oneStr: string, towStr: string) {
 }
 
 console.log(validAnagram2("ete", "gte"));
+
+
+//
+
+Number.
