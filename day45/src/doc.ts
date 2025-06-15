@@ -178,15 +178,23 @@ console.log(validAnagram2("ete", "gte"));
 function generateHashtag(str: string) {
   if (str.length > 140 || str.length === 0) return false;
 
-  const stringToArray =
-    "$" +
-    str
-      .split(" ")
-      .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
-      .join(" ")
-      .replace(/[^A-Za-z]/g, "");
+  // const stringToArray =
+  //   "$" +
+  //   str
+  //     .split(" ")
+  //     .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+  //     .join(" ")
+  //     .replace(/[^A-Za-z]/g, "");
 
-  return stringToArray;
+  // return stringToArray;
+
+  // with method 2
+
+  const strToArray = str.split(" ");
+
+  return strToArray.reduce(function (acc, curr) {
+    return acc + curr.charAt(0).toUpperCase() + curr.substring(1);
+  }, "#");
 }
 
 console.log(generateHashtag("hello world"));

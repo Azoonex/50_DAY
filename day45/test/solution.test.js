@@ -43,6 +43,6 @@ describe("Generate Hashtag", () => {
     expect(generateHashtag("a".repeat(141))).toBe(false);
   });
   it("should return hashtag for valid string", () => {
-    expect(generateHashtag("hello world")).toBe("$HelloWorld");
+    expect(generateHashtag("hello world")).toBe("#HelloWorld");
   });
 });

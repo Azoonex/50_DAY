@@ -139,12 +139,18 @@ console.log(validAnagram2("ete", "gte"));
 function generateHashtag(str) {
     if (str.length > 140 || str.length === 0)
         return false;
-    var stringToArray = "$" +
-        str
-            .split(" ")
-            .map(function (s) { return s.charAt(0).toUpperCase() + s.slice(1); })
-            .join(" ")
-            .replace(/[^A-Za-z]/g, "");
-    return stringToArray;
+    // const stringToArray =
+    //   "$" +
+    //   str
+    //     .split(" ")
+    //     .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+    //     .join(" ")
+    //     .replace(/[^A-Za-z]/g, "");
+    // return stringToArray;
+    // with method 2
+    var strToArray = str.split(" ");
+    return strToArray.reduce(function (acc, curr) {
+        return acc + curr.charAt(0).toUpperCase() + curr.substring(1);
+    }, "#");
 }
 console.log(generateHashtag("hello world"));
