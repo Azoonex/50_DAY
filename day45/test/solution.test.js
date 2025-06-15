@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { hightScoringWord,validAnagram } from "../src/doc";
+import { generateHashtag, hightScoringWord,validAnagram } from "../src/doc";
 
 // describe("check test", () => {
 //   it("check the character should return false", () => {
@@ -33,4 +33,16 @@ describe('Check the letter world return == false', () => {
     it('should return true validAnagram', () => {
       expect(validAnagram("take","get")).toBeTruthy()
     });
+});
+
+describe("Generate Hashtag", () => {
+  it("should return false for empty string", () => {
+    expect(generateHashtag("")).toBe(false);
+  });
+  it("should return false for string longer than 140 characters", () => {
+    expect(generateHashtag("a".repeat(141))).toBe(false);
+  });
+  it("should return hashtag for valid string", () => {
+    expect(generateHashtag("hello world")).toBe("$HelloWorld");
+  });
 });

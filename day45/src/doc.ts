@@ -168,13 +168,27 @@ function validAnagram2(oneStr: string, towStr: string) {
       acc[cur] = (acc[cur] || 0) + 1;
       return acc;
     }, {});
-  return Object.keys(checkTheLetter).some(i => i === letterWord)
-
+  return Object.keys(checkTheLetter).some((i) => i === letterWord);
 }
 
 console.log(validAnagram2("ete", "gte"));
 
+//generateHashtag
 
-//
+function generateHashtag(str: string) {
+  if (str.length > 140 || str.length === 0) return false;
 
-Number.
+  const stringToArray =
+    "$" +
+    str
+      .split(" ")
+      .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+      .join(" ")
+      .replace(/[^A-Za-z]/g, "");
+
+  return stringToArray;
+}
+
+console.log(generateHashtag("hello world"));
+
+export { generateHashtag };
