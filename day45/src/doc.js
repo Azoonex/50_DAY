@@ -154,3 +154,15 @@ function generateHashtag(str) {
     }, "#");
 }
 console.log(generateHashtag("hello world"));
+function isValidIpv4(ip) {
+    var stringToArray = ip.split(".");
+    switch (true) {
+        case stringToArray.length < 4:
+            return false;
+        case stringToArray[0].length > 1:
+            return stringToArray.every(function (item) { return item.length > 1; });
+        default:
+            return true;
+    }
+}
+console.log(isValidIpv4("133.22.3.1"));
