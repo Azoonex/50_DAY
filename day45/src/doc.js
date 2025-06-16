@@ -2,6 +2,7 @@
 // function find_missingNumber(arr: number[]): number {
 //   if (!arr.length) return 1;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzeCarMileage = void 0;
 exports.hightScoringWord = hightScoringWord;
 exports.validAnagram = validAnagram;
 exports.generateHashtag = generateHashtag;
@@ -169,3 +170,51 @@ function isValidIpv4(ip) {
     }
 }
 console.log(isValidIpv4("1.2.3.4"));
+var AnalyzeCarMileage = /** @class */ (function () {
+    function AnalyzeCarMileage(cars) {
+        this.cars = cars;
+    }
+    AnalyzeCarMileage.prototype.averageMileage = function () {
+        var sum = this.cars.reduce(function (acc, curr) {
+            return acc + curr.mileage;
+        }, 0) / this.cars.length;
+        return Math.floor(sum);
+    };
+    AnalyzeCarMileage.prototype.totalMileage = function () {
+        var result = this.cars.reduce(function (acc, curr) {
+            return acc + curr.mileage;
+        }, 0);
+        return result;
+    };
+    AnalyzeCarMileage.prototype.find_eldest_mileage = function () {
+        var findItem = Math.max.apply(Math, this.cars.map(function (o) { return o.mileage; }));
+        return this.cars.filter(function (item) { return item.mileage == findItem; });
+    };
+    AnalyzeCarMileage.prototype.find_lost_mileage = function () {
+        var findItem = Math.min.apply(Math, this.cars.map(function (o) { return o.mileage; }));
+        return this.cars.filter(function (item) { return item.mileage == findItem; });
+    };
+    return AnalyzeCarMileage;
+}());
+exports.AnalyzeCarMileage = AnalyzeCarMileage;
+var analyzeCars = new AnalyzeCarMileage([
+    {
+        make: "bmw",
+        mileage: 3000,
+        model: "2019",
+    },
+    {
+        make: "toyota",
+        mileage: 1500,
+        model: "2000",
+    },
+    {
+        make: "",
+        mileage: 100,
+        model: "2019",
+    },
+]);
+console.log(analyzeCars.averageMileage());
+console.log(analyzeCars.totalMileage());
+console.log(analyzeCars.find_eldest_mileage());
+console.log(analyzeCars.find_lost_mileage());

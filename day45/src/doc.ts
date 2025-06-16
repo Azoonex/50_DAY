@@ -212,10 +212,63 @@ function isValidIpv4(ip: string) {
     default:
       return true;
   }
-
-
 }
 
 console.log(isValidIpv4("1.2.3.4"));
+
+type TypeCars = { make: string; model: string; mileage: number };
+
+export class AnalyzeCarMileage {
+  constructor(public cars: TypeCars[]) {}
+
+  averageMileage() {
+    const sum =
+      this.cars.reduce((acc, curr) => {
+        return acc + curr.mileage;
+      }, 0) / this.cars.length;
+
+    return Math.floor(sum);
+  }
+
+  totalMileage() {
+    const result = this.cars.reduce((acc, curr) => {
+      return acc + curr.mileage;
+    }, 0);
+    return result;
+  }
+
+  find_eldest_mileage() {
+    const findItem = Math.max(...this.cars.map((o) => o.mileage));
+    return this.cars.filter((item) => item.mileage == findItem);
+  }
+
+  find_lost_mileage() {
+    const findItem = Math.min(...this.cars.map((o) => o.mileage));
+    return this.cars.filter((item) => item.mileage == findItem);
+  }
+}
+
+const analyzeCars = new AnalyzeCarMileage([
+  {
+    make: "bmw",
+    mileage: 3000,
+    model: "2019",
+  },
+  {
+    make: "toyota",
+    mileage: 1500,
+    model: "2000",
+  },
+  {
+    make: "",
+    mileage: 100,
+    model: "2019",
+  },
+]);
+
+console.log(analyzeCars.averageMileage());
+console.log(analyzeCars.totalMileage());
+console.log(analyzeCars.find_eldest_mileage());
+console.log(analyzeCars.find_lost_mileage());
 
 export { generateHashtag, isValidIpv4 };
