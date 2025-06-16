@@ -237,13 +237,21 @@ export class AnalyzeCarMileage {
     return result;
   }
 
+  // find_eldest_mileage() {
+  //   const findItem = Math.max(...this.cars.map((o) => o.mileage));
+  //   return this.cars.filter((item) => item.mileage == findItem);
+  // }
+
   find_eldest_mileage() {
-    const findItem = Math.max(...this.cars.map((o) => o.mileage));
-    return this.cars.filter((item) => item.mileage == findItem);
+    return this.cars.reduce((acc, cur) => {
+      return acc.mileage > cur.mileage ? acc : cur;
+    }, this.cars[0]);
   }
 
   find_lost_mileage() {
-    const findItem = Math.min(...this.cars.map((o) => o.mileage));
+    return this.cars.reduce((acc, curr) => {
+      return acc.mileage < curr.mileage ? acc : curr;
+    }, this.cars[0]);
     return this.cars.filter((item) => item.mileage == findItem);
   }
 }
@@ -260,7 +268,7 @@ const analyzeCars = new AnalyzeCarMileage([
     model: "2000",
   },
   {
-    make: "",
+    make: "audi",
     mileage: 100,
     model: "2019",
   },

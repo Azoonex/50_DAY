@@ -186,12 +186,19 @@ var AnalyzeCarMileage = /** @class */ (function () {
         }, 0);
         return result;
     };
+    // find_eldest_mileage() {
+    //   const findItem = Math.max(...this.cars.map((o) => o.mileage));
+    //   return this.cars.filter((item) => item.mileage == findItem);
+    // }
     AnalyzeCarMileage.prototype.find_eldest_mileage = function () {
-        var findItem = Math.max.apply(Math, this.cars.map(function (o) { return o.mileage; }));
-        return this.cars.filter(function (item) { return item.mileage == findItem; });
+        return this.cars.reduce(function (acc, cur) {
+            return acc.mileage > cur.mileage ? acc : cur;
+        }, this.cars[0]);
     };
     AnalyzeCarMileage.prototype.find_lost_mileage = function () {
-        var findItem = Math.min.apply(Math, this.cars.map(function (o) { return o.mileage; }));
+        return this.cars.reduce(function (acc, curr) {
+            return acc.mileage < curr.mileage ? acc : curr;
+        }, this.cars[0]);
         return this.cars.filter(function (item) { return item.mileage == findItem; });
     };
     return AnalyzeCarMileage;
@@ -209,7 +216,7 @@ var analyzeCars = new AnalyzeCarMileage([
         model: "2000",
     },
     {
-        make: "",
+        make: "audi",
         mileage: 100,
         model: "2019",
     },
