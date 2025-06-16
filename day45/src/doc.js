@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.hightScoringWord = hightScoringWord;
 exports.validAnagram = validAnagram;
 exports.generateHashtag = generateHashtag;
+exports.isValidIpv4 = isValidIpv4;
 //   let n = arr.length + 1;
 //   let expectedSum = (n * (n + 1)) / 2;
 //   let actualSum = arr.reduce((acc, current) => acc + current, 0);
@@ -155,6 +156,8 @@ function generateHashtag(str) {
 }
 console.log(generateHashtag("hello world"));
 function isValidIpv4(ip) {
+    if (!ip.length)
+        return false;
     var stringToArray = ip.split(".");
     switch (true) {
         case stringToArray.length < 4:
@@ -165,4 +168,4 @@ function isValidIpv4(ip) {
             return true;
     }
 }
-console.log(isValidIpv4("133.22.3.1"));
+console.log(isValidIpv4("1.2.3.4"));

@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { generateHashtag, hightScoringWord,validAnagram } from "../src/doc";
+import {
+  generateHashtag,
+  hightScoringWord,
+  isValidIpv4,
+  validAnagram,
+} from "../src/doc";
 
 // describe("check test", () => {
 //   it("check the character should return false", () => {
@@ -25,14 +30,13 @@ describe("Function stringTo_array", () => {
   });
 });
 
-
-describe('Check the letter world return == false', () => {
-    it('should  return false', () => {
-      expect(validAnagram("ttt","mma")).toBe(false)
-    });
-    it('should return true validAnagram', () => {
-      expect(validAnagram("take","get")).toBeTruthy()
-    });
+describe("Check the letter world return == false", () => {
+  it("should  return false", () => {
+    expect(validAnagram("ttt", "mma")).toBe(false);
+  });
+  it("should return true validAnagram", () => {
+    expect(validAnagram("take", "get")).toBeTruthy();
+  });
 });
 
 describe("Generate Hashtag", () => {
@@ -44,5 +48,19 @@ describe("Generate Hashtag", () => {
   });
   it("should return hashtag for valid string", () => {
     expect(generateHashtag("hello world")).toBe("#HelloWorld");
+  });
+});
+
+describe("Valid Ipv4", () => {
+  it("should  Return false with empty input", () => {
+    expect(isValidIpv4("")).toBeFalsy();
+  });
+
+  it("Should return InvalidIp", () => {
+    expect(isValidIpv4("1,21,21,1")).toBeFalsy();
+  });
+
+  it("should Valid IP", function () {
+    expect(isValidIpv4("1.2.3.4")).toBeTruthy();
   });
 });

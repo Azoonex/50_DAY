@@ -200,6 +200,7 @@ function generateHashtag(str: string) {
 console.log(generateHashtag("hello world"));
 
 function isValidIpv4(ip: string) {
+  if (!ip.length) return false;
   const stringToArray = ip.split(".");
 
   switch (true) {
@@ -211,8 +212,10 @@ function isValidIpv4(ip: string) {
     default:
       return true;
   }
+
+
 }
 
-console.log(isValidIpv4("133.22.3.1"));
+console.log(isValidIpv4("1.2.3.4"));
 
-export { generateHashtag };
+export { generateHashtag, isValidIpv4 };
