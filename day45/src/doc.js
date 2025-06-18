@@ -293,3 +293,12 @@ var TravelCompony_one = new TravelCompony(120, [500000000, 30000000], [
     { month: 4, size: 77 },
 ]);
 console.log(TravelCompony_one.total_check_travel);
+console.log("New Challenge ------------------------------------");
+// Missing letter
+function missingLetter(letter) {
+    var alpha = "abcdefg".split("");
+    var arrayTostring = letter.join("");
+    var result = alpha.filter(function (item, index) { return item !== arrayTostring.charAt(index); });
+    return result.length ? "Alpha Invalid" : "OK. This alpha is Truth";
+}
+console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));

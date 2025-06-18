@@ -346,3 +346,18 @@ const TravelCompony_one = new TravelCompony(
 );
 
 console.log(TravelCompony_one.total_check_travel);
+console.log("New Challenge ------------------------------------");
+
+// Missing letter
+
+function missingLetter(letter: Array<string>) {
+  const alpha = "abcdefg".split("");
+  const arrayTostring = letter.join("");
+
+  const result = alpha.filter(
+    (item, index) => item !== arrayTostring.charAt(index)
+  );
+  return result.length ? "Alpha Invalid"  : "OK. This alpha is Truth";
+}
+
+console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
