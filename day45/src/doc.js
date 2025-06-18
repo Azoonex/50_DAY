@@ -199,7 +199,6 @@ var AnalyzeCarMileage = /** @class */ (function () {
         return this.cars.reduce(function (acc, curr) {
             return acc.mileage < curr.mileage ? acc : curr;
         }, this.cars[0]);
-        return this.cars.filter(function (item) { return item.mileage == findItem; });
     };
     return AnalyzeCarMileage;
 }());
@@ -225,3 +224,72 @@ console.log(analyzeCars.averageMileage());
 console.log(analyzeCars.totalMileage());
 console.log(analyzeCars.find_eldest_mileage());
 console.log(analyzeCars.find_lost_mileage());
+//  TYPES START ___++++++++++++++++//
+var StatusTotal_check_travel;
+(function (StatusTotal_check_travel) {
+    StatusTotal_check_travel[StatusTotal_check_travel["GOOD"] = 0] = "GOOD";
+    StatusTotal_check_travel[StatusTotal_check_travel["MIDDLE"] = 1] = "MIDDLE";
+    StatusTotal_check_travel[StatusTotal_check_travel["VERY_GOOD"] = 2] = "VERY_GOOD";
+})(StatusTotal_check_travel || (StatusTotal_check_travel = {}));
+// TYPE END ___++++++++++++++++++++//
+var TravelCompony = /** @class */ (function () {
+    // !! admin access
+    function TravelCompony(Employs, price_person, travel_of_month) {
+        this.Employs = Employs;
+        this.price_person = price_person;
+        this.travel_of_month = travel_of_month;
+    }
+    Object.defineProperty(TravelCompony.prototype, "all_data", {
+        get: function () {
+            return {
+                Employs: this.Employs,
+                price_person: this.price_person,
+                travel_of_month: this.travel_of_month,
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TravelCompony.prototype, "sizeEmploys", {
+        get: function () {
+            return this.Employs;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TravelCompony.prototype, "average_price_person", {
+        get: function () {
+            return (this.price_person.reduce(function (acc, curr) { return acc + curr; }, 0) /
+                this.price_person.length);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TravelCompony.prototype, "total_check_travel", {
+        get: function () {
+            var status;
+            var travel_of_month = this.travel_of_month;
+            var sumSizeTravel = this.travel_of_month.reduce(function (acc, curr) {
+                return acc + curr.size;
+            }, travel_of_month[0].size);
+            if (sumSizeTravel < 5)
+                status = "BAD";
+            else if (sumSizeTravel >= 10 && sumSizeTravel <= 20)
+                status = "GOOD";
+            else if (sumSizeTravel > 20)
+                status = "VERY_GOOD";
+            else {
+                status = "VERY_GOOD";
+            }
+            return status;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return TravelCompony;
+}());
+var TravelCompony_one = new TravelCompony(120, [500000000, 30000000], [
+    { month: 1, size: 100 },
+    { month: 4, size: 77 },
+]);
+console.log(TravelCompony_one.total_check_travel);
