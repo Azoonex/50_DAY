@@ -308,39 +308,45 @@
 
 // }
 
-function checkDuplicate(str:string){
-  const checkStr:{[key : string]:boolean} = {};
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
 
 
-  for(let i =0;i < str.length;i++){
+//   for(let i =0;i < str.length;i++){
 
 
-    if(checkStr[str[i]]){
-      return false
-    }
+//     if(checkStr[str[i]]){
+//       return false
+//     }
 
-    checkStr[str[i]] = true
+//     checkStr[str[i]] = true
 
-  }
+//   }
 
-  return checkStr
+//   return checkStr
 
-}
+// }
 
 
 function findFirstRepeatCharacters(str:string){
   let  saveCharacter:{[key:string]:number} = {};
 
  for(const char of str){
-  saveCharacter[char] = (saveCharacter[char] || 0) + 1
-  console.log(saveCharacter)
+  saveCharacter[char] = (saveCharacter[char] || 0) + 1;
  }
 
-let obj = Object.keys(saveCharacter);
+ const findBigSizeObject = Math.max(...Object.values(saveCharacter));
 
-return Math.max(...obj)
+ console.log(findBigSizeObject)
 
 
 }
 
 console.log(findFirstRepeatCharacters("hello"))
+
+const value = {
+  id : 1,
+  name: 2
+}
+
+console.log(Object.keys(value))

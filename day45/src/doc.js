@@ -225,24 +225,28 @@
 //   }
 //   return checkStr
 // }
-function checkDuplicate(str) {
-    var checkStr = {};
-    for (var i = 0; i < str.length; i++) {
-        if (checkStr[str[i]]) {
-            return false;
-        }
-        checkStr[str[i]] = true;
-    }
-    return checkStr;
-}
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
+//   for(let i =0;i < str.length;i++){
+//     if(checkStr[str[i]]){
+//       return false
+//     }
+//     checkStr[str[i]] = true
+//   }
+//   return checkStr
+// }
 function findFirstRepeatCharacters(str) {
     var saveCharacter = {};
     for (var _i = 0, str_1 = str; _i < str_1.length; _i++) {
         var char = str_1[_i];
         saveCharacter[char] = (saveCharacter[char] || 0) + 1;
-        console.log(saveCharacter);
     }
-    var obj = Object.keys(saveCharacter);
-    return Math.max.apply(Math, obj);
+    var findBigSizeObject = Math.max.apply(Math, Object.values(saveCharacter));
+    console.log(findBigSizeObject);
 }
 console.log(findFirstRepeatCharacters("hello"));
+var value = {
+    id: 1,
+    name: 2
+};
+console.log(Object.keys(value));
