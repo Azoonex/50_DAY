@@ -13,7 +13,7 @@ function sumUpTo(n) {
     // console.log(n + sumUpTo(n - 1))
     return n + sumUpTo(n - 1);
 }
-console.log(sumUpTo(3));
+// console.log(sumUpTo(3));
 function reverseString(str) {
     var method = [];
     // method one
@@ -26,4 +26,23 @@ function reverseString2(str) {
         return "";
     return reverseString2(str.substr(1)) + str.charAt(0);
 }
-reverseString2("str");
+// reverseString2("str");
+function pageNation(size) {
+    var array = [];
+    var current_page = 3;
+    for (var x = 0; x < size; x++) {
+        var firstSize = x <= 2;
+        var centerSize = size / current_page;
+        if (firstSize) {
+            array.push(x);
+        }
+        else if (current_page - 3 && x == 4) {
+            array.push("...");
+        }
+    }
+    return array;
+}
+console.log(pageNation(30));
+// else if (size === x + 1) {
+//       array.push(x, x + 1);
+//     }
