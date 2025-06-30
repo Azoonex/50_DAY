@@ -45,10 +45,10 @@ function pageNation(size: number) {
   for (let x = 0; x < size; x++) {
     let firstSize = x <= 2;
     let centerSize = size / current_page;
-    if (firstSize ) {
+    if (firstSize) {
       array.push(x);
-    }else if (current_page - 3 && x == 4){
-      array.push("...")
+    } else if (current_page - 3 && x == 4) {
+      array.push("...");
     }
   }
 
@@ -60,3 +60,28 @@ console.log(pageNation(30));
 // else if (size === x + 1) {
 //       array.push(x, x + 1);
 //     }
+
+function fibonacci(num: number): any {
+  if (num < 2) {
+    return num;
+  }
+
+  // 6 - 1 5 + 4
+  //
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+console.log(fibonacci(6));
+
+function factorial(num: number): any {
+  if (num < 2) return 1;
+  const value: Array<number> = [];
+  if (num !== 0) {
+    factorial(num - 1);
+    value.push(factorial(num - 1))
+  }
+  return value;
+}
+
+console.log(factorial(22));

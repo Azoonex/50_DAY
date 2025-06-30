@@ -46,3 +46,23 @@ console.log(pageNation(30));
 // else if (size === x + 1) {
 //       array.push(x, x + 1);
 //     }
+function fibonacci(num) {
+    if (num < 2) {
+        return num;
+    }
+    // 6 - 1 5 + 4
+    //
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
+console.log(fibonacci(6));
+function factorial(num) {
+    if (num < 2)
+        return 1;
+    var value = [];
+    if (num !== 0) {
+        factorial(num - 1);
+        value.push(factorial(num + 2));
+    }
+    return value;
+}
+console.log(factorial(22));
