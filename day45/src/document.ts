@@ -1,53 +1,87 @@
-class Person<T, K> {
-  constructor(public key: T, private value: K) {}
-  static ArrayUtils<T>(value: T) {
-    return [value];
+function countDown(num: number) {
+  if (num <= 0) {
+    console.log("All done!");
+    return;
   }
+  console.log(num);
+
+  num--;
+  countDown(num);
 }
 
-const newPerson = new Person<string, number>("quantity", 22);
+function sumUpTo(n: number) {
+  if (n === 1) return 1;
 
-// generic function interface
+  // console.log(n + sumUpTo(n - 1))
 
-interface Result<T> {
-  data: T | null;
-  error: string | null;
+  return n + sumUpTo(n - 1);
 }
 
-function fetching<T>(url: string): Result<T> {
-  if (url == "all") {
-    return { data: null, error: null };
+// console.log(sumUpTo(3));
+
+function reverseString(str: string) {
+  let method = [];
+
+  // method one
+
+  const stringToArray = str.split("");
+
+  method[0] = stringToArray.reverse();
+
+  // method two
+}
+
+function reverseString2(str: string): any {
+  if (str == "") return "";
+
+  return reverseString2(str.substr(1)) + str.charAt(0);
+}
+// reverseString2("str");
+
+function pageNation(size: number) {
+  const array: Array<number | string> = [];
+  const current_page = 3;
+
+  for (let x = 0; x < size; x++) {
+    let firstSize = x <= 2;
+    let centerSize = size / current_page;
+    if (firstSize) {
+      array.push(x);
+    } else if (current_page - 3 && x == 4) {
+      array.push("...");
+    }
   }
-  return { data: null, error: null };
+
+  return array;
 }
 
-interface Products {
-  title: string;
+console.log(pageNation(30));
+
+// else if (size === x + 1) {
+//       array.push(x, x + 1);
+//     }
+
+function fibonacci(num: number): any {
+  if (num < 2) {
+    return num;
+  }
+
+  // 6 - 1 5 + 4
+  //
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
-interface Category {
-  name: string;
+console.log(fibonacci(6));
+
+function factorial(num: number): any {
+  if (num < 2) return 1;
+  const value: Array<number> = [];
+  if (num !== 0) {
+    factorial(num - 1);
+    value.push(factorial(num - 1))
+  }
+  return value;
 }
 
-const allData = fetching<Products>("url");
-
-allData.data?.title;
-
-// limit generic type
-
-function create<T extends string | boolean>(size: T) {
-  return size;
-}
-
-const createCircle = create("32");
-
-// lesson 63 inherit class
-
-// exercise 63
-
-// keyof
-
-// exercise 64
-
-
-
+console.log(factorial(22));

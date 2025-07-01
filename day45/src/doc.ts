@@ -4,148 +4,224 @@
 //   let n = arr.length + 1;
 //   let expectedSum = (n * (n + 1)) / 2;
 
-//   console.log(arr);
-
 //   let actualSum = arr.reduce((acc, current) => acc + current, 0);
-
 //   console.log(actualSum, expectedSum);
-
-// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
-
-// function findMaxNumber(arr: number[]): number {
-//   let item = [];
-//   let items = arr.reduce((max, current) => {
-//     arr[max] === current ? item.push(max) : undefined;
-//   }, arr[0]);
-//   console.log(item);
+//   return expectedSum - actualSum;
 // }
 
-// // console.log(findMaxNumber([3, 9, 2, 5, 12, 7]));
+// // example missing alpha
+// // function findMissing_Alpha(arr: string[]): string[] | string {
+// //   if (!arr.length) return "String is Empty";
+// //   const allAlphabets = "abcdefghijklmnopqrstuvwxyz";
+// //   let findMissing = allAlphabets.indexOf(arr[0]);
+
+// //   for (let i = 0; i < arr.length; i++) {
+// //     const checkAlpa =
+// //   }
+// //   return findMissing;
+// // }
+
+// // console.log(findMissing_Alpha(["a", "b", "d", "e"])); // ["c"]
+
+// // format Phone number
+
+// function formatPhoneNumber(phoneNumber: Array<number>): string {
+//   if (!phoneNumber.length) {
+//     return "Phone  Number is Invalid";
+//   }
+
+//   const startCodeNumber = phoneNumber.slice(0, 3).join("");
+//   const middleCodeNumber = phoneNumber
+//     .slice(startCodeNumber.length, startCodeNumber.length + 3)
+//     .join("");
+//   const lastCodeNumber = phoneNumber.slice(-3).join("");
+
+//   return phoneNumber.length === 8
+//     ? `(${startCodeNumber}) ${middleCodeNumber}-${lastCodeNumber}`
+//     : "Value is not valid";
+// }
+
+// console.log(formatPhoneNumber([1, 3, 5, 1, 3, 1, 3, 2]));
+
+// // ValidateEmail
+
+// function validateEmail(email: string): boolean {
+//   const [localPart, domin] = email.split(",");
+//   console.log(localPart, domin);
+
+//   if (email.lastIndexOf("@") !== -1 && email.lastIndexOf(".") !== -1)
+//     return true;
+//   return false;
+// }
+
+// console.log(validateEmail("create react app@."));
 
 // const items = [
-//   { id: 1, name: "Apple", price: 100 },
-//   { id: 2, name: "Banana", price: 50 },
-//   { id: 3, name: "Orange", price: 70 },
+//   {
+//     id: 1,
+//     name: "age",
+//   },
+//   {
+//     id: 2,
+//     name: "ali",
+//   },
 // ];
 
-// function arraytoobject(arr: number[]) {
-//   return arr.reduce((acc, current) => {
-//     acc[current.id] = current;
+// const [person1,person2] = items;
+
+// console.log(person1,person2)
+
+// sumOfEvenSquares
+
+function sumOfEvenSquares(number: Array<number>) {
+  if (!number.length) return false;
+
+  // one method
+  // return number.reduce((acc, current) => {
+  //   if (current % 2 === 0) {
+  //     return acc + current;
+  //   }
+  //   return acc;
+  // }, 0);
+
+  // two method
+  // let sum = 0;
+  // number
+  //   .filter((item) => item % 2 == 0)
+  //   .forEach((item) => {
+  //     sum += item;
+  //   });
+  // return sum;
+
+  // method three
+}
+
+// total tax
+
+// const totalProducts = [
+//   { name: "lab-tab", price: 0.2, qunit: 200 },
+//   { name: "peen", price: 0.5, qunit: 200 },
+// ];
+
+// function totalTax(
+//   arr: { name: string; price: number; qunit: number }[],
+//   tax: number
+// ) {
+//   const some = arr.reduce((acc, current) => {
+//     acc = current.price * current.qunit;
 //     return acc;
-//   }, {});
+//   }, 0);
+
+//   const totalTax = (some * tax) / 100;
+
+//   return tax + totalTax;
 // }
 
-// console.log(arraytoobject(items));
-// Exercise-130 with Solution
+// console.log(totalTax(totalProducts,10));
 
-// function findDigitEven(num: number) {
-//   return num
-//     .toString()
-//     .split("")
-//     .map(Number)
-//     .filter((item) => item % 2 === 0);
-// }
-// let num = 1235545
-// console.log(num.toFixed(3));
+// solution hightScoring Word
+function hightScoringWord(str: string) {
+  if (!str.length) return "Invalid string and writing This.";
 
-// class Person {
-//   constructor(
-//     public id: number,
-//     public age: number,
-//     readonly service: string,
-//     private balance: number
-//   ) {}
+  const stringTo_array = str.split(" ");
+  const largeLength = stringTo_array.reduce(
+    (acc, curr) => Math.max(acc, curr.length),
+    0
+  );
+  return stringTo_array.find((v) => v.length === largeLength);
 
-//   getUser(num: number) {
-//     if (num > 0) {
-//       return "Yes";
-//     }
-//   }
+  // let max = -Infinity;
+  // let index = -1;
+  // const sum = stringTo_array.forEach(function (a, i) {
+  //   if (a.length > max) {
+  //     max = a.length;
+  //     index = i;
+  //   }
+  // });
+  // return sum;
+}
 
-//   // getter and setter
-//   get logBalance(): number {
-//     return this.balance;
-//   }
+// console.log(hightScoringWord("hello world And string to array"));
 
-//   // fixe_todo
-//   set setBalance(num: number) {
-//     if (num < 0) throw new Error("Invalid value");
-//     this.balance = num;
-//   }
-// }
+// choose chat gpt
+let minNegative = -Infinity;
 
-// let PersonBank = new Person(1, 2, "programer", 2);
-// // fixed todo
-// PersonBank.setBalance = 2;
-// PersonBank.getUser(1);
+// console.log(max < -1000);
 
-// console.log(PersonBank.getUser(2));
-// console.log(PersonBank.logBalance);
+// validAnagrams
 
-// class SeatAssignment {
-//   [seatNumber: string]: string;
-// }
+function validAnagram(oneStr: string, towStr: string) {
+  const letterWord = oneStr.slice(0, 1);
+  let checkTheLetter = towStr.split("").includes(letterWord);
+  return checkTheLetter;
+}
 
-// let seats = new SeatAssignment();
+console.log(validAnagram("ttt", "mmt"));
 
-// seats.A1 = "abas";
-// seats.A2 = "tehran";
+export { hightScoringWord, validAnagram };
 
-// // static
+function validAnagram2(oneStr: string, towStr: string) {
+  const letterWord = oneStr.slice(0, 1);
+  let checkTheLetter = towStr
+    .split("")
+    .reduce((acc: Record<string, number>, cur: string) => {
+      acc[cur] = (acc[cur] || 0) + 1;
+      return acc;
+    }, {});
+  return Object.keys(checkTheLetter).some((i) => i === letterWord);
+}
 
-// class Ride {
-//   private static activeRide: number = 0;
-//   static get print() {
-//     return Ride.activeRide;
-//   }
+console.log(validAnagram2("ete", "gte"));
 
-//   static set setRider(num: number) {
-//     Ride.activeRide += num;
-//   }
-// }
+//generateHashtag
 
-// const activeRiders = new Ride();
+function generateHashtag(str: string) {
+  if (str.length > 140 || str.length === 0) return false;
 
-// Ride.setRider = 2;
+  // const stringToArray =
+  //   "$" +
+  //   str
+  //     .split(" ")
+  //     .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+  //     .join(" ")
+  //     .replace(/[^A-Za-z]/g, "");
 
-// console.log(Ride.print);
+  // return stringToArray;
 
-// inheritance ts
+  // with method 2
 
-// class PersonNew {
-//   constructor(private name: string, private status: boolean) {}
+  const strToArray = str.split(" ");
 
-//   getFullName(value: string): string {
-//     return `${this.name} ${value}`;
-//   }
-// }
+  return strToArray.reduce(function (acc, curr) {
+    return acc + curr.charAt(0).toUpperCase() + curr.substring(1);
+  }, "#");
+}
 
-// class Employee extends Person {
-//   constructor(name: string, status: boolean) {
-//     super(name, status);
-//   }
-// }
+console.log(generateHashtag("hello world"));
 
-// Exercise-131 with Solution
+function isValidIpv4(ip: string) {
+  if (!ip.length) return false;
+  const stringToArray = ip.split(".");
 
-// function prefix_sums(arr: Array<number>) {
-//   if (!arr.length) return false;
-//   let newArray: number[] = [];
+  switch (true) {
+    case stringToArray.length < 4:
+      return false;
 
-//   for (let x = 0; x < arr.length; x++) {
-//     newArray[x] = 0;
-//     for (let i = 0; x < i + 1; i++) {
-//       newArray[x] += arr[i];
-//     }
-//   }
+    case stringToArray[0].length > 1:
+      return stringToArray.every((item) => item.length > 1);
+    default:
+      return true;
+  }
+}
 
-//   return newArray;
-// }
+console.log(isValidIpv4("1.2.3.4"));
 
-// console.log(prefix_sums([1, 3, 4, 1, 2]));
+type TypeCars = { make: string; model: string; mileage: number };
 
-// const obj = { foo: "bar", baz: 42 };
+export class AnalyzeCarMileage {
+  constructor(public cars: TypeCars[]) {}
 
+<<<<<<< HEAD
 // console.log(Object.entries(obj));
 
 // const target = { a: 1, b: 2 };
@@ -326,11 +402,66 @@
 //   return checkStr
 
 // }
+=======
+  averageMileage() {
+    const sum =
+      this.cars.reduce((acc, curr) => {
+        return acc + curr.mileage;
+      }, 0) / this.cars.length;
 
+    return Math.floor(sum);
+  }
 
-function findFirstRepeatCharacters(str:string){
-  let  saveCharacter:{[key:string]:number} = {};
+  totalMileage() {
+    const result = this.cars.reduce((acc, curr) => {
+      return acc + curr.mileage;
+    }, 0);
+    return result;
+  }
 
+  // find_eldest_mileage() {
+  //   const findItem = Math.max(...this.cars.map((o) => o.mileage));
+  //   return this.cars.filter((item) => item.mileage == findItem);
+  // }
+
+  find_eldest_mileage() {
+    return this.cars.reduce((acc, cur) => {
+      return acc.mileage > cur.mileage ? acc : cur;
+    }, this.cars[0]);
+  }
+
+  find_lost_mileage() {
+    return this.cars.reduce((acc, curr) => {
+      return acc.mileage < curr.mileage ? acc : curr;
+    }, this.cars[0]);
+  }
+}
+>>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72
+
+const analyzeCars = new AnalyzeCarMileage([
+  {
+    make: "bmw",
+    mileage: 3000,
+    model: "2019",
+  },
+  {
+    make: "toyota",
+    mileage: 1500,
+    model: "2000",
+  },
+  {
+    make: "audi",
+    mileage: 100,
+    model: "2019",
+  },
+]);
+
+console.log(analyzeCars.averageMileage());
+console.log(analyzeCars.totalMileage());
+console.log(analyzeCars.find_eldest_mileage());
+console.log(analyzeCars.find_lost_mileage());
+
+<<<<<<< HEAD
  for(const char of str){
   saveCharacter[char] = (saveCharacter[char] || 0) + 1;
  }
@@ -338,10 +469,19 @@ function findFirstRepeatCharacters(str:string){
  const findBigSizeObject = Math.max(...Object.values(saveCharacter));
 
  console.log(findBigSizeObject)
+=======
+export { generateHashtag, isValidIpv4 };
+>>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72
 
+//  TYPES START ___++++++++++++++++//
 
+enum StatusTotal_check_travel {
+  "GOOD",
+  "MIDDLE",
+  "VERY_GOOD",
 }
 
+<<<<<<< HEAD
 console.log(findFirstRepeatCharacters("hello"))
 
 const value = {
@@ -350,3 +490,78 @@ const value = {
 }
 
 console.log(Object.keys(value))
+=======
+type statusTotal = "BAD" | "GOOD" | "MIDDLE" | "VERY_GOOD";
+
+// TYPE END ___++++++++++++++++++++//
+
+class TravelCompony {
+  // !! admin access
+  constructor(
+    private Employs: number,
+    private price_person: Array<number>,
+    private travel_of_month: { month: number; size: number }[]
+  ) {}
+
+  get all_data() {
+    return {
+      Employs: this.Employs,
+      price_person: this.price_person,
+      travel_of_month: this.travel_of_month,
+    };
+  }
+
+  get sizeEmploys() {
+    return this.Employs;
+  }
+
+  get average_price_person() {
+    return (
+      this.price_person.reduce((acc, curr) => acc + curr, 0) /
+      this.price_person.length
+    );
+  }
+
+  get total_check_travel() {
+    let status: statusTotal;
+    const travel_of_month = this.travel_of_month;
+    const sumSizeTravel = this.travel_of_month.reduce((acc, curr) => {
+      return acc + curr.size;
+    }, travel_of_month[0].size);
+
+    if (sumSizeTravel < 5) status = "BAD";
+    else if (sumSizeTravel >= 10 && sumSizeTravel <= 20) status = "GOOD";
+    else if (sumSizeTravel > 20) status = "VERY_GOOD";
+    else {
+      status = "VERY_GOOD";
+    }
+    return status;
+  }
+}
+
+const TravelCompony_one = new TravelCompony(
+  120,
+  [500_000_000, 300_000_00],
+  [
+    { month: 1, size: 100 },
+    { month: 4, size: 77 },
+  ]
+);
+
+console.log(TravelCompony_one.total_check_travel);
+console.log("New Challenge ------------------------------------");
+
+// Missing letter
+
+function missingLetter(letter: Array<string>) {
+  const alpha = "abcdefg".split("");
+  const arrayTostring = letter.join("");
+
+  const result = alpha.filter(
+    (item, index) => item !== arrayTostring.charAt(index)
+  );
+  return result.length ? "Alpha Invalid"  : "OK. This alpha is Truth";
+}
+
+console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
+>>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72
