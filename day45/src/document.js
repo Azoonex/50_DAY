@@ -42,7 +42,7 @@ function pageNation(size) {
     }
     return array;
 }
-console.log(pageNation(30));
+// console.log(pageNation(30));
 // else if (size === x + 1) {
 //       array.push(x, x + 1);
 //     }
@@ -61,8 +61,20 @@ function factorial(num) {
     var value = [];
     if (num !== 0) {
         factorial(num - 1);
-        value.push(factorial(num + 2));
+        value.push(factorial(num - 1));
     }
     return value;
 }
-console.log(factorial(22));
+// console.log(factorial(22));
+// breadCrumb logic home>login>...>make
+var asPath = [{ name: "auth" }, { name: "admin" }, { name: "login" }];
+var breadCrumb = "";
+for (var x in asPath) {
+    if (Number(x) !== asPath.length) {
+        breadCrumb += asPath[x] + ">";
+        console.log(breadCrumb += asPath[x] + ">");
+    }
+    ;
+    console.log(asPath[x].name);
+}
+console.log(breadCrumb);
