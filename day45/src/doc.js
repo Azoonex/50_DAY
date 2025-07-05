@@ -97,6 +97,125 @@ function sumOfEvenSquares(number) {
 //   const totalTax = (some * tax) / 100;
 //   return tax + totalTax;
 // }
+<<<<<<< HEAD
+// console.log(TitleCase("amir reza Abas"))
+// reverse string
+// function reverseString (str:string){
+//   // return str.split("").reverse().join("")
+//   const newString = str.split("");
+//   let arrayString:string[] = []
+//   for(let x = newString.length - 1; x >= 0 ; x--){
+//     arrayString.push(newString[x])
+//   }
+//   return arrayString.join("")
+// }
+// console.log(reverseString("tehran"))
+// console.log("items".length)
+// count vowels
+// function countVowels(str: string) {
+//   const Alphabet = ["a", "b", "c", "i", "y"];
+//   const newArray = str.split("");
+//   let findVowels: string[] = [];
+//   for (let x = 0; newArray.length > x; x++) {
+//     if (Alphabet[x] && Alphabet[x] === newArray[x]) {
+//       findVowels.push("yes");
+//     }
+//   }
+//   return findVowels.length
+// }
+// console.log(countVowels("abas"));
+// function removeDuplicate (arr:number[]){
+//   // one solution
+//   let one = arr.filter((value,index)=> arr.indexOf(value) === index);
+//   // two solution
+//   let two = [...new Set(arr)]
+//   // three solution
+//   let unique:number[] = [];
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element)
+//     }
+//   })
+//   // fore solution
+//   arr.reduce((prevous,curren)=>{
+//     if(prevous.index(prevous) < 0) prevous.push(curren)
+//     return prevous
+//   })
+// }
+// function findMissingAlpha(arr: string[]) {
+//   let allAlpha = "abcdefghijklmnopqrstuywxyz";
+//   let findIndexAlpha = allAlpha.indexOf(arr[0]);
+//   let missingAlpha: Array<string> = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     findIndexAlpha += 1;
+//     console.log(findIndexAlpha);
+//     if (allAlpha[findIndexAlpha + 1] !== arr[i]) {
+//       missingAlpha.push(allAlpha[findIndexAlpha + 1]);
+//     }
+//   }
+//   return missingAlpha;
+// }
+// console.log(findMissingAlpha(["a", "b","c", "d"]));
+// function allCharacterUnique(str: string) {
+//   const charCount = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (charCount[char]) {
+//       return false;
+//     }
+//     charCount[char] = true;
+//   }
+//   return charCount;
+// }
+// method 2
+// export function allCharacterUnique(str: string) {
+//   const charSet = new Set();
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (charSet.has(char)) {
+//       return false;
+//     }
+//     charSet.add(char);
+//   }
+//   return Array.from(charSet);
+// }
+// console.log(allCharacterUnique("amir"));
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
+//   for(let i =0;i < str.length;i++){
+//     if(checkStr[str[i]]){
+//       return false
+//     }
+//     checkStr[str[i]] = true
+//   }
+//   return checkStr
+// }
+// function checkDuplicate(str:string){
+//   const checkStr:{[key : string]:boolean} = {};
+//   for(let i =0;i < str.length;i++){
+//     if(checkStr[str[i]]){
+//       return false
+//     }
+//     checkStr[str[i]] = true
+//   }
+//   return checkStr
+// }
+function findFirstRepeatCharacters(str) {
+    var saveCharacter = {};
+    for (var _i = 0, str_1 = str; _i < str_1.length; _i++) {
+        var char = str_1[_i];
+        saveCharacter[char] = (saveCharacter[char] || 0) + 1;
+    }
+    var findBigSizeObject = Math.max.apply(Math, Object.values(saveCharacter));
+    console.log(findBigSizeObject);
+}
+console.log(findFirstRepeatCharacters("hello"));
+var value = {
+    id: 1,
+    name: 2
+};
+console.log(Object.keys(value));
+=======
 // console.log(totalTax(totalProducts,10));
 // solution hightScoring Word
 function hightScoringWord(str) {
@@ -302,3 +421,4 @@ function missingLetter(letter) {
     return result.length ? "Alpha Invalid" : "OK. This alpha is Truth";
 }
 console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
+>>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72

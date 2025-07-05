@@ -42,7 +42,7 @@ function pageNation(size) {
     }
     return array;
 }
-console.log(pageNation(30));
+// console.log(pageNation(30));
 // else if (size === x + 1) {
 //       array.push(x, x + 1);
 //     }
