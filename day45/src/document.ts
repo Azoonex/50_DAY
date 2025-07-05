@@ -76,12 +76,10 @@ console.log(fibonacci(6));
 
 function factorial(num: number): any {
   if (num < 2) return 1;
-  const value: Array<number> = [];
-  if (num !== 0) {
-    factorial(num - 1);
-    value.push(factorial(num - 1))
-  }
-  return value;
+
+  return num * factorial(num - 1);
 }
 
-console.log(factorial(22));
+console.log(factorial(5));
+
+

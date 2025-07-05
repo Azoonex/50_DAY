@@ -58,11 +58,6 @@ console.log(fibonacci(6));
 function factorial(num) {
     if (num < 2)
         return 1;
-    var value = [];
-    if (num !== 0) {
-        factorial(num - 1);
-        value.push(factorial(num + 2));
-    }
-    return value;
+    return num * factorial(num - 1);
 }
-console.log(factorial(22));
+console.log(factorial(5));
