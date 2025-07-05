@@ -76,7 +76,6 @@ console.log(fibonacci(6));
 
 function factorial(num: number): any {
   if (num < 2) return 1;
-<<<<<<< HEAD
 
   return num * factorial(num - 1);
 }
@@ -84,31 +83,3 @@ function factorial(num: number): any {
 console.log(factorial(5));
 
 
-=======
-  const value: Array<number> = [];
-  if (num !== 0) {
-    factorial(num - 1);
-    value.push(factorial(num - 1));
-  }
-  return value;
-}
-
-// console.log(factorial(22));
-
-// breadCrumb logic home>login>...>make
-
-const asPath = [{ name: "auth" }, { name: "admin" }, { name: "login" }];
-
-let breadCrumb = "";
-
-for (let x in asPath) {
-  if (Number(x) !== asPath.length) {
-    breadCrumb += asPath[x] + ">"
-    console.log(breadCrumb += asPath[x] + ">")
-  };
-  console.log(asPath[x].name);
-}
-
-
-console.log(breadCrumb)
->>>>>>> f3004be9cbe76c8aa06262632ebcd1376739f0d0
