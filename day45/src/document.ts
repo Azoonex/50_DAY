@@ -100,5 +100,9 @@ for (let x in asPath) {
   console.log(asPath[x].name);
 }
 
+function printTree(node) {
+  console.log(node.name);
+  node.children.forEach(child => printTree(child));
+}
 
-console.log(breadCrumb)
+console.log(printTree())

@@ -77,4 +77,8 @@ for (var x in asPath) {
     ;
     console.log(asPath[x].name);
 }
-console.log(breadCrumb);
+function printTree(node) {
+    console.log(node.name);
+    node.children.forEach(function (child) { return printTree(child); });
+}
+console.log(printTree());

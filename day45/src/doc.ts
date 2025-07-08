@@ -565,3 +565,18 @@ function missingLetter(letter: Array<string>) {
 
 console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
 >>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72
+
+// chunk array
+
+function chunk(arra: Array<number>, size: number) {
+  let firstIndex = 0;
+  const resultArray: Array<Array<number>> = [];
+  for (let x = 0; x < arra.length; x++) {
+    let newArra = arra.slice(firstIndex, size);
+    (firstIndex += 2), (size += 2);
+    resultArray.push(newArra);
+  }
+  return resultArray;
+}
+
+console.log(chunk([1, 3, 41, 2], 2));
