@@ -88,5 +88,13 @@ function power(base: number, exponent: number):any {
   return base * power(base, exponent - 1);
 }
 
+function printTree(node) {
+  console.log(node.name);
+  node.children.forEach(child => printTree(child));
+}
 
+<<<<<<< HEAD
+console.log(printTree())
+=======
 console.log(power(2, 3));
+>>>>>>> a030fd7f09b9904cee36783dee4d6aef5362d58c
