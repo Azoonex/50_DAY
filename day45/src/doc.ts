@@ -571,12 +571,13 @@ console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
 function chunk(arra: Array<number>, size: number) {
   let firstIndex = 0;
   const resultArray: Array<Array<number>> = [];
-  for (let x = 0; x < arra.length; x++) {
+  for (let x = 0; x  < arra.length; x++) {
+    console.log(x);
     let newArra = arra.slice(firstIndex, size);
     (firstIndex += 2), (size += 2);
-    resultArray.push(newArra);
+    if (newArra && newArra.length > 0) resultArray.push(newArra);
   }
   return resultArray;
 }
 
-console.log(chunk([1, 3, 41, 2], 2));
+console.log(chunk([1, 3, 41, 2, 9, 5, 4, 7, 8, 9], 2));
