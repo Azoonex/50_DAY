@@ -58,27 +58,20 @@ console.log(fibonacci(6));
 function factorial(num) {
     if (num < 2)
         return 1;
-    var value = [];
-    if (num !== 0) {
-        factorial(num - 1);
-        value.push(factorial(num - 1));
-    }
-    return value;
+    return num * factorial(num - 1);
 }
-// console.log(factorial(22));
-// breadCrumb logic home>login>...>make
-var asPath = [{ name: "auth" }, { name: "admin" }, { name: "login" }];
-var breadCrumb = "";
-for (var x in asPath) {
-    if (Number(x) !== asPath.length) {
-        breadCrumb += asPath[x] + ">";
-        console.log(breadCrumb += asPath[x] + ">");
-    }
-    ;
-    console.log(asPath[x].name);
+console.log(factorial(5));
+function power(base, exponent) {
+    if (exponent == 0)
+        return 1;
+    return base * power(base, exponent - 1);
 }
+<<<<<<< HEAD
 function printTree(node) {
     console.log(node.name);
     node.children.forEach(function (child) { return printTree(child); });
 }
 console.log(printTree());
+=======
+console.log(power(2, 3));
+>>>>>>> a030fd7f09b9904cee36783dee4d6aef5362d58c

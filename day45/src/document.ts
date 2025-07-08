@@ -76,28 +76,16 @@ console.log(fibonacci(6));
 
 function factorial(num: number): any {
   if (num < 2) return 1;
-  const value: Array<number> = [];
-  if (num !== 0) {
-    factorial(num - 1);
-    value.push(factorial(num - 1));
-  }
-  return value;
+
+  return num * factorial(num - 1);
 }
 
-// console.log(factorial(22));
+console.log(factorial(5));
 
-// breadCrumb logic home>login>...>make
+function power(base: number, exponent: number):any {
+  if (exponent == 0) return 1;
 
-const asPath = [{ name: "auth" }, { name: "admin" }, { name: "login" }];
-
-let breadCrumb = "";
-
-for (let x in asPath) {
-  if (Number(x) !== asPath.length) {
-    breadCrumb += asPath[x] + ">"
-    console.log(breadCrumb += asPath[x] + ">")
-  };
-  console.log(asPath[x].name);
+  return base * power(base, exponent - 1);
 }
 
 function printTree(node) {
@@ -105,4 +93,8 @@ function printTree(node) {
   node.children.forEach(child => printTree(child));
 }
 
+<<<<<<< HEAD
 console.log(printTree())
+=======
+console.log(power(2, 3));
+>>>>>>> a030fd7f09b9904cee36783dee4d6aef5362d58c
