@@ -481,7 +481,6 @@ enum StatusTotal_check_travel {
   "VERY_GOOD",
 }
 
-<<<<<<< HEAD
 console.log(findFirstRepeatCharacters("hello"))
 
 const value = {
@@ -490,81 +489,6 @@ const value = {
 }
 
 console.log(Object.keys(value))
-=======
-type statusTotal = "BAD" | "GOOD" | "MIDDLE" | "VERY_GOOD";
-
-// TYPE END ___++++++++++++++++++++//
-
-class TravelCompony {
-  // !! admin access
-  constructor(
-    private Employs: number,
-    private price_person: Array<number>,
-    private travel_of_month: { month: number; size: number }[]
-  ) {}
-
-  get all_data() {
-    return {
-      Employs: this.Employs,
-      price_person: this.price_person,
-      travel_of_month: this.travel_of_month,
-    };
-  }
-
-  get sizeEmploys() {
-    return this.Employs;
-  }
-
-  get average_price_person() {
-    return (
-      this.price_person.reduce((acc, curr) => acc + curr, 0) /
-      this.price_person.length
-    );
-  }
-
-  get total_check_travel() {
-    let status: statusTotal;
-    const travel_of_month = this.travel_of_month;
-    const sumSizeTravel = this.travel_of_month.reduce((acc, curr) => {
-      return acc + curr.size;
-    }, travel_of_month[0].size);
-
-    if (sumSizeTravel < 5) status = "BAD";
-    else if (sumSizeTravel >= 10 && sumSizeTravel <= 20) status = "GOOD";
-    else if (sumSizeTravel > 20) status = "VERY_GOOD";
-    else {
-      status = "VERY_GOOD";
-    }
-    return status;
-  }
-}
-
-const TravelCompony_one = new TravelCompony(
-  120,
-  [500_000_000, 300_000_00],
-  [
-    { month: 1, size: 100 },
-    { month: 4, size: 77 },
-  ]
-);
-
-console.log(TravelCompony_one.total_check_travel);
-console.log("New Challenge ------------------------------------");
-
-// Missing letter
-
-function missingLetter(letter: Array<string>) {
-  const alpha = "abcdefg".split("");
-  const arrayTostring = letter.join("");
-
-  const result = alpha.filter(
-    (item, index) => item !== arrayTostring.charAt(index)
-  );
-  return result.length ? "Alpha Invalid"  : "OK. This alpha is Truth";
-}
-
-console.log(missingLetter(["a", "b", "c", "d", "e", "f"]));
->>>>>>> 24483fdb573e5429f52683b837fb9781d7ff4a72
 
 // chunk array
 
