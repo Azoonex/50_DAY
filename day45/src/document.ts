@@ -113,7 +113,7 @@ function recursionArray(num: number): number {
 
 // fibonacci
 
-function fibonacci(num: number):number {
+function fibonacci(num: number): number {
   switch (num) {
     case 0:
       return 0;
@@ -126,5 +126,12 @@ function fibonacci(num: number):number {
 
 console.log(recursionArray(3));
 
+console.log(typeof 0 === "number");
 
-console.log(typeof 0 === "number")
+const myArray = ["abas", "game", "test"];
+
+const entriesArray = myArray.entries();
+
+for (let [value, index] of entriesArray) {
+  console.log(index,value);
+}

@@ -106,3 +106,9 @@ function fibonacci(num) {
 }
 console.log(recursionArray(3));
 console.log(typeof 0 === "number");
+var myArray = ["abas", "game", "test"];
+var entriesArray = myArray.entries();
+for (var _i = 0, entriesArray_1 = entriesArray; _i < entriesArray_1.length; _i++) {
+    var _a = entriesArray_1[_i], value = _a[0], index = _a[1];
+    console.log(index, value);
+}
