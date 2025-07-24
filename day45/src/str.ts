@@ -19,6 +19,7 @@ const strings = [
   "ab\uD83D\uDE04c",
 ];
 
-for(let str of strings){
-    console.log(str)
+for (let str of strings) {
+  console.log(str);
 }
+

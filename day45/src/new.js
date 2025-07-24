@@ -42,4 +42,19 @@ function todo(todo) {
         });
     });
 }
-console.log(todo().then(function (v) { console.log(v); }));
+console.log(todo().then(function (v) {
+    console.log(v);
+}));
+// fellate array 44
+function fellateArrayRecursion(array) {
+    var result = [];
+    for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
+        var va = array_1[_i];
+        if (Array.isArray(va))
+            result = result.concat(fellateArrayRecursion(va));
+        else
+            result.push(va);
+    }
+    return result;
+}
+console.log(fellateArrayRecursion([1, 2, 3, [1, 2, 3], [1, 2]]));
