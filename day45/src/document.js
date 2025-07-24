@@ -104,11 +104,22 @@ function fibonacci(num) {
             return fibonacci(num - 1) + fibonacci(num - 2);
     }
 }
+<<<<<<< HEAD
+function printTree(node) {
+    console.log(node.name);
+    node.children.forEach(function (child) { return printTree(child); });
+}
+console.log(printTree());
+=======
 console.log(recursionArray(3));
 console.log(typeof 0 === "number");
+<<<<<<< HEAD
 var myArray = ["abas", "game", "test"];
 var entriesArray = myArray.entries();
 for (var _i = 0, entriesArray_1 = entriesArray; _i < entriesArray_1.length; _i++) {
     var _a = entriesArray_1[_i], value = _a[0], index = _a[1];
     console.log(index, value);
 }
+=======
+>>>>>>> d0c073df7727fdab4218f37b34c4f698e4586abe
+>>>>>>> 1b46266c56c453d372f59f0ec6b6c653f9f17e16
