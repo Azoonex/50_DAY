@@ -31,36 +31,97 @@ const user = {
   age: 28,
 };
 
-console.log(Object.fromEntries(entries));
-console.log(Object.entries(user).map((item) => console.log(item[1])));
+// console.log(Object.fromEntries(entries));
+// console.log(Object.entries(user).map((item) => console.log(item[1])));
 
 // console.log(editData(rawData));
 
 // Logarithmic Time (0(long n)) example Binary search | AVL Tree
 
-function MemoSearchRecursive(
-  arr: Array<number>,
-  x: number,
-  start: number,
-  end: number
-) {
-  if (start > end) return false;
+// function MemoSearchRecursive(
+//   arr: Array<number>,
+//   x: number,
+//   start: number,
+//   end: number
+// ) {
+//   if (start > end) return false;
 
-  let mid = Math.floor((start + end) / 2);
-  // example [0,300] => 0 + 300 / 2 150;
+//   let mid = Math.floor((start + end) / 2);
+//   // example [0,300] => 0 + 300 / 2 150;
 
-  if (arr[mid] === x) return true;
+//   if (arr[mid] === x) return true;
 
-  // [50] > 30
-  if (arr[mid] > x) {
-    console.log(arr[x]);
-    return MemoSearchRecursive(arr, x, start, mid - 1);
-  } else {
-    return MemoSearchRecursive(arr, x, mid + 1, end);
-  }
-}
+//   // [50] > 30
+//   if (arr[mid] > x) {
+//     console.log(arr[x]);
+//     return MemoSearchRecursive(arr, x, start, mid - 1);
+//   } else {
+//     return MemoSearchRecursive(arr, x, mid + 1, end);
+//   }
+// }
 
-let arr = Array.from({ length: 3_000_000 }).map((_, i) => i);
-let x = 5;
+// let arr = Array.from({ length: 3_000_000 }).map((_, i) => i);
+// let x = 5;
 
-console.log(MemoSearchRecursive(arr, x, 0, arr.length - 1));
+// console.log(MemoSearchRecursive(arr, x, 0, arr.length - 1));
+
+// let array = [1, 2.3, 4, 5, 6];
+// function maxSubarraySum(arr: Array<number>, k: number) {
+//   let maxSum = 0;
+
+//   for (let i = 0; i < arr.length - k; i++) {
+//     let currentSum = 0;
+//     for (let j = i; j < i + k; j++) {
+//       console.log(arr[j]);
+//     }
+//     maxSum = Math.max(maxSum, currentSum);
+//   }
+//   return maxSum
+// }
+
+// console.log(maxSubarraySum(array, 3));
+
+
+//! Intel method JS
+
+//  خلاصه سازه‌های اصلی Intl
+// Intl.Collator → مقایسه رشته‌ها بر اساس قوانین زبان
+
+// Intl.NumberFormat → قالب‌بندی اعداد، پول و واحدها
+
+// Intl.DateTimeFormat → قالب‌بندی تاریخ و زمان
+
+// Intl.PluralRules → انتخاب حالت جمع/مفرد درست بر اساس زبان
+
+// Intl.RelativeTimeFormat → نمایش "5 minutes ago" یا "در ۵ دقیقه قبل"
+
+// Intl.ListFormat → قالب‌بندی لیست‌ها ("A, B, and C")
+
+// ~ compare language
+const collator = new Intl.Collator("sv")
+console.log(collator.compare("ب","z"))
+
+
+// ~ Intel.NumberFormat => this set number determine language and country
+
+const formatter = new Intl.NumberFormat("de-BE");
+console.log(formatter.format("13314234234"));
+
+// ~ Intl.DateTimeFormate => format Date determine language / county NICE
+const dateFormatter = new Intl.DateTimeFormat("fa-IR");
+console.log(dateFormatter.format(new Date()))
+
+// ~ Intl.NumberFormat => Unit of measurement
+
+// example 1 with Units
+const unitFormatter = new Intl.NumberFormat("en-US",{style:"unit",unit:"kilometer-per-hour"});
+console.log(unitFormatter.format(120))
+
+// example 2 with Currency nice
+
+const currencyFormatter = new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
+console.log(currencyFormatter.format(54546546546546546563354))
+
+
+
+
