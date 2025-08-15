@@ -64,6 +64,13 @@ var user = {
 // }
 // console.log(maxSubarraySum(array, 3));
 //! Intel method JS
+//  خلاصه سازه‌های اصلی Intl
+// Intl.Collator → مقایسه رشته‌ها بر اساس قوانین زبان
+// Intl.NumberFormat → قالب‌بندی اعداد، پول و واحدها
+// Intl.DateTimeFormat → قالب‌بندی تاریخ و زمان
+// Intl.PluralRules → انتخاب حالت جمع/مفرد درست بر اساس زبان
+// Intl.RelativeTimeFormat → نمایش "5 minutes ago" یا "در ۵ دقیقه قبل"
+// Intl.ListFormat → قالب‌بندی لیست‌ها ("A, B, and C")
 // ~ compare language
 var collator = new Intl.Collator("sv");
 console.log(collator.compare("ب", "z"));
@@ -77,6 +84,6 @@ console.log(dateFormatter.format(new Date()));
 // example 1 with Units
 var unitFormatter = new Intl.NumberFormat("en-US", { style: "unit", unit: "kilometer-per-hour" });
 console.log(unitFormatter.format(120));
-// example 2 with Currency
+// example 2 with Currency nice
 var currencyFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 console.log(currencyFormatter.format(54546546546546546563354));
