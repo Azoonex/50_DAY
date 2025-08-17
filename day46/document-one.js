@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var car = { make: "toyota", model: "camry", year: 2020 };
 delete car.make;
 console.log(car);
@@ -30,3 +41,30 @@ var initializedMap = new Map([
     ["text", "value2"],
 ]);
 console.log(initializedMap.values());
+var person = {
+    ali: {
+        status: function () { return false; },
+        age: 22,
+        work: "clear",
+    },
+    amir: {
+        status: function () { return true; },
+        age: 25,
+        work: "devops",
+    },
+    jamal: {
+        status: function () { return true; },
+        age: 35,
+        work: "fluter",
+    },
+};
+var statusDoer = [];
+for (var _c = 0, _d = Object.entries(person); _c < _d.length; _c++) {
+    var _e = _d[_c], key = _e[0], value = _e[1];
+    if (value.status()) {
+        var newObject = {};
+        newObject = __assign({ name: key }, value);
+        statusDoer.push(newObject);
+    }
+}
+console.log(statusDoer);

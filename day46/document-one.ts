@@ -40,7 +40,6 @@ const bookMap = new Map(Object.entries(book));
 
 console.log(bookMap.values());
 
-
 // new map key as everything type boolean and string number everything
 
 const initializedMap = new Map([
@@ -48,7 +47,34 @@ const initializedMap = new Map([
   ["text", "value2"],
 ]);
 
+console.log(initializedMap.values());
 
+const person = {
+  ali: {
+    status: () => false,
+    age: 22,
+    work: "clear",
+  },
+  amir: {
+    status: () => true,
+    age: 25,
+    work: "devops",
+  },
+  jamal: {
+    status: () => true,
+    age: 35,
+    work: "fluter",
+  },
+};
 
+const statusDoer = [];
 
-console.log(initializedMap.values())
+for (let [key, value] of Object.entries(person)) {
+  if (value.status()) {
+    let newObject = {};
+    newObject = { name: key, ...value };
+    statusDoer.push(newObject);
+  }
+}
+
+console.log(statusDoer);
