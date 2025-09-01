@@ -144,6 +144,7 @@
 
 // dataMap.clear()
 
+// change method with solution
 function worldFrequencyCounter(str: string) {
   const newMapString = new Map();
 
@@ -154,4 +155,33 @@ function worldFrequencyCounter(str: string) {
   return newMapString;
 }
 
-console.log(worldFrequencyCounter("the app create by flutter"));
+function phoneNumberDirectory(array: Array<string>) {
+  // const newArrayAsStr = str.split(":");
+
+  const Directors = new Map();
+
+  // newArrayAsStr.forEach((value, index) => {
+  //   Directors.set(value, index);
+  // });
+
+  // array.forEach((value, index) => {
+  //   convertArrayToString = value.split(":");
+  // });
+
+  for (let value of array) {
+    const [name, phone] = value.split(":");
+    Directors.set(name, phone);
+  }
+
+  return Directors;
+}
+
+console.log(
+  phoneNumberDirectory([
+    "john:5454-87788-525",
+    "abas:545-7788-58775",
+    "app:545-7788-57975",
+  ])
+);
+
+// console.log(worldFrequencyCounter("the app create by flutter"));

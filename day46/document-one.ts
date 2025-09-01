@@ -77,4 +77,18 @@ for (let [key, value] of Object.entries(person)) {
   }
 }
 
-console.log(statusDoer);
+
+const b = new Map([
+  [1, "one"],
+  [2, "two"],
+  [4, "four"],
+]);
+
+const setValue = new Set();
+
+setValue.add("app")
+setValue.add("vehicle")
+setValue.add("Trucks")
+
+console.log("setValue",b.)
+

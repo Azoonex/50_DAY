@@ -67,4 +67,13 @@ for (var _c = 0, _d = Object.entries(person); _c < _d.length; _c++) {
         statusDoer.push(newObject);
     }
 }
-console.log(statusDoer);
+var b = new Map([
+    [1, "one"],
+    [2, "two"],
+    [4, "four"],
+]);
+var setValue = new Set();
+setValue.add("app");
+setValue.add("vehicle");
+setValue.add("Trucks");
+console.log("setValue", b.);

@@ -104,6 +104,7 @@
 //   console.log(key, value);
 // }
 // dataMap.clear()
+// change method with solution
 function worldFrequencyCounter(str) {
     var newMapString = new Map();
     var stringToArray = str.split(" ").map(function (item, index) {
@@ -111,4 +112,25 @@ function worldFrequencyCounter(str) {
     });
     return newMapString;
 }
-console.log(worldFrequencyCounter("the app create by flutter"));
+function phoneNumberDirectory(array) {
+    // const newArrayAsStr = str.split(":");
+    var Directors = new Map();
+    // newArrayAsStr.forEach((value, index) => {
+    //   Directors.set(value, index);
+    // });
+    // array.forEach((value, index) => {
+    //   convertArrayToString = value.split(":");
+    // });
+    for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
+        var value = array_1[_i];
+        var _a = value.split(":"), name_1 = _a[0], phone = _a[1];
+        Directors.set(name_1, phone);
+    }
+    return Directors;
+}
+console.log(phoneNumberDirectory([
+    "john:5454-87788-525",
+    "abas:545-7788-58775",
+    "app:545-7788-57975",
+]));
+// console.log(worldFrequencyCounter("the app create by flutter"));
