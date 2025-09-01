@@ -90,5 +90,20 @@ setValue.add("app")
 setValue.add("vehicle")
 setValue.add("Trucks")
 
-console.log("setValue",b.)
 
+// symmetricDifference()
+
+function symmetricDifference(arrayOne:Array<number>,arrayTwo:Array<number>){
+  // arrayOne 1 2 3 4 5
+  // arrayTwo 2345 6
+  // return 1 6
+
+  const newConvertValue = arrayOne.concat(arrayTwo)
+  let convertSet =  new Set(newConvertValue)
+
+  return Array.from(convertSet)
+}
+
+
+
+console.log(symmetricDifference([1,2,3,4,5],[1,2,45,51,2,5,1]))

@@ -76,4 +76,13 @@ var setValue = new Set();
 setValue.add("app");
 setValue.add("vehicle");
 setValue.add("Trucks");
-console.log("setValue", b.);
+// symmetricDifference()
+function symmetricDifference(arrayOne, arrayTwo) {
+    // arrayOne 1 2 3 4 5
+    // arrayTwo 2345 6
+    // return 1 6
+    var newConvertValue = arrayOne.concat(arrayTwo);
+    var convertSet = new Set(newConvertValue);
+    return Array.from(convertSet);
+}
+console.log(symmetricDifference([1, 2, 3, 4, 5], [1, 2, 45, 51, 2, 5, 1]));
