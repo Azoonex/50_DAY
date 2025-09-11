@@ -76,13 +76,32 @@ var setValue = new Set();
 setValue.add("app");
 setValue.add("vehicle");
 setValue.add("Trucks");
-// symmetricDifference()
 function symmetricDifference(arrayOne, arrayTwo) {
     // arrayOne 1 2 3 4 5
     // arrayTwo 2345 6
     // return 1 6
-    var newConvertValue = arrayOne.concat(arrayTwo);
-    var convertSet = new Set(newConvertValue);
+    var newConvertValue;
+    var convertSet;
+    if (arrayTwo === null || arrayTwo === void 0 ? void 0 : arrayTwo.length) {
+        newConvertValue = arrayOne.concat(arrayTwo);
+        convertSet = new Set(newConvertValue);
+    }
+    else {
+        convertSet = new Set(arrayOne);
+    }
     return Array.from(convertSet);
 }
 console.log(symmetricDifference([1, 2, 3, 4, 5], [1, 2, 45, 51, 2, 5, 1]));
+// twoSum
+function twoSum(num, target) {
+    var numSet = new Set();
+    for (var i = 0; i < num.length; i++) {
+        var complement = target - num[i];
+        if (numSet.has(complement)) {
+            console.log(i);
+            return [num.indexOf(complement), i];
+        }
+        numSet.add(num[i]);
+    }
+}
+console.log(twoSum([1, 2, 3, 4, 5], 9));
