@@ -122,12 +122,42 @@ function twoSum(num: TypeArrayNumber, target: number) {
     const complement = target - num[i];
 
     if (numSet.has(complement)) {
-      console.log( i)
+      console.log(i);
       return [num.indexOf(complement), i];
     }
 
-    numSet.add(num[i])
+    numSet.add(num[i]);
   }
 }
 
 console.log(twoSum([1, 2, 3, 4, 5], 9));
+
+// Pagination
+
+function handlePagination() {
+  let pageSize = 30;
+  let currentPage = 10;
+
+  let result: (number | boolean | string)[] = [];
+
+  for (let x = 0; x < pageSize; x++) {
+    if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
+      result.push(x);
+    } else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
+      result.push("...");
+    }
+  }
+
+  return result;
+}
+
+console.log(handlePagination());
+
+// [
+//    0,  1,  2,  3,  4,  5,  6,  7,  8,
+//    9, 10, 11, 12, 13, 14, 15, 16, 17,
+//   18, 19, 20, 21, 22, 23, 24, 25, 26,
+//   27, 28, 29
+// ]
+
+// 0 1 9 10 11 28 29
