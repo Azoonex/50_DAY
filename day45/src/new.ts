@@ -4,4 +4,4 @@ async function todo(todo?:string){
     return todo
 }
 
-console.log(todo().then((v)=>{console.log(v)}))
+console.log(todo("test"))

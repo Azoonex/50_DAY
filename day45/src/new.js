@@ -42,4 +42,4 @@ function todo(todo) {
         });
     });
 }
-console.log(todo().then(function (v) { console.log(v); }));
+console.log(todo("test"));
