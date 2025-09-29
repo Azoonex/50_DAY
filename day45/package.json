@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "main": "doc.js",
   "dependencies": {
+    "@types/node": "^24.3.0",
     "assertion-error": "^2.0.1",
     "cac": "^6.7.14",
     "chai": "^5.2.0",
@@ -43,8 +44,10 @@
   },
   "scripts": {
     "test": "vitest",
-    "dev": "tsc -w ./src/new.ts",
-    "node": "nodemon ./src/new.js"
+    "build": "tsc",
+    "dev": "tsc -w",
+    "start": "node dist/new-doc.js",
+    "node": "nodemon dist/new-doc.js"
   },
   "author": "",
   "license": "ISC",
