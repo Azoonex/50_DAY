@@ -73,3 +73,17 @@ var findDuplicate = duplicateValue.reduce(function (acc, curr) {
     return acc;
 }, {});
 console.log(findDuplicate);
+// flat Array
+var nestedArray = [[1, 2], [3, 4], [5, 6], [[2, 3, 1, 3]]];
+var flatArray = nestedArray.reduce(function (acc, curr) {
+    return curr.flat();
+}, []);
+var orders = [
+    { id: 1, amount: 100 },
+    { id: 2, amount: 200 },
+    { id: 3, amount: 300 },
+];
+var AmountOrder = orders.reduce(function (acc, curr) {
+    return acc + curr.amount;
+}, 0);
+console.log(AmountOrder);

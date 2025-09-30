@@ -102,3 +102,22 @@ const findDuplicate = duplicateValue.reduce(
 );
 
 console.log(findDuplicate);
+
+// flat Array
+let nestedArray = [[1, 2], [3, 4], [5, 6], [[2, 3, 1, 3]]];
+
+let flatArray = nestedArray.reduce((acc, curr) => {
+  return curr.flat();
+}, []);
+
+let orders = [
+  { id: 1, amount: 100 },
+  { id: 2, amount: 200 },
+  { id: 3, amount: 300 },
+];
+
+const AmountOrder = orders.reduce((acc, curr) => {
+  return acc + curr.amount;
+}, 0);
+
+console.log(AmountOrder);
