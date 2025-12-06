@@ -134,24 +134,24 @@ console.log(twoSum([1, 2, 3, 4, 5], 9));
 
 // Pagination
 
-function handlePagination() {
-  let pageSize = 30;
-  let currentPage = 10;
+// function handlePagination() {
+//   let pageSize = 30;
+//   let currentPage = 10;
 
-  let result: (number | boolean | string)[] = [];
+//   let result: (number | boolean | string)[] = [];
 
-  for (let x = 0; x < pageSize; x++) {
-    if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
-      result.push(x);
-    } else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
-      result.push("...");
-    }
-  }
+//   for (let x = 0; x < pageSize; x++) {
+//     if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
+//       result.push(x);
+//     } else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
+//       result.push("...");
+//     }
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(handlePagination());
+// console.log(handlePagination());
 
 // [
 //    0,  1,  2,  3,  4,  5,  6,  7,  8,
@@ -161,3 +161,65 @@ console.log(handlePagination());
 // ]
 
 // 0 1 9 10 11 28 29
+
+// (function SquareRoot() {
+//   let n = 10;
+//   console.log(Math.sqrt(n) > Math.round(n / 3));
+// })();
+
+let textTest = "?test";
+let result = isFinite(NaN);
+let bool = Boolean(0);
+
+console.log(Number.isFinite("23"));
+console.log(parseInt(" 924590__3434 "));
+console.log(String(new Date().toLocaleString("fa-IR")).split(","));
+console.log(bool);
+
+let bool = true;
+let text = bool.toString();
+
+const newArray = [1, 32, 34, 2345, 123, 4, 3, 123, 43, 65, 657, 234, 2, 132];
+
+const arr1 = [1, 2, [3, 4]];
+const arr2 = [[5, 6], 7, 8];
+const arr3 = arr1.concat(arr2);
+
+console.log(newArray.at(-1));
+
+console.log(arr3);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Create an Iterator
+const list = fruits.entries();
+console.log(list);
+
+let text2 = "Hello World!";
+let result2 = text2.toString();
+
+console.log(result2);
+
+function sumArray(arr: number[]) {
+  const toString = arr.toString();
+  const newString = toString.replaceAll(",", " ");
+  return newString.split(" ").reduce((acc, current) => {
+    return Number(acc) + Number(current);
+  }, 0);
+}
+
+console.log(sumArray([5, 15, 25, 5]));
+
+let text3 = "Hello world";
+let result3 = text.endsWith("world");
+
+console.log(result3);
+
+// start challenge to 110
+
+function findSequence(array: Array<number>, index: number) {
+  const spliceArray = array.slice(0,index + 1);
+  return spliceArray.filter((value) => value % 2 == 0);
+}
+
+console.log(findSequence([1, 2, 3, 4, 6], 4));

@@ -106,21 +106,20 @@ function twoSum(num, target) {
 }
 console.log(twoSum([1, 2, 3, 4, 5], 9));
 // Pagination
-function handlePagination() {
-    var pageSize = 30;
-    var currentPage = 10;
-    var result = [];
-    for (var x = 0; x < pageSize; x++) {
-        if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
-            result.push(x);
-        }
-        else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
-            result.push("...");
-        }
-    }
-    return result;
-}
-console.log(handlePagination());
+// function handlePagination() {
+//   let pageSize = 30;
+//   let currentPage = 10;
+//   let result: (number | boolean | string)[] = [];
+//   for (let x = 0; x < pageSize; x++) {
+//     if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
+//       result.push(x);
+//     } else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
+//       result.push("...");
+//     }
+//   }
+//   return result;
+// }
+// console.log(handlePagination());
 // [
 //    0,  1,  2,  3,  4,  5,  6,  7,  8,
 //    9, 10, 11, 12, 13, 14, 15, 16, 17,
@@ -128,3 +127,46 @@ console.log(handlePagination());
 //   27, 28, 29
 // ]
 // 0 1 9 10 11 28 29
+// (function SquareRoot() {
+//   let n = 10;
+//   console.log(Math.sqrt(n) > Math.round(n / 3));
+// })();
+var textTest = "?test";
+var result = isFinite(NaN);
+var bool = Boolean(0);
+console.log(Number.isFinite("23"));
+console.log(parseInt(" 924590__3434 "));
+console.log(String(new Date().toLocaleString("fa-IR")).split(","));
+console.log(bool);
+var bool = true;
+var text = bool.toString();
+var newArray = [1, 32, 34, 2345, 123, 4, 3, 123, 43, 65, 657, 234, 2, 132];
+var arr1 = [1, 2, [3, 4]];
+var arr2 = [[5, 6], 7, 8];
+var arr3 = arr1.concat(arr2);
+console.log(newArray.at(-1));
+console.log(arr3);
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// Create an Iterator
+var list = fruits.entries();
+console.log(list);
+var text2 = "Hello World!";
+var result2 = text2.toString();
+console.log(result2);
+function sumArray(arr) {
+    var toString = arr.toString();
+    var newString = toString.replaceAll(",", " ");
+    return newString.split(" ").reduce(function (acc, current) {
+        return Number(acc) + Number(current);
+    }, 0);
+}
+console.log(sumArray([5, 15, 25, 5]));
+var text3 = "Hello world";
+var result3 = text.endsWith("world");
+console.log(result3);
+// start challenge to 110
+function findSequence(array, index) {
+    var spliceArray = array.slice(0, index + 1);
+    return spliceArray.filter(function (value) { return value % 2 == 0; });
+}
+console.log(findSequence([1, 2, 3, 4, 6], 4));
