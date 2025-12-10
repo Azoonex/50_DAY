@@ -101,3 +101,19 @@ var AmountOrder = orders.reduce(function (acc, curr) {
     return acc + curr.amount;
 }, 0);
 console.log(AmountOrder);
+var Solution = /** @class */ (function () {
+    function Solution() {
+    }
+    Solution.prototype.permutation = function (arr, int) {
+        for (var x = 0; x < int; x++) {
+            if (arr.indexOf(x + 1) < 0) {
+                return false;
+            }
+        }
+        return true;
+    };
+    return Solution;
+}());
+// The indexOf() method of Array instances returns the first index at which a given element can be found in the array, or -1 if it is not present.
+var AllSolution = new Solution();
+console.log(AllSolution.permutation([1, 3], 3));

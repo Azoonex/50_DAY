@@ -9,14 +9,14 @@ function strictly(arr: Array<number>) {
 
   for (let x = 0; x < arr.length; x++) {
     if (arr_direction * (arr[x + 1] - arr[x]) <= 0) {
-      return false
+      return false;
     }
   }
 
   return true;
 }
 
-console.log(strictly([2, 34, 1, 3, 1, 31, 1,2,3]));
+console.log(strictly([2, 34, 1, 3, 1, 31, 1, 2, 3]));
 // function longestConsoluteSequence(array: number[]) {
 //   const convertToSet = new Set(array);
 //   const findMaxValueInSet = Math.max(...array);
@@ -140,3 +140,21 @@ const AmountOrder = orders.reduce((acc, curr) => {
 }, 0);
 
 console.log(AmountOrder);
+
+class Solution {
+  constructor() {}
+  permutation(arr: number[], int: number) {
+    for (let x = 0; x < int; x++) {
+      if (arr.indexOf(x + 1) < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+// The indexOf() method of Array instances returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+const AllSolution = new Solution();
+
+console.log(AllSolution.permutation([1, 3], 3));
