@@ -22,6 +22,7 @@ function isValid(s: string) {
     }
   }
   return !left.length;
+  
 }
 
 console.log(isValid(input));
