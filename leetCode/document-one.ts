@@ -41,13 +41,13 @@ console.log(token.logout());
 
 // method
 
-// set and get
+// setters and getters
 
 class FormFiled {
   private _value: string = "";
 
-  constructor(_value:string){
-    this._value = _value
+  constructor(_value: string) {
+    this._value = _value;
   }
 
   get value() {
@@ -62,7 +62,21 @@ class FormFiled {
   }
 }
 
-
 const filed = new FormFiled("amirabas");
 
-console.log(filed.value = "34")
+console.log((filed.value = "34"));
+
+//  Create the value of NOR of two given booleans
+
+function logicNor(x: boolean, y: boolean) {
+  // method 1
+  // const norX = Number(x);
+  // const norY = Number(y);
+
+  // return Boolean(norX * norY);
+  // method two
+
+  return !x && !y;
+}
+
+console.log(logicNor(true, true));

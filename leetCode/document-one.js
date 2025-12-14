@@ -28,7 +28,7 @@ console.log(token.logout());
 // readonly
 // protected
 // method
-// set and get
+// setters and getters
 var FormFiled = /** @class */ (function () {
     function FormFiled(_value) {
         this._value = "";
@@ -50,4 +50,14 @@ var FormFiled = /** @class */ (function () {
     return FormFiled;
 }());
 var filed = new FormFiled("amirabas");
-console.log(filed.value = "34");
+console.log((filed.value = "34"));
+//  Create the value of NOR of two given booleans
+function logicNor(x, y) {
+    // method 1
+    // const norX = Number(x);
+    // const norY = Number(y);
+    // return Boolean(norX * norY);
+    // method two
+    return !x && !y;
+}
+console.log(logicNor(true, true));
