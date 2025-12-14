@@ -1,172 +1,53 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
+var User = /** @class */ (function () {
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return User;
+}());
+var AuthService = /** @class */ (function () {
+    function AuthService(token, name) {
+        this.token = token;
+        this.name = name;
+    }
+    AuthService.prototype.getToken = function () {
+        return this.token;
     };
-    return __assign.apply(this, arguments);
-};
-var car = { make: "toyota", model: "camry", year: 2020 };
-delete car.make;
-console.log(car);
-// object.keys() => return enumerable قابل شمارهش
-for (var key in car) {
-    console.log("".concat(key, " | ").concat(car[key]));
-}
-var book = {
-    title: "JavaScript Guide",
-    author: "John Doe",
-    pages: 350,
-};
-var entries = Object.entries(book);
-console.log("tttttttttttttt", entries[0][0]);
-for (var _i = 0, _a = Object.entries(book); _i < _a.length; _i++) {
-    var _b = _a[_i], key = _b[0], value = _b[1];
-    console.log("".concat(key, ": ").concat(value));
-}
-Object.entries(book).forEach(function (_a) {
-    var key = _a[0], value = _a[1];
-    if (typeof value === "string") {
-        console.log("".concat(key, " has ").concat(value.length, " characters"));
+    AuthService.prototype.logout = function () {
+        this.token = "";
+    };
+    AuthService.prototype.changeName = function () {
+        this.name = "dfjk";
+    };
+    return AuthService;
+}());
+var token = new AuthService("randomToken", "name");
+console.log(token.logout());
+// Public
+// Private
+// readonly
+// protected
+// method
+// set and get
+var FormFiled = /** @class */ (function () {
+    function FormFiled(_value) {
+        this._value = "";
+        this._value = _value;
     }
-});
-var bookMap = new Map(Object.entries(book));
-console.log(bookMap.values());
-// new map key as everything type boolean and string number everything
-var initializedMap = new Map([
-    ["key1", "value1"],
-    ["text", "value2"],
-]);
-console.log(initializedMap.values());
-var person = {
-    ali: {
-        status: function () { return false; },
-        age: 22,
-        work: "clear",
-    },
-    amir: {
-        status: function () { return true; },
-        age: 25,
-        work: "devops",
-    },
-    jamal: {
-        status: function () { return true; },
-        age: 35,
-        work: "fluter",
-    },
-};
-var statusDoer = [];
-for (var _c = 0, _d = Object.entries(person); _c < _d.length; _c++) {
-    var _e = _d[_c], key = _e[0], value = _e[1];
-    if (value.status()) {
-        var newObject = {};
-        newObject = __assign({ name: key }, value);
-        statusDoer.push(newObject);
-    }
-}
-var b = new Map([
-    [1, "one"],
-    [2, "two"],
-    [4, "four"],
-]);
-var setValue = new Set();
-setValue.add("app");
-setValue.add("vehicle");
-setValue.add("Trucks");
-function symmetricDifference(arrayOne, arrayTwo) {
-    // arrayOne 1 2 3 4 5
-    // arrayTwo 2345 6
-    // return 1 6
-    var newConvertValue;
-    var convertSet;
-    if (arrayTwo === null || arrayTwo === void 0 ? void 0 : arrayTwo.length) {
-        newConvertValue = arrayOne.concat(arrayTwo);
-        convertSet = new Set(newConvertValue);
-    }
-    else {
-        convertSet = new Set(arrayOne);
-    }
-    return Array.from(convertSet);
-}
-console.log(symmetricDifference([1, 2, 3, 4, 5], [1, 2, 45, 51, 2, 5, 1]));
-// twoSum
-function twoSum(num, target) {
-    var numSet = new Set();
-    for (var i = 0; i < num.length; i++) {
-        var complement = target - num[i];
-        if (numSet.has(complement)) {
-            console.log(i);
-            return [num.indexOf(complement), i];
-        }
-        numSet.add(num[i]);
-    }
-}
-console.log(twoSum([1, 2, 3, 4, 5], 9));
-// Pagination
-// function handlePagination() {
-//   let pageSize = 30;
-//   let currentPage = 10;
-//   let result: (number | boolean | string)[] = [];
-//   for (let x = 0; x < pageSize; x++) {
-//     if (x <= 1 || x >= pageSize - 2 || Math.abs(x - currentPage) <= 1) {
-//       result.push(x);
-//     } else if (currentPage > 7 && Math.abs(x - currentPage) <= 2) {
-//       result.push("...");
-//     }
-//   }
-//   return result;
-// }
-// console.log(handlePagination());
-// [
-//    0,  1,  2,  3,  4,  5,  6,  7,  8,
-//    9, 10, 11, 12, 13, 14, 15, 16, 17,
-//   18, 19, 20, 21, 22, 23, 24, 25, 26,
-//   27, 28, 29
-// ]
-// 0 1 9 10 11 28 29
-// (function SquareRoot() {
-//   let n = 10;
-//   console.log(Math.sqrt(n) > Math.round(n / 3));
-// })();
-var textTest = "?test";
-var result = isFinite(NaN);
-var bool = Boolean(0);
-console.log(Number.isFinite("23"));
-console.log(parseInt(" 924590__3434 "));
-console.log(String(new Date().toLocaleString("fa-IR")).split(","));
-console.log(bool);
-var bool = true;
-var text = bool.toString();
-var newArray = [1, 32, 34, 2345, 123, 4, 3, 123, 43, 65, 657, 234, 2, 132];
-var arr1 = [1, 2, [3, 4]];
-var arr2 = [[5, 6], 7, 8];
-var arr3 = arr1.concat(arr2);
-console.log(newArray.at(-1));
-console.log(arr3);
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// Create an Iterator
-var list = fruits.entries();
-console.log(list);
-var text2 = "Hello World!";
-var result2 = text2.toString();
-console.log(result2);
-function sumArray(arr) {
-    var toString = arr.toString();
-    var newString = toString.replaceAll(",", " ");
-    return newString.split(" ").reduce(function (acc, current) {
-        return Number(acc) + Number(current);
-    }, 0);
-}
-console.log(sumArray([5, 15, 25, 5]));
-var text3 = "Hello world";
-var result3 = text.endsWith("world");
-console.log(result3);
-// start challenge to 110
-function findSequence(array, index) {
-    var spliceArray = array.slice(0, index + 1);
-    return spliceArray.filter(function (value) { return value % 2 == 0; });
-}
-console.log(findSequence([1, 2, 3, 4, 6], 4));
+    Object.defineProperty(FormFiled.prototype, "value", {
+        get: function () {
+            return this._value;
+        },
+        set: function (val) {
+            if (val.length > 10) {
+                throw new Error("Too long");
+            }
+            this._value = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return FormFiled;
+}());
+var filed = new FormFiled("amirabas");
+console.log(filed.value = "34");
