@@ -62,3 +62,99 @@ var ProfileComponent = function () {
     })();
     return ProfileComponent = _classThis;
 }();
+// console.log("Hello")
+function identity(arg) {
+    return arg;
+}
+var num = identity(4);
+function getLengthT(item) {
+    return item.v;
+}
+function getItem(item) {
+    return item;
+}
+// function padLeft(padding: number | string, input: string): string {
+//   if (typeof padding == "number") {
+//     return "".repeat(padding) + input;
+//   }
+//   return padding + input;
+// }
+// console.log(padLeft(213, "sfd"));
+// function Logger(constructor: Function) {
+//   console.log("Class Created", constructor.name);
+// }
+// @Logger
+var User = /** @class */ (function () {
+    function User() {
+        this.name = "Amir";
+    }
+    return User;
+}());
+// Hello world
+var person1 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue",
+};
+// Create Source Object
+var person2 = { firstName: "Anne", lastName: "Smith" };
+// Assign Source to Target
+var newAssign = Object.assign(person1, person2);
+console.log(newAssign);
+var user = {
+    accessibility: "yes",
+    getAccess: function () {
+        return this.accessibility;
+    },
+};
+console.log(user.getAccess());
+console.log(this);
+var users = {
+    name: "Amir",
+    getName: function () {
+        console.log(this.name);
+    },
+};
+console.log("00000--------------------00000");
+// pure function is the just dependency of parameter ,is n't change any objects or variables that existed before is was called. same input , same output;
+function safe(v, h) {
+    console.log(v + h);
+}
+var a = 10;
+var b = a;
+b = 20;
+console.log(a === 10, b === 20);
+// number; string; boolean; null; undefined; symbol; bigint;
+// Reference type Object array function data map / set
+var obj1 = { name: "Ali" };
+var obj2 = obj1;
+obj2.name = "Reza";
+console.log(obj1);
+// چون هر دو به یه آدرس تو حافظه اشاره می‌کنن
+var a2 = { x: 1 };
+var b2 = { x: 1 };
+a2 === b2; // false ❌ چون آدرس‌ها فرق دارن
+// prototypes
+function Person(name) {
+    this.name = name;
+}
+var name1 = new Person("Ali");
+var name2 = new Person("Reza");
+Person.prototype.sayHi = function () {
+    console.log("Hi" + this.name);
+};
+console.log(name1);
+var userItem = {
+    name: "Ali",
+};
+function sayHi() {
+    console.log(this.name);
+}
+console.log(sayHi());
+console.log(sayHi.call(userItem));
+console.log(sayHi.apply(user));
+var boundFun = sayHi.bind(getItem);
+console.log(boundFun());
+var numbers = ["1", "2", "3"];
+console.log(numbers.map(parseInt));
