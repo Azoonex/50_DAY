@@ -135,3 +135,7 @@ console.log(boundFun());
 
 const numbers = ["1", "2", "3"];
 console.log(numbers.map(parseInt))
+
+const date= new Date();
+
+console.log(date.toString)

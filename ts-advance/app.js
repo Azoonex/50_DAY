@@ -158,3 +158,5 @@ var boundFun = sayHi.bind(getItem);
 console.log(boundFun());
 var numbers = ["1", "2", "3"];
 console.log(numbers.map(parseInt));
+var date = new Date();
+console.log(date.toString);
