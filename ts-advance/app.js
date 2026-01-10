@@ -57,8 +57,12 @@ function Component2(value) {
         constructor.prototype.options = value;
     };
 }
+function Pipe(constructor) {
+    console.log("Pipe");
+    constructor.prototype.pip = true;
+}
 var Proformance = function () {
-    var _classDecorators = [Component2(1)];
+    var _classDecorators = [Component2(1), Pipe];
     var _classDescriptor;
     var _classExtraInitializers = [];
     var _classThis;

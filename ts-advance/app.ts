@@ -25,7 +25,13 @@ function Component2(value:number){
     }
 }
 
+function Pipe(constructor:Function){
+    console.log("Pipe");
+    constructor.prototype.pip = true
+}
+
 @Component2(1)
+@Pipe
 class Proformance {
 
 }
