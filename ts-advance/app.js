@@ -94,3 +94,18 @@ var scoreElham = listPlayer.reduce(function (acc, cur) {
     return acc;
 }, 0);
 console.log("Score Elham: ".concat(scoreElham));
+// -----------------------------------------------
+// Date and time
+var now = new Date();
+console.log();
+console.log(now.getFullYear());
+var before = new Date("February 1 2019 7:30:59");
+console.log(before.getTime());
+var diff = now.getTime() - before.getTime();
+console.log(diff);
+var mains = Math.round(diff / 100 / 60);
+var hordes = Math.round(mains / 60);
+var days = Math.round(hordes / 60);
+var months = Math.round(days / 30);
+var years = Math.round(months / 12);
+console.log(mains, hordes, days, months, years);

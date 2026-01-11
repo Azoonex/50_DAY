@@ -121,3 +121,21 @@ const scoreElham = listPlayer.reduce((acc,cur)=>{
 },0);
 
 console.log(`Score Elham: ${scoreElham}`);
+
+// -----------------------------------------------
+// Date and time
+const now = new Date();
+console.log();
+console.log(now.getFullYear());
+const before = new Date("February 1 2019 7:30:59")
+
+console.log(before.getTime());
+const diff = now.getTime() - before.getTime();
+console.log(diff);
+
+const mains = Math.round(diff / 100 / 60 );
+const hordes = Math.round(mains / 60 );
+const days = Math.round(hordes / 60 );
+const months = Math.round(days / 30 );
+const years = Math.round(months / 12 );
+console.log(mains, hordes, days, months, years);
