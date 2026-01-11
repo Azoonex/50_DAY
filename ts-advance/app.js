@@ -26,8 +26,6 @@ function Pipe(constructor) {
 // @Component2(1)
 // @Pipe
 // Symbols
-var symbols = Symbol("11");
-console.log(symbols);
 var score = [50, 39, 0, 1, 32, 40];
 for (var i = 0; i < score.length; i++) {
     if (score[i] === 0) {
@@ -51,3 +49,48 @@ switch (grade) {
     default:
         console.log("Very bad");
 }
+var htmlLink = "";
+var personName = ["mike", "Allen", "Jon", "Ali"];
+personName.forEach(handleMergeHtmlLink);
+function handleMergeHtmlLink(value, index) {
+    htmlLink += "".concat(value, " + ").concat(index, " / ");
+}
+console.log(htmlLink);
+var newNamePerson = personName.sort();
+var newScore = score.sort();
+console.log(newNamePerson, newScore);
+// score.sort((a, b) => b - a);
+score.sort();
+score.reverse();
+console.log(score);
+var area = 7.55;
+console.log(Math.round(area));
+console.log(Math.floor(area));
+console.log(Math.ceil(area));
+console.log(Math.trunc(area));
+var random = Math.random();
+console.log(random);
+console.log(Math.round(random * 100));
+console.log();
+var result = score.reduce(function (acc, curr) {
+    if (curr > 30) {
+        acc++;
+    }
+    return acc;
+}, 0);
+var listPlayer = [
+    { name: "Elham", score: 30 },
+    { name: "Jon", score: 30 },
+    { name: "Ali", score: 30 },
+    { name: "Jon", score: 30 },
+    { name: "Ali", score: 30 },
+    { name: "Jon", score: 30 },
+    { name: "Elham", score: 70 },
+];
+var scoreElham = listPlayer.reduce(function (acc, cur) {
+    if (cur.name === "Elham") {
+        acc += cur.score;
+    }
+    return acc;
+}, 0);
+console.log("Score Elham: ".concat(scoreElham));
