@@ -139,3 +139,31 @@ const days = Math.round(hordes / 60 );
 const months = Math.round(days / 30 );
 const years = Math.round(months / 12 );
 console.log(mains, hordes, days, months, years);
+
+// --------------------------------------------------
+
+const objectPerson = {
+  name : "Elham",
+  age : 30,
+  location:"toronto"
+}
+
+console.log(objectPerson);
+const updatePerson = {...objectPerson,name:"Reza"}
+
+console.log(updatePerson,objectPerson);
+
+const namesArray = ["Rya","chn-li","shaun"]
+
+const namesSet = new Set(namesArray);
+namesSet.add("item")
+namesSet.delete("Rya")
+console.log(Array.from(namesSet),namesSet.has("chn-li"));
+
+namesSet.clear()
+console.log(Array.from(namesSet))
+
+// symbol
+
+const symbols = Symbol();
+console.log(symbols,typeof symbols);

@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 console.log("make item");
 function Component(constructor) {
     console.log("constructor");
@@ -109,3 +120,22 @@ var days = Math.round(hordes / 60);
 var months = Math.round(days / 30);
 var years = Math.round(months / 12);
 console.log(mains, hordes, days, months, years);
+// --------------------------------------------------
+var objectPerson = {
+    name: "Elham",
+    age: 30,
+    location: "toronto"
+};
+console.log(objectPerson);
+var updatePerson = __assign(__assign({}, objectPerson), { name: "Reza" });
+console.log(updatePerson, objectPerson);
+var namesArray = ["Rya", "chn-li", "shaun"];
+var namesSet = new Set(namesArray);
+namesSet.add("item");
+namesSet.delete("Rya");
+console.log(Array.from(namesSet), namesSet.has("chn-li"));
+namesSet.clear();
+console.log(Array.from(namesSet));
+// symbol
+var symbols = Symbol();
+console.log(symbols, typeof symbols);
