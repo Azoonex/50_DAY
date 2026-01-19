@@ -38,6 +38,20 @@ class ProductMethod extends Product {
             return "your Product is not found!";
         }
     }
+    removeProduct(name) {
+        if (!name) {
+            return "Invalid name!";
+        }
+        let findItem = this.prodData.find((product) => product.name === name);
+        if (findItem) {
+            let updateProduct = this.prodData.filter((value) => value.name !== name);
+            this.prodData = updateProduct;
+            return "Remove SuccessFully";
+        }
+        else {
+            return "Product undefined!";
+        }
+    }
 }
 const productMethod = new ProductMethod();
 const productParent = new Product();
@@ -47,4 +61,3 @@ productMethod.addNewProduct({
     purchase_price: 1000000,
     sell_price2: 80000500,
 });
-console.log(productMethod.logData);

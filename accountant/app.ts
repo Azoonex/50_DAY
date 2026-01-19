@@ -34,20 +34,34 @@ class ProductMethod extends Product {
     }
     let findItem = this.prodData.find((product) => product.name === name);
     if (findItem) {
-        // todo add logic with update product
+      // todo add logic with update product
     } else {
       return "your Product is not found!";
     }
   }
+
+  removeProduct(name: string) {
+    if (!name) {
+      return "Invalid name!";
+    }
+    let findItem = this.prodData.find((product) => product.name === name);
+    if (findItem) {
+      let updateProduct = this.prodData.filter((value) => value.name !== name);
+      this.prodData = updateProduct;
+
+      return "Remove SuccessFully";
+    } else {
+      return "Product undefined!";
+    }
+  }
+ 
 }
 
 const productMethod = new ProductMethod();
-const productParent = new Product()
+const productParent = new Product();
 productMethod.addNewProduct({
   name: "Phone",
   sell_price: 20_000_000,
   purchase_price: 10_000_00,
   sell_price2: 80_000_500,
 });
-
-console.log(productMethod.logData);
