@@ -21,3 +21,8 @@ function charCount(str) {
 var value = [1, 32, 1, 32, 4];
 // console.log(value.splice(0,8));
 // frequency Counter
+function same(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+}
