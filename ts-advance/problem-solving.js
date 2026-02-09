@@ -180,4 +180,37 @@ console.log(gen.next().value);
 console.log(gen.next().value);
 console.log(gen.next().value);
 console.log(gen.next().value);
-// step-by-step is very import i handle the generate function
+function processUserBatch(users, batchSize) {
+    var batch, _i, users_2, user;
+    if (batchSize === void 0) { batchSize = 100; }
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                batch = [];
+                _i = 0, users_2 = users;
+                _a.label = 1;
+            case 1:
+                if (!(_i < users_2.length)) return [3 /*break*/, 4];
+                user = users_2[_i];
+                batch.push(user.id);
+                if (!(batch.length === batchSize)) return [3 /*break*/, 3];
+                return [4 /*yield*/, batch];
+            case 2:
+                _a.sent();
+                batch = [];
+                _a.label = 3;
+            case 3:
+                _i++;
+                return [3 /*break*/, 1];
+            case 4:
+                if (!batch.length) return [3 /*break*/, 6];
+                return [4 /*yield*/, batch];
+            case 5:
+                _a.sent();
+                _a.label = 6;
+            case 6: return [2 /*return*/];
+        }
+    });
+}
+var genTwo = processUserBatch(bigUserList);
+console.log(genTwo.next());

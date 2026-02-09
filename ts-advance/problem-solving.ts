@@ -115,12 +115,34 @@ function* processUserYield(users) {
 
 const gen = processUserYield(bigUserList);
 
-console.log(gen.next().value)
-console.log(gen.next().value)
-console.log(gen.next().value)
-console.log(gen.next().value)
-console.log(gen.next().value)
-console.log(gen.next().value)
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
 
 // step-by-step is very import i handle the generate function
 
+type userType = {
+  id: number;
+};
+
+function* processUserBatch(users: Array<userType>, batchSize = 100) {
+  let batch = [];
+
+  for (const user of users) {
+    batch.push(user.id);
+
+    if (batch.length === batchSize) {
+      yield batch;
+      batch = [];
+    }
+  }
+
+  if (batch.length) yield batch;
+}
+
+const genTwo = processUserBatch(bigUserList);
+
+console.log(genTwo.next())
