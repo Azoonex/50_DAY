@@ -47,9 +47,80 @@ let obj = {
 
 // Object.keys(obj).map((value) => console.log(obj[value]));
 
-let objString = ""
-for(let val in obj){
- objString += !objString ? obj[val] : " " + obj[val]
+let objString = "";
+for (let val in obj) {
+  objString += !objString ? obj[val] : " " + obj[val];
 }
 
-console.log(objString.split(" ").reverse().join(" "))
+console.log(objString.split(" ").reverse().join(" "));
+
+function* myGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = myGenerator();
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+
+function* counter() {
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+
+const c = counter();
+
+console.log("c", c.next());
+console.log("c", c.next());
+console.log("c", c.next());
+console.log("c", c.next());
+console.log("c", c.next());
+console.log("c", c.next());
+
+function* fruits() {
+  const list = ["🍎", "🍌", "🍓"];
+  for (const item of list) {
+    yield item;
+  }
+}
+
+for (const fruit of fruits()) {
+  console.log(fruit);
+}
+
+const bigUserList = Array.from({ length: 1_000_000 }).map((v, index) => {
+  return { id: index };
+});
+
+console.log(bigUserList);
+// yield it take : "Wait a minute...take this...we'll continue later";
+
+function processUser(users) {
+  return users.map((u) => {
+    console.log(u);
+    return u.id;
+  });
+}
+
+function* processUserYield(users) {
+  for (const user of users) {
+    yield user.id;
+  }
+}
+
+const gen = processUserYield(bigUserList);
+
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+
+// step-by-step is very import i handle the generate function
+
