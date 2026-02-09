@@ -141,7 +141,7 @@ for (var _i = 0, _a = fruits(); _i < _a.length; _i++) {
     var fruit = _a[_i];
     console.log(fruit);
 }
-var bigUserList = Array.from({ length: 1000000 }).map(function (v, index) {
+var bigUserList = Array.from({ length: 100 }).map(function (v, index) {
     return { id: index };
 });
 console.log(bigUserList);
@@ -214,3 +214,56 @@ function processUserBatch(users, batchSize) {
 }
 var genTwo = processUserBatch(bigUserList);
 console.log(genTwo.next());
+// frame by frame
+(function run() {
+    var _a = genTwo.next(), value = _a.value, done = _a.done;
+    if (done)
+        return;
+    console.log(value);
+    // requestAnimationFrame(run);
+})();
+// example two
+function pagination(items, pageSize) {
+    var i;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                i = 0;
+                _a.label = 1;
+            case 1:
+                if (!(i < items.length)) return [3 /*break*/, 4];
+                return [4 /*yield*/, items.slice(i, i + pageSize)];
+            case 2:
+                _a.sent();
+                _a.label = 3;
+            case 3:
+                i += pageSize;
+                return [3 /*break*/, 1];
+            case 4: return [2 /*return*/];
+        }
+    });
+}
+var pages = pagination(bigUserList, 10);
+console.log(pages.next());
+function timer() {
+    var seconds;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                seconds = 0;
+                _a.label = 1;
+            case 1:
+                if (!true) return [3 /*break*/, 3];
+                return [4 /*yield*/, seconds++];
+            case 2:
+                _a.sent();
+                return [3 /*break*/, 1];
+            case 3: return [2 /*return*/];
+        }
+    });
+}
+var t = timer();
+//stateful iteration 
+setInterval(function () {
+    console.log(t.next().value);
+}, 1000);

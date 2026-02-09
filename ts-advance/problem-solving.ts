@@ -93,7 +93,7 @@ for (const fruit of fruits()) {
   console.log(fruit);
 }
 
-const bigUserList = Array.from({ length: 1_000_000 }).map((v, index) => {
+const bigUserList = Array.from({ length: 100 }).map((v, index) => {
   return { id: index };
 });
 
@@ -145,4 +145,37 @@ function* processUserBatch(users: Array<userType>, batchSize = 100) {
 
 const genTwo = processUserBatch(bigUserList);
 
-console.log(genTwo.next())
+console.log(genTwo.next());
+// frame by frame
+(function run() {
+  const { value, done } = genTwo.next();
+  if (done) return;
+  console.log(value);
+  // requestAnimationFrame(run);
+})();
+
+// example two
+function* pagination(items: userType[], pageSize: number) {
+  for (let i = 0; i < items.length; i += pageSize) {
+    yield items.slice(i, i + pageSize);
+  }
+}
+
+const pages = pagination(bigUserList, 10);
+
+console.log(pages.next());
+
+function* timer() {
+  let seconds = 0;
+  while (true) {
+    yield seconds++;
+  }
+}
+
+const t = timer();
+
+//stateful iteration 
+
+setInterval(() => {
+  console.log(t.next().value);
+}, 1000);
