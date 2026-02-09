@@ -31,11 +31,25 @@ function same(arr1: string, arr2: string) {
   }
 
   for (let arr of arr1) {
-    if(!arr2.includes(arr)){
-      return false
+    if (!arr2.includes(arr)) {
+      return false;
     }
   }
-  return true
+  return true;
 }
 
-console.log(same("ts", "ts"));
+let obj = {
+  name: "reza",
+  age: 30,
+  side: "left",
+  category: "person",
+};
+
+// Object.keys(obj).map((value) => console.log(obj[value]));
+
+let objString = ""
+for(let val in obj){
+ objString += !objString ? obj[val] : " " + obj[val]
+}
+
+console.log(objString.split(" ").reverse().join(" "))

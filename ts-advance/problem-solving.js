@@ -32,4 +32,15 @@ function same(arr1, arr2) {
     }
     return true;
 }
-console.log(same("ts", "ts"));
+var obj = {
+    name: "reza",
+    age: 30,
+    side: "left",
+    category: "person",
+};
+// Object.keys(obj).map((value) => console.log(obj[value]));
+var objString = "";
+for (var val in obj) {
+    objString += !objString ? obj[val] : " " + obj[val];
+}
+console.log(objString.split(" ").reverse().join(" "));
