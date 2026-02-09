@@ -20,9 +20,16 @@ function charCount(str) {
 // console.log(charCount("Hello world"));
 var value = [1, 32, 1, 32, 4];
 // console.log(value.splice(0,8));
-// frequency Counter
 function same(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
+    if (!arr1 || !arr2 || arr1.length !== arr2.length) {
         return false;
     }
+    for (var _i = 0, arr1_1 = arr1; _i < arr1_1.length; _i++) {
+        var arr = arr1_1[_i];
+        if (!arr2.includes(arr)) {
+            return false;
+        }
+    }
+    return true;
 }
+console.log(same("ts", "ts"));

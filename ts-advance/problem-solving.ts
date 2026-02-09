@@ -25,12 +25,17 @@ const value = [1, 32, 1, 32, 4];
 
 // console.log(value.splice(0,8));
 
-// frequency Counter
-function same(arr1: number[], arr2: number[]) {
-  if (arr1.length !== arr2.length) {
+function same(arr1: string, arr2: string) {
+  if (!arr1 || !arr2 || arr1.length !== arr2.length) {
     return false;
   }
 
-  
-
+  for (let arr of arr1) {
+    if(!arr2.includes(arr)){
+      return false
+    }
+  }
+  return true
 }
+
+console.log(same("ts", "ts"));
