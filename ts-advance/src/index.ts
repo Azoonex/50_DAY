@@ -13,4 +13,13 @@ class Vehicle {
 const vehicle = new Vehicle();
 vehicle.updateDriver = "test";
 
-console.log(vehicle.userDriver)
+console.log(vehicle.userDriver);
+
+const obj = { link: "", item: 2 } ast;
+
+type ObjInstance = typeof obj;
+
+let value: ObjInstance = {
+  item: 2,
+  link: "d",
+};

@@ -13,3 +13,8 @@ class Vehicle {
 const vehicle = new Vehicle();
 vehicle.updateDriver = "test";
 console.log(vehicle.userDriver);
+const obj = { link: "", item: 2 }, ast;
+let value = {
+    item: 2,
+    link: "d",
+};
