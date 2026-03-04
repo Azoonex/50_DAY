@@ -7,7 +7,10 @@ var CategoryFood = /** @class */ (function () {
         if (!(nameCategory === null || nameCategory === void 0 ? void 0 : nameCategory.length)) {
             return "Please fill the name category";
         }
-        nameCategory.map(function (value) { return _this.listCateGory.push(value); });
+        if ((nameCategory === null || nameCategory === void 0 ? void 0 : nameCategory.length) && nameCategory[0]) {
+            nameCategory.map(function (value) { return _this.listCateGory.push(value); });
+            return "Make list Category";
+        }
     };
     Object.defineProperty(CategoryFood.prototype, "logData", {
         get: function () {
@@ -19,8 +22,10 @@ var CategoryFood = /** @class */ (function () {
     return CategoryFood;
 }());
 var category = new CategoryFood();
-var makeCategory = category.makeCategory([{ "Fast-food": ["berger", "pizza"] }, { "Stack": ["mite", "bird"] }]);
-console.log(category.logData);
+var makeCategory = category.makeCategory([
+    { "fast-food": ["berger", "pizza"] },
+    { stack: ["mite", "bird"] },
+]);
 var MakeTable = /** @class */ (function () {
     function MakeTable() {
     }
