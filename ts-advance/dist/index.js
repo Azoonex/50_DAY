@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tool_index_1 = require("./tools/tool.index");
 class Vehicle {
     constructor() {
         this.driver = null;
@@ -40,3 +42,6 @@ class TripCountry extends Trip {
 }
 ;
 const tripCountry = new TripCountry(33);
+const generate = new tool_index_1.Generate();
+console.log(generate.address);
+console.log(generate.makeRandom(3, true));

@@ -1,3 +1,5 @@
+import { Generate } from "./tools/tool.index";
+
 class Vehicle {
   public driver: string | null = null;
 
@@ -49,3 +51,8 @@ constructor(public person:number){
 
 
 const tripCountry = new TripCountry(33)
+
+const generate = new Generate();
+
+console.log(generate.address)
+console.log(generate.makeRandom(3,true))
