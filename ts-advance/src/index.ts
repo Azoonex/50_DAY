@@ -10,12 +10,17 @@ class Vehicle {
   }
 }
 
+class Car extends Vehicle {}
+
 const vehicle = new Vehicle();
 vehicle.updateDriver = "test";
 
+const CarInstance = new Car();
+
 console.log(vehicle.userDriver);
 
-const obj = { link: "", item: 2 } ast;
+console.log(vehicle.driver);
+const obj = { link: "", item: 2 };
 
 type ObjInstance = typeof obj;
 
@@ -23,3 +28,24 @@ let value: ObjInstance = {
   item: 2,
   link: "d",
 };
+
+class Trip {
+  constructor(protected person: number) {}
+
+  get personSize() {
+    return this.person;
+  }
+}
+
+const trip = new Trip(22)
+console.log(trip.personSize)
+
+
+class TripCountry extends Trip{
+constructor(public person:number){
+  super(person)
+}
+};
+
+
+const tripCountry = new TripCountry(33)
