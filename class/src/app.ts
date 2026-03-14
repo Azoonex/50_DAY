@@ -56,7 +56,30 @@ Circles.calculateArea(5); // returns 78.5
 
 let circleObj = new Circles();
 let obj = circleObj.calculateCircumference(5); // returns 31.4000000
-console.log(obj)
+console.log(obj);
 //circleObj.calculateArea(); &lt;-- cannot call this
 
 // In the above example, the Circle class includes static method calculateArea and non-static method calculateCircumference. As you can see, the static field pi can be accessed in the static method using this.pi and in the non-static (instance) method using Circle.pi.
+
+// app Age calculator
+
+class CalculatorAge {
+  public date = new Date();
+  protected age: number;
+  constructor(age: number) {
+    this.age = age;
+  }
+
+  get getAge() {
+    return this.age;
+  }
+
+  get computeAge() {
+    const currentDate = this.date.getFullYear();
+    return currentDate - this.age;
+  }
+}
+
+const calculateAge = new CalculatorAge(2002);
+
+console.log(calculateAge.computeAge);
