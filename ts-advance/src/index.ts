@@ -1,58 +1,22 @@
-import { Generate } from "./tools/tool.index";
 
-class Vehicle {
-  public driver: string | null = null;
+const circleElement = document.getElementById("circle")!;
+console.log(circleElement)
 
-  set updateDriver(name: string) {
-    this.driver = name;
-  }
-
-  get userDriver() {
-    return this.driver;
-  }
-}
-
-class Car extends Vehicle {}
-
-const vehicle = new Vehicle();
-vehicle.updateDriver = "test";
-
-const CarInstance = new Car();
-
-console.log(vehicle.userDriver);
-
-console.log(vehicle.driver);
-const obj = { link: "", item: 2 };
-
-type ObjInstance = typeof obj;
-
-let value: ObjInstance = {
-  item: 2,
-  link: "d",
-};
-
-class Trip {
-  constructor(protected person: number) {}
-
-  get personSize() {
-    return this.person;
+var ol = 0;
+var circleInterval = 0;
+function circleAnimation(time: number) {
+  ol++;
+  
+  console.log(time,ol);
+  
+  
+  if (time < 4000) {
+    circleInterval = requestAnimationFrame(circleAnimation);
+    circleElement.style.marginLeft = `${ol}px`; 
+  } else {
+    circleElement.style.backgroundColor = "red";
+    cancelAnimationFrame(circleInterval);
   }
 }
 
-const trip = new Trip(22)
-console.log(trip.personSize)
-
-
-class TripCountry extends Trip{
-constructor(public person:number){
-  super(person)
-}
-};
-
-
-const tripCountry = new TripCountry(33)
-
-const generate = new Generate();
-
-console.log(generate.address)
-console.log(generate.makeRandom(3,true))
+circleInterval = requestAnimationFrame(circleAnimation);
