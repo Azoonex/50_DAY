@@ -1,22 +1,26 @@
-
 const circleElement = document.getElementById("circle")!;
-console.log(circleElement)
+console.log(circleElement);
 
 var ol = 0;
 var circleInterval = 0;
+var flag = false;
 function circleAnimation(time: number) {
   ol++;
-  
-  console.log(time,ol);
-  
-  
-  if (time < 4000) {
-    circleInterval = requestAnimationFrame(circleAnimation);
-    circleElement.style.marginLeft = `${ol}px`; 
-  } else {
+  circleElement.style.marginLeft = `${ol}px`;
+  circleInterval = requestAnimationFrame(circleAnimation);
+}
+
+function mouseClick() {
+  if (flag) {
+    flag = false;
     circleElement.style.backgroundColor = "red";
     cancelAnimationFrame(circleInterval);
+  } else {
+    flag = true;
+    circleElement.style.backgroundColor = "aqua";
+    circleInterval = requestAnimationFrame(circleAnimation);
   }
 }
 
-circleInterval = requestAnimationFrame(circleAnimation);
+document.getElementById("switch")?.addEventListener("click", mouseClick);
+// circleInterval = requestAnimationFrame(circleAnimation);
