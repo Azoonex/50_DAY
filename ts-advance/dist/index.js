@@ -1,26 +1,34 @@
 "use strict";
-var _a;
-const circleElement = document.getElementById("circle");
-console.log(circleElement);
-var ol = 0;
-var circleInterval = 0;
-var flag = false;
-function circleAnimation(time) {
-    ol++;
-    circleElement.style.marginLeft = `${ol}px`;
-    circleInterval = requestAnimationFrame(circleAnimation);
-}
-function mouseClick() {
-    if (flag) {
-        flag = false;
-        circleElement.style.backgroundColor = "red";
-        cancelAnimationFrame(circleInterval);
-    }
-    else {
-        flag = true;
-        circleElement.style.backgroundColor = "aqua";
-        circleInterval = requestAnimationFrame(circleAnimation);
-    }
-}
-(_a = document.getElementById("switch")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", mouseClick);
-// circleInterval = requestAnimationFrame(circleAnimation);
+// const circleElement = document.getElementById("circle")!;
+// class Motion {
+//   ol: number = 0;
+//   circleInterval: number = 0;
+//   flag: boolean = false;
+//   motion() {
+//     this.ol++;
+//     circleElement.style.marginLeft = `${this.ol}px`;
+//     this.circleInterval = requestAnimationFrame(this.motion);
+//   }
+//   handleClick() {
+//     if (this.flag) {
+//       this.flag = false;
+//       circleElement.style.backgroundColor = "red";
+//       cancelAnimationFrame(this.circleInterval);
+//     } else {
+//       this.flag = true;
+//       circleElement.style.backgroundColor = "aqua";
+//       this.circleInterval = requestAnimationFrame(this.motion.bind);
+//     }
+//   }
+// }
+// const motion = new Motion();
+// const handleClick = motion.handleClick;
+// document.getElementById("switch")?.addEventListener("click", handleClick.bind(motion));
+const obj = {
+    name: "ali",
+    say() {
+        console.log(this.name);
+    },
+};
+const say = obj.say.bind(this);
+say();

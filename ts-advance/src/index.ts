@@ -1,26 +1,52 @@
-const circleElement = document.getElementById("circle")!;
-console.log(circleElement);
+const nums = [5, 10, 2];
+const sum = nums.reduce((acc, n) => acc + n, 0);
+console.log(sum);
 
-var ol = 0;
-var circleInterval = 0;
-var flag = false;
-function circleAnimation(time: number) {
-  ol++;
-  circleElement.style.marginLeft = `${ol}px`;
-  circleInterval = requestAnimationFrame(circleAnimation);
-}
+const users = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+];
 
-function mouseClick() {
-  if (flag) {
-    flag = false;
-    circleElement.style.backgroundColor = "red";
-    cancelAnimationFrame(circleInterval);
-  } else {
-    flag = true;
-    circleElement.style.backgroundColor = "aqua";
-    circleInterval = requestAnimationFrame(circleAnimation);
-  }
-}
+const arrayToObject = users.reduce(
+  (acc, current) => {
+    acc[current.id] = current;
+    return acc;
+  },
+  {} as Record<number, { id: number; name: string }>,
+);
 
-document.getElementById("switch")?.addEventListener("click", mouseClick);
-// circleInterval = requestAnimationFrame(circleAnimation);
+console.log(arrayToObject);
+
+const orders = [
+  { userId: 1, amount: 200 },
+  { userId: 2, amount: 50 },
+  { userId: 1, amount: 100 },
+];
+
+const sortingByGroup = orders.reduce(
+  (acc, curr) => {
+    if (!acc[curr.userId]) acc[curr.userId] = [];
+    acc[curr.userId].push(curr);
+    return acc
+  },
+  {} as Record<number, any[]>,
+);
+console.log(sortingByGroup);
+
+// remove duplicate value from array 
+
+const arr = [1,2,2,3,3,3,4];
+
+console.log(arr.length);
+
+const newArray = arr.reduce((acc,curr)=>{
+  if(!acc.includes(curr)) acc.push(curr);
+  return acc
+},[]as number[]);
+
+const avg = arr.reduce((acc,curr)=>{
+  acc += curr;
+  return acc
+},0)
+
+console.log((avg / arr.length).toFixed())
