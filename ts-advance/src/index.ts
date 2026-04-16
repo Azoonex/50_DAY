@@ -27,26 +27,45 @@ const sortingByGroup = orders.reduce(
   (acc, curr) => {
     if (!acc[curr.userId]) acc[curr.userId] = [];
     acc[curr.userId].push(curr);
-    return acc
+    return acc;
   },
   {} as Record<number, any[]>,
 );
 console.log(sortingByGroup);
 
-// remove duplicate value from array 
+// remove duplicate value from array
 
-const arr = [1,2,2,3,3,3,4];
+const arr = [1, 2, 2, 3, 3, 3, 4];
 
 console.log(arr.length);
 
-const newArray = arr.reduce((acc,curr)=>{
-  if(!acc.includes(curr)) acc.push(curr);
-  return acc
-},[]as number[]);
+const newArray = arr.reduce((acc, curr) => {
+  if (!acc.includes(curr)) acc.push(curr);
+  return acc;
+}, [] as number[]);
 
-const avg = arr.reduce((acc,curr)=>{
+const avg = arr.reduce((acc, curr) => {
   acc += curr;
-  return acc
-},0)
+  return acc;
+}, 0);
 
-console.log((avg / arr.length).toFixed())
+console.log((avg / arr.length).toFixed());
+
+let num = [3, 7, 2, 9];
+
+const updateNum = num.reduce((acc, cur) => {
+  return (acc += cur);
+}, 0);
+console.log(updateNum);
+
+const fruit = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+const sortFruit = fruit.reduce(
+  (acc, curr) => {
+    acc[curr] = (acc[curr] ?? 0) + 1;
+    return acc;
+  },
+  {} as Record<string, number>,
+);
+
+console.log(sortFruit);
