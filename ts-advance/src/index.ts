@@ -69,3 +69,7 @@ const sortFruit = fruit.reduce(
 );
 
 console.log(sortFruit);
+
+// 3) Build a user map by id
+
+
