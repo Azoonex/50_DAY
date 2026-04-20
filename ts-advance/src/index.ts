@@ -72,4 +72,27 @@ console.log(sortFruit);
 
 // 3) Build a user map by id
 
+type Order = {
+  id: number
+  price: number
+}
 
+const order: Order[] = [
+  { id: 1, price: 120 },
+  { id: 2, price: 80 },
+  { id: 3, price: 200 },
+  { id: 4, price: 50 }
+]
+
+const calculatePrice = order.reduce((acc,curr)=>{
+  return acc += curr.price
+},0);
+
+console.log(calculatePrice);
+
+
+// method two is very short 
+
+const calculatePrice_b = order.reduce((acc,{price})=> acc += price,0);
+
+console.log(calculatePrice_b)
