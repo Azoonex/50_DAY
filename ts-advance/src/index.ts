@@ -170,3 +170,77 @@ const cars = [
   { brand: "BMW", color: "blue" },
   { brand: "Kia", color: "red" },
 ];
+
+const calculateSizeCar = cars.reduce(
+  (acc, { brand }) => {
+    acc[brand] = (acc[brand] || 0) + 1;
+    return acc;
+  },
+  {} as Record<string, number>,
+);
+
+console.log(calculateSizeCar);
+
+const productsSize = [
+  { name: "Phone", price: 500 },
+  { name: "Laptop", price: 2000 },
+  { name: "Watch", price: 300 },
+];
+
+const findByPrice = productsSize.reduce((acc, curr) => {
+  acc = acc < curr.price ? curr.price : acc;
+  return acc;
+}, 0);
+
+const findByPriceTwo = productsSize.reduce(
+  (acc, { price }) => Math.max(acc, price),
+  0,
+);
+
+console.log("findByPrice", findByPriceTwo);
+
+const values = [2, 3, 3, 5, 2, 8, 5];
+
+const removeDuplicate = values.reduce((acc, curr) => {
+  if (!acc.includes(curr)) acc.push(curr);
+  return acc;
+}, [] as number[]);
+
+console.log(removeDuplicate);
+
+const students = [
+  { name: "Ali", age: 19, score: 18 },
+  { name: "Sara", age: 21, score: 16 },
+  { name: "Reza", age: 17, score: 19 },
+];
+
+const specialStudentCheckAgeScore = students.every((value) => {
+  return value.age > 18 && value.score > 15;
+});
+
+console.log(specialStudentCheckAgeScore);
+
+// remove duplicate num of array with method reduce
+
+let removeDuplicateTwo = values.reduce((acc, curr) => {
+  acc.add(curr);
+  return acc;
+}, new Set<number>());
+
+console.log(Array.from(removeDuplicateTwo));
+
+const unique = [...new Set(values)];
+
+console.log(unique);
+
+const person = new Map();
+
+person.set(1, "ali");
+console.log(person.has(1));
+person.delete(1);
+const usersNew = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+];
+
+
