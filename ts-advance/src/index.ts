@@ -73,26 +73,100 @@ console.log(sortFruit);
 // 3) Build a user map by id
 
 type Order = {
-  id: number
-  price: number
-}
+  id: number;
+  price: number;
+};
 
 const order: Order[] = [
   { id: 1, price: 120 },
   { id: 2, price: 80 },
   { id: 3, price: 200 },
-  { id: 4, price: 50 }
-]
+  { id: 4, price: 50 },
+];
 
-const calculatePrice = order.reduce((acc,curr)=>{
-  return acc += curr.price
-},0);
+const calculatePrice = order.reduce((acc, curr) => {
+  return (acc += curr.price);
+}, 0);
 
 console.log(calculatePrice);
 
+// method two is very short
 
-// method two is very short 
+const calculatePrice_b = order.reduce((acc, { price }) => (acc += price), 0);
 
-const calculatePrice_b = order.reduce((acc,{price})=> acc += price,0);
+console.log(calculatePrice_b);
 
-console.log(calculatePrice_b)
+const allUser = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+  { id: 3, name: "Nima" },
+];
+
+const newAllUser = allUser.reduce(
+  (acc, current) => {
+    acc[current.id] = current;
+    return acc;
+  },
+  {} as Record<number, { id: number; name: string }>,
+);
+
+console.log(newAllUser);
+
+const nums2 = [5, 3, 8, 2, 7];
+
+const calculateNum = nums2.reduce((acc, curr) => (acc += curr), 0);
+console.log(calculateNum);
+
+const products = [
+  { title: "Book", price: 20 },
+  { title: "Pen", price: 5 },
+  { title: "Laptop", price: 0 },
+];
+
+const checkProduct = products.every(function (item) {
+  if (item.price > 0) {
+    return true;
+  }
+  return false;
+});
+
+console.log(checkProduct);
+
+const scores = [17, 20, 14, 19];
+
+const avgScore = scores.reduce((acc, curr) => (acc += curr), 0) / scores.length;
+
+console.log(avgScore);
+
+const names = ["ali", "sara", "mehdi", "li"];
+
+const checkLength = names.every((value) => value.length > 0);
+
+console.log(checkLength);
+
+const items = [
+  { type: "fruit", name: "apple" },
+  { type: "vegetable", name: "carrot" },
+  { type: "fruit", name: "banana" },
+];
+
+const groupItems = items.reduce(
+  (acc, current) => {
+    if (!acc[current.type]) {
+      acc[current.type] = [];
+    }
+    acc[current.type].push(current);
+
+    return acc;
+  },
+  {} as Record<string, { type: string; name: string }[]>,
+);
+
+console.log(groupItems);
+
+const cars = [
+  { brand: "BMW", color: "red" },
+  { brand: "Audi", color: "black" },
+  { brand: "BMW", color: "blue" },
+  { brand: "Kia", color: "red" },
+];
