@@ -1,3 +1,4 @@
+import { Factory, Setup } from "./decorator/setup";
 import { Library } from "./Library";
 import { Book } from "./module/Book";
 import { Magazine } from "./module/Magazine";
@@ -17,3 +18,10 @@ b1.borrow("user123");
 console.log(b1.isBorrowed);
 
 b1.returnItem();
+
+const setup = new Setup();
+const factory = new Factory();
+console.log(setup.createdAt);
+factory.name = "2"
+
+console.log(factory.add(2,3))
