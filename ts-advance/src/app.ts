@@ -9,4 +9,4 @@ makeTask.addTask("Task 3","amir hesam");
 makeTask.removeTask("Task 1")
 
 
-console.log(makeTask.AllTask)
+console.log(makeTask.AllTask())

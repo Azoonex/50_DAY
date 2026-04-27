@@ -1,8 +1,10 @@
+import { MeasureTime } from "../decorator/MeastuerTime";
+import { Validate } from "../decorator/Validate";
 import { taskType, typeMakeTask } from "../interface/task.type";
 
 abstract class BaseTask {
-  abstract get lengthTaskData(): number | string;
-  abstract get AllTask(): taskType[];
+  abstract lengthTaskData(): number | string;
+  abstract AllTask(): taskType[];
 }
 
 //  Service Layer
@@ -10,11 +12,13 @@ abstract class BaseTask {
 export class MakeTask extends BaseTask implements typeMakeTask {
   taskData: taskType[] = [];
 
+  @Validate
   addTask(task: string, author: string) {
     let newTask: taskType = {
       name: task,
       createdAt: new Date(),
       isDo: true,
+      author,
     };
 
     this.taskData.push(newTask);
@@ -37,11 +41,12 @@ export class MakeTask extends BaseTask implements typeMakeTask {
     return `Task ${nameTask} is Deleting`;
   }
 
-  get AllTask(): taskType[] {
+  @MeasureTime
+  AllTask(): taskType[] {
     return this.taskData;
   }
 
-  get lengthTaskData(): number | string {
+  lengthTaskData(): number | string {
     return this.taskData.length ? this.taskData.length : "TaskData is empty";
   }
 }

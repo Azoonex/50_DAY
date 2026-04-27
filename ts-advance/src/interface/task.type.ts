@@ -2,6 +2,7 @@ export interface taskType {
   name: string;
   isDo: boolean;
   createdAt: Date;
+  author: string
 }
 
 
