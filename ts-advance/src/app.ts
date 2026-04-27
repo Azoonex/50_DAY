@@ -1,6 +1,12 @@
-const bil = ["age", "name"];
-const newBil = bil.reduce((acc, curr) => {
-  acc.push(curr.slice(0, 1));
-  return acc;
-}, [] as string[]);
-console.log(newBil);
+import { MakeTask } from "./module/Task";
+
+const makeTask = new MakeTask()
+
+makeTask.addTask("Task 1","amir");
+makeTask.addTask("Task 2","amir reza");
+makeTask.addTask("Task 3","amir hesam");
+
+makeTask.removeTask("Task 1")
+
+
+console.log(makeTask.AllTask)
