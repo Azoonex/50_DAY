@@ -1,35 +1,29 @@
-import { MakeTask } from "./module/Task";
+console.log(Math.PI);
 
-const makeTask = new MakeTask();
+// Calculate the area of circle
 
-makeTask.addTask("Task 1", "amir");
-makeTask.addTask("Task 2", "amir reza");
-makeTask.addTask("Task 3", "amir hesam");
+class Circle {
+  private PI = Math.PI;
 
-makeTask.removeTask("Task 1");
+  area(radios: number) {
+    return this.PI * radios * radios;
+  }
+};
 
-console.log(makeTask.AllTask());
+const circle = new Circle();
 
-const div = 50 / 100;
-const div2 = 150 / 100 + 50;
+console.log(circle.area(22))
+console.log(Math.E);
+console.log(Math.round(3.9999999));
 
-// salary of person
+console.log(Math.floor(324.23423233))
+console.log(Math.ceil(323));
 
-const salary = 100 / 10 + 300;
-const incrementSalary = 20 / 100;
+console.log(Math.trunc(33.3333333333333))
 
-console.log(div, div2, salary, incrementSalary * 400 - 400);
-const price = 432;
-const percent = 0.02;
-
-const positive = price * (1 + percent);
-const negative = price * (1 - percent);
-
-
-console.log(positive,negative);
+console.log(Math.pow(3,2))
+3**2;
 
 
-
-
-
+console.log(Math.sqrt(120));
 
