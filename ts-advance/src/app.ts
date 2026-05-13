@@ -1,29 +1,34 @@
-console.log(Math.PI);
-
-// Calculate the area of circle
-
-class Circle {
-  private PI = Math.PI;
-
-  area(radios: number) {
-    return this.PI * radios * radios;
-  }
+type Activity = {
+  userId: string;
+  points: number;
 };
 
-const circle = new Circle();
+const activities: Activity[] = [
+  { userId: "u1", points: 10 },
+  { userId: "u2", points: 20 },
+  { userId: "u1", points: 15 },
+  { userId: "u3", points: 5 },
+  { userId: "u2", points: 10 },
+  { userId: "u3", points: 30 },
+];
 
-console.log(circle.area(22))
-console.log(Math.E);
-console.log(Math.round(3.9999999));
+function getTopUsers(activities: Activity[], topN: number) {
+  const userTotals: Record<string, number> = {};
+  for (const activity of activities) {
+    if (userTotals[activity.userId]) {
+      userTotals[activity.userId] += activity.points;
+    } else {
+      userTotals[activity.userId] = activity.points;
+    }
+  }
 
-console.log(Math.floor(324.23423233))
-console.log(Math.ceil(323));
+  const usersArray = Object.entries(userTotals).map(([userId, total]) => {
+    return { userId, total };
+  });
 
-console.log(Math.trunc(33.3333333333333))
+  usersArray.sort((a, b) => b.total - a.total);
 
-console.log(Math.pow(3,2))
-3**2;
-
-
-console.log(Math.sqrt(120));
+  return usersArray.slice(0,topN)
+}
+console.log(getTopUsers(activities, 1));
 
