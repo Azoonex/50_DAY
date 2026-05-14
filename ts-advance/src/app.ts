@@ -118,5 +118,80 @@ const userMap = new Map(person.map((item) => [item.id, item]));
 
 console.log(userMap.get(2));
 
-// Memoization
+// Memoization Time Complexity
 
+function slowFunction(n: number) {
+  console.log("calculating...");
+  return n * n;
+}
+
+const cache = new Map();
+
+function memoized(n: number) {
+  if (cache.has(n)) {
+    return cache.get(n);
+  }
+
+  const result = slowFunction(n);
+  cache.set(n, result);
+
+  return result;
+}
+
+console.log(memoized(4));
+
+function debounce(fn: any, delay: number) {
+  let timer: number;
+
+  return function <T>(...args: T[]) {
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+      fn(...args);
+    }, delay);
+  };
+}
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) break;
+
+  console.log(i);
+}
+
+const user = {
+  name: "Ali",
+  age: 20,
+};
+console.log("name " in user);
+
+const myArray = [1];
+
+console.log(0 in myArray);
+
+console.log(myArray instanceof Date);
+
+if (myArray instanceof Array) {
+  console.log(12);
+}
+
+console.log(Infinity);
+
+let names = "guesss";
+
+names ||= "guest";
+
+console.log(names);
+
+const userFreeze = Object.freeze({
+  name: "Ali",
+});
+
+const obj = {
+  user: {
+    name: "Ali",
+  },
+};
+
+const copy = { ...obj };
+const bestCopy = structuredClone(obj)
+console.log(bestCopy);
