@@ -28,7 +28,95 @@ function getTopUsers(activities: Activity[], topN: number) {
 
   usersArray.sort((a, b) => b.total - a.total);
 
-  return usersArray.slice(0,topN)
+  return usersArray.slice(0, topN);
 }
 console.log(getTopUsers(activities, 1));
+
+//  Schwartzian Transform
+
+const data = ["delta", "alpha", "charlie", "bravo"];
+
+function someSlowOperation(str: string) {
+  console.log("processing", str);
+  return str.length;
+}
+
+data.sort((a, b) => {
+  return someSlowOperation(a) - someSlowOperation(b);
+});
+
+const mapped = data.map((v, i) => ({
+  i,
+  value: someSlowOperation(v),
+}));
+
+console.log(mapped);
+
+console.log(mapped.sort((a, b) => a.value - b.value));
+
+const result = mapped.map((v) => data[v.i]);
+
+console.log(result);
+
+const arr = [3, 1, 4, 1, 5, 9];
+const compareFn = (a: number, b: number) => (a > b ? 1 : 0);
+arr.sort(compareFn);
+console.log(arr);
+
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+
+const arrayLinking = Array.prototype.sort.call(arrayLike);
+
+console.log(arrayLinking);
+
+// Precompute Search
+
+const users = ["Ali Reza", "Sara Mohammadi", "Amir Hossein"];
+
+function search(query: string) {
+  return users.filter((user) =>
+    user.toLowerCase().includes(query.toLowerCase()),
+  );
+}
+
+// Start
+
+const indexedUsers = users.map((name) => ({
+  original: name,
+  searchValue: name.toLowerCase(),
+}));
+
+console.log(indexedUsers);
+
+function searchCharacter(query: string) {
+  const q = query.toLowerCase();
+  return indexedUsers
+    .filter((user) => user.searchValue.includes(q))
+    .map((v) => v.original);
+}
+
+console.log(searchCharacter("reza"));
+
+//  Map Index Pattern
+
+const person = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+  { id: 3, name: "Amir" },
+];
+
+function getUser(id: number) {
+  return person.find((u) => u.id === id);
+} // O(n)
+
+const userMap = new Map(person.map((item) => [item.id, item]));
+
+console.log(userMap.get(2));
+
+// Memoization
 
