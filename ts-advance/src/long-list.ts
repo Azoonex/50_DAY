@@ -22,12 +22,18 @@ const newArray = new Array(0, 1, 3, 2).concat(203, [2]);
 
 console.log("new array", newArray);
 
-function findDifference<arrayT>(array: arrayT[]) {
-  const difference: string | number;
-  const 
+// Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.
 
-  for(const key of array){
-    
+function findDifference<arrayT>(array: arrayT[], array2: arrayT[]) {
+  const differenceMap = new Set();
+
+  for (const key of array) {
+    if (array2.includes(key)) {
+      differenceMap.add(key);
+    }
   }
+
+  console.log(Array.from(differenceMap));
+  return differenceMap;
 }
-findDifference(["d"]);
+findDifference(["d", "m", "d", "b"], ["b", "j", "t"]);
