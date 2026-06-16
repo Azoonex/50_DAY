@@ -37,3 +37,14 @@ function findDifference<arrayT>(array: arrayT[], array2: arrayT[]) {
   return differenceMap;
 }
 findDifference(["d", "m", "d", "b"], ["b", "j", "t"]);
+
+
+function differenceBy<arrayT,targetT> (arr:arrayT[],arr2:arrayT[],target:targetT){
+  const differenceMap:arrayT[] = new Map();
+
+  for(const item of arr){
+    if(arr2.includes(item) === target){
+      differenceMap.set(item)
+    }
+  }
+}

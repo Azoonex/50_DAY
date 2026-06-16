@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/long-list.ts"
+    "dev": "nodemon ./src/longset-palindromic.ts"
   },
   "keywords": [],
   "author": "",
