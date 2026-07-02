@@ -13,7 +13,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(rgb(161, 161, 221) 10%,#d8d8bf,rgb(97, 163, 97));
 }
 
 #area{
@@ -47,4 +46,8 @@
     background-color: blue;
     text-align: center;
     border-radius: 20px;
+}
+
+.bg_color {
+    background-color: blue;
 }

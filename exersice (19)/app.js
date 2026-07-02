@@ -1,23 +1,35 @@
-const inputEarea = document.querySelector('#area');
-const tagDiv = document.querySelector('.tag');
+const inputArea = document.querySelector("#area");
+const tagDiv = document.querySelector(".tag");
+const headTag = document.getElementsByTagName("h3")[0];
+const container = document.getElementsByClassName("container")[0];
 
-inputEarea.focus()
+console.log(container)
 
-inputEarea.addEventListener('keyup',(event)=>{
-    if(event.keyCode === 13){
-       let newData = event.target.value
-       addHnadler(newData)
-       event.target.value = ""
-    }
-    
-})
+const spanTag = document.createElement("span");
+spanTag.textContent = "Hello bro"
+headTag.append(spanTag)
+headTag.blur("Mytext")
+tagDiv.after = "make";
 
-function addHnadler (value) {
-    let div = document.createElement('div')
-    let divNew = div.innerHTML = value
-    tagDiv.append(divNew) 
+
+const nodeList = document.body.childNodes;
+let text =""
+for(let x =0 ;x < nodeList.length;x++){
+    text += nodeList[x].nodeName + "<br />"
 }
 
+headTag.innerHTML = text
+
+console.log(nodeList);
+
+
+console.log(container.childNodes.length)
+
+
+console.log(container.childElementCount)
+console.log(container.children.length)
+
+container.classList.toggle("bg_color")
 
 
 

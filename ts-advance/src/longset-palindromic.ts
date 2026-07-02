@@ -1,24 +1,4 @@
 function longestPalindrome(s: string) {
-  //   const stringToArray = s.split("");
-  //   let resultPalindrome = stringToArray.reduce(
-  //     (acc, curr) => {
-  //       console.log(acc[curr]);
-  //       acc[curr] = (acc[curr] || 0) + 1;
-  //       return acc;
-  //     },
-  //     {} as Record<string, number>,
-  //   );
-  //   let biggestChar: { char: string; size: number } = { char: "", size: 0 };
-  //   for (const char in resultPalindrome) {
-  //     if (resultPalindrome[char] > biggestChar.size) {
-  //       biggestChar = { char, size: resultPalindrome[char] };
-  //     }
-  //   }
-  //   const formatString = s.slice(
-  //     s.indexOf(biggestChar.char),
-  //     s.lastIndexOf(biggestChar.char) + 1,
-  //   );
-  //   return formatString;
 
   if (isPalindrome(s)) {
     return s;
@@ -44,3 +24,28 @@ function isPalindrome(s: string) {
 }
 
 console.log(longestPalindrome("abb"));
+
+function longestPalindromeBast(s: string): string {
+  let longSet = "";
+
+  for (let i = 0; i < s.length; i++) {
+    checkLeftAndRight(i, i);
+    checkLeftAndRight(i, i + 1);
+  }
+
+  function checkLeftAndRight(left: number, right: number) {
+    while (left >= 0 && right <= s.length && s[left] === s[right]) {
+      if (right - left + 1 > longSet.length) {
+        longSet = s.slice(left, right + 1);
+      }
+      console.log("left", left);
+      console.log("right", right);
+      left--;
+      right++;
+    }
+  }
+  return longSet;
+}
+
+
+console.log(longestPalindromeBast("bsdflkj"))
