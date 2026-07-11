@@ -25,6 +25,8 @@ function isPalindrome(s: string) {
 
 console.log(longestPalindrome("abb"));
 
+// expend around center
+
 function longestPalindromeBast(s: string): string {
   let longSet = "";
 
@@ -38,8 +40,6 @@ function longestPalindromeBast(s: string): string {
       if (right - left + 1 > longSet.length) {
         longSet = s.slice(left, right + 1);
       }
-      console.log("left", left);
-      console.log("right", right);
       left--;
       right++;
     }
