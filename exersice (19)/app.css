@@ -8,7 +8,7 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,20 +33,14 @@
 
 .tag{
     text-align: start;
-    padding: 20px;
     background-color: black;
     border: 20px;
     color: white;
     display: flex;
     gap: 20px;
+    padding: 30px;
 }
 
-.tag > div {
-    font-size: 22px;
-    background-color: blue;
-    text-align: center;
-    border-radius: 20px;
-}
 
 .bg_color {
     background-color: blue;
