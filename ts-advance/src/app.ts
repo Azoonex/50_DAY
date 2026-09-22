@@ -93,14 +93,13 @@ function argAnagrams(a: string, b: string) {
   }
 
   b.split("").forEach((value) => {
-    isCheckEqual =  argMap.get(value) ?? false 
+    isCheckEqual = argMap.get(value) ?? false;
   });
 
   return Boolean(isCheckEqual);
 }
 
-console.log(argAnagrams("ppale","apple"))
-
+console.log(argAnagrams("ppale", "apple"));
 
 function twoSumSorted(arr: number[], target: number): [number, number] | null {
   let l = 0;
@@ -117,3 +116,88 @@ function twoSumSorted(arr: number[], target: number): [number, number] | null {
 
 // Example:
 console.log(twoSumSorted([1, 2, 3, 4, 6, 8, 9], 10)); // [1, 5] -> 2 + 8
+
+const newArray = [
+  {
+    name: "ali",
+    age: 33,
+  },
+  {
+    name: "reza",
+    age: 24,
+  },
+];
+
+const findAge = newArray.find((s) => s.age === 24);
+
+if (findAge?.age) {
+  findAge.age = 33;
+}
+
+console.log(findAge);
+
+const person = { fname: "John", lname: "Doe", age: 25 };
+
+let objText = "";
+for (let x in person) {
+  objText += x;
+}
+
+console.log(objText);
+
+// for...in
+// Object.keys(obj)
+// Object.values(obj)
+// Object.entries(obj)
+
+const queryParams = {
+  category: "laptop",
+  brand: "asus",
+  color: "",
+  minPrice: 1000,
+  maxPrice: undefined,
+};
+
+const mongoFilter: Record<string, any> = {};
+
+const user = { name: "Azoonex", role: "admin" };
+
+console.log(Object.entries(user));
+
+for (const [key, value] of Object.entries(user)) {
+  console.log("key", key, "value", value);
+}
+
+const updateBody = {
+  name: "گوشی سامسونگ",
+  price: 25000000,
+  role: "admin",
+  discount: undefined,
+};
+
+const allowedFields = ["name", "price", "description", "stock"];
+const safeUpdates: Record<string, any> = {};
+
+
+
+for(const [key,value] of Object.entries(updateBody)){
+  if(allowedFields.includes(key) && !!value){
+    safeUpdates[key] = value
+  }
+}
+
+// query string shipping
+
+const paymentParams = {
+  merchant_id: '*******',
+  amount: 500000,
+  callback_url: 'https://myshop.com/verify',
+  description: 'خرید سفارش #104'
+};
+
+
+const queryString = Object.entries(paymentParams).map(([key,value],index)=> {
+  return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+}).join("&")
+
+console.log(queryString)
