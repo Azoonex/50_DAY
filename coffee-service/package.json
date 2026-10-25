@@ -1,0 +1,13 @@
+{
+  "name": "coffee-service",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "dev":"nodemon ./dist/src/admin-services.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

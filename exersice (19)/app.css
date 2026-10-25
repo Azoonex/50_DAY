@@ -8,12 +8,11 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: ;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(rgb(161, 161, 221) 10%,#d8d8bf,rgb(97, 163, 97));
 }
 
 #area{
@@ -34,17 +33,15 @@
 
 .tag{
     text-align: start;
-    padding: 20px;
     background-color: black;
     border: 20px;
     color: white;
     display: flex;
     gap: 20px;
+    padding: 30px;
 }
 
-.tag > div {
-    font-size: 22px;
+
+.bg_color {
     background-color: blue;
-    text-align: center;
-    border-radius: 20px;
 }
