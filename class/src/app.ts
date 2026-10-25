@@ -62,6 +62,7 @@ console.log(obj);
 // In the above example, the Circle class includes static method calculateArea and non-static method calculateCircumference. As you can see, the static field pi can be accessed in the static method using this.pi and in the non-static (instance) method using Circle.pi.
 
 // app Age calculator
+// app three
 
 class CalculatorAge {
   public date = new Date();
@@ -80,6 +81,23 @@ class CalculatorAge {
   }
 }
 
+// class sort helmet
+
+type typeHelmet = "rase" | "sport" | "minimal" | null;
+
+class factoryHelmet {
+  type: typeHelmet;
+  constructor(type: typeHelmet) {
+    this.type = type;
+  }
+}
+
 const calculateAge = new CalculatorAge(2002);
 
 console.log(calculateAge.computeAge);
+
+// save data in backend i want used the data fake
+
+class App {
+  
+}
