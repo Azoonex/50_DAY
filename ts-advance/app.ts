@@ -89,7 +89,7 @@ function twoPointers(nums: number[], target: number) {
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
     console.log(complement);
-    console.log(map)
+    console.log(map);
     if (map.has(complement)) {
       return [map.get(complement)!, i];
     }
@@ -102,3 +102,41 @@ let nums = [3, 2, 4];
 let target = 6;
 
 console.log("two sum", twoPointers(nums, target));
+
+class Solution {
+  hasDuplicate(nums: number[]) {
+    const map = new Map();
+    for (let key of nums) {
+      if (!map.has(key)) {
+        map.set(key, key);
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+  groupAnagrams(strs: string[]): string[][] {
+    const map = new Map<string, string[]>();
+
+    for (const word of strs) {
+      const key = word.split("").sort().join("");
+
+      if (!map.has(key)) {
+        map.set(key, []);
+      }
+      map.get(key)!.push(word);
+    }
+
+    const result: string[][] = [];
+    for (const group of map.values()) {
+      result.push(group.sort());
+    }
+
+    return result.sort((a, b) => a[0].localeCompare(b[0]));
+  }
+}
+const solution = new Solution();
+console.log(solution.hasDuplicate([1, 2, 3, 4, 5, 1, 2]));
+console.log(
+  solution.groupAnagrams(["act", "pots", "tops", "cat", "stop", "hat"]),
+);
